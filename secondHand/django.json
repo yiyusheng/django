@@ -1,0 +1,454 @@
+nohup: 忽略输入
+[13/Jul/2017 16:28:50] "GET /data_display/show/ HTTP/1.1" 200 229402
+[13/Jul/2017 16:29:43] "GET /data_display/show/ HTTP/1.1" 200 229402
+[13/Jul/2017 16:31:36] "GET /data_display/show HTTP/1.1" 301 0
+[13/Jul/2017 16:31:38] "GET /data_display/show/ HTTP/1.0" 200 229402
+[13/Jul/2017 16:31:46] "GET /data_display/show HTTP/1.1" 301 0
+[13/Jul/2017 16:31:46] "GET /data_display/show HTTP/1.1" 301 0
+[2017-07-13 16:31:48,675] - Broken pipe from ('101.226.68.161', 42800)
+
+[13/Jul/2017 16:31:49] "GET /data_display/show/ HTTP/1.1" 200 229402
+[13/Jul/2017 16:32:33] "GET /data_display/show HTTP/1.1" 301 0
+[13/Jul/2017 16:32:35] "GET /data_display/show/ HTTP/1.1" 200 229402
+[13/Jul/2017 16:32:42] "GET /data_display/show/ HTTP/1.1" 200 229402
+[13/Jul/2017 16:33:55] "GET /data_display/show/ HTTP/1.1" 200 229402
+[13/Jul/2017 16:33:59] "GET /data_display/show/ HTTP/1.1" 200 229402
+[13/Jul/2017 16:34:01] "GET /data_display/show/ HTTP/1.1" 200 229402
+[13/Jul/2017 16:51:33] "GET /data_display/show/ HTTP/1.1" 200 229617
+[13/Jul/2017 16:57:00] "GET /data_display/show/ HTTP/1.1" 200 229617
+[13/Jul/2017 16:58:19] "GET /data_display/show/ HTTP/1.1" 200 229617
+[13/Jul/2017 17:02:02] "GET /data_display/show/ HTTP/1.1" 200 229617
+Not Found: /favicon.ico
+[13/Jul/2017 17:02:03] "GET /favicon.ico HTTP/1.1" 404 2194
+[14/Jul/2017 00:30:20] "GET /data_display/show/ HTTP/1.1" 200 229047
+Not Found: /favicon.ico
+[14/Jul/2017 00:30:22] "GET /favicon.ico HTTP/1.1" 404 2194
+[14/Jul/2017 00:53:45] "GET /data_display/show/ HTTP/1.1" 200 135500
+Not Found: /favicon.ico
+[14/Jul/2017 00:53:47] "GET /favicon.ico HTTP/1.1" 404 2194
+[14/Jul/2017 00:56:17] "GET /data_display/show/ HTTP/1.1" 200 136352
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '='None' and l.ext2 or ''' from 'l.ext2='None' and l.ext2 or '''
+[14/Jul/2017 00:57:21] "GET /data_display/show/ HTTP/1.1" 500 116804
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=='None' and l.ext2 or ''' from 'l.ext2=='None' and l.ext2 or '''
+[14/Jul/2017 00:57:42] "GET /data_display/show/ HTTP/1.1" 500 116597
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=='None'' from 'l.ext2=='None''
+[14/Jul/2017 00:58:09] "GET /data_display/show/ HTTP/1.1" 500 116224
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=='None'' from 'l.ext2=='None''
+[14/Jul/2017 01:00:56] "GET /data_display/show/ HTTP/1.1" 500 117409
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '{{l.ext2}}}=='None'' from '{{l.ext2}}}=='None''
+[14/Jul/2017 01:06:13] "GET /data_display/show/ HTTP/1.1" 500 117589
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '{{l.ext2}}=='None'' from '{{l.ext2}}=='None''
+[14/Jul/2017 01:06:26] "GET /data_display/show/ HTTP/1.1" 500 117565
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=='None'' from ''None'=='None''
+[14/Jul/2017 01:06:47] "GET /data_display/show/ HTTP/1.1" 500 117525
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '='None'' from ''None'='None''
+[14/Jul/2017 01:07:08] "GET /data_display/show/ HTTP/1.1" 500 117270
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 18: 'endif', expected 'endifnotequal'. Did you forget to register or load this tag?
+[14/Jul/2017 01:08:37] "GET /data_display/show/ HTTP/1.1" 500 116846
+[14/Jul/2017 01:09:01] "GET /data_display/show/ HTTP/1.1" 200 155069
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 9, in data_display
+    return(render(request,'data_display/data_display.html',{'list':item_list}))
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: ''None'' from 'u'None''
+[14/Jul/2017 01:10:27] "GET /data_display/show/ HTTP/1.1" 500 116891
+[14/Jul/2017 01:10:43] "GET /data_display/show/ HTTP/1.1" 200 155069
+[14/Jul/2017 01:11:06] "GET /data_display/show/ HTTP/1.1" 200 155167
+[14/Jul/2017 01:11:34] "GET /data_display/show/ HTTP/1.1" 200 154075
+[14/Jul/2017 01:11:49] "GET /data_display/show/ HTTP/1.1" 200 155167
+[14/Jul/2017 01:12:12] "GET /data_display/show/ HTTP/1.1" 200 155167
+[14/Jul/2017 01:14:56] "GET /data_display/show/ HTTP/1.1" 200 154489
+[14/Jul/2017 01:15:16] "GET /data_display/show/ HTTP/1.1" 200 154339
+[14/Jul/2017 01:15:37] "GET /data_display/show/ HTTP/1.1" 200 154753
+[14/Jul/2017 01:17:41] "GET /data_display/show/ HTTP/1.1" 200 154753
+Not Found: /favicon.ico
+[14/Jul/2017 01:17:43] "GET /favicon.ico HTTP/1.1" 404 2194
+[14/Jul/2017 01:18:31] "GET /data_display/show/ HTTP/1.1" 200 154753
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 14 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, mytest, sessions.
+Run 'python manage.py migrate' to apply them.
+July 13, 2017 - 16:28:37
+Django version 1.11.3, using settings 'secondHand.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /data_display/show/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yiyusheng/Code/Python/django/secondHand/data_display/views.py", line 11, in data_display
+    item_list = Secondhand.objects.filter(data__range=[startdate,enddate])
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'data' into field. Choices are: create_time, ext1, ext2, ext3, ext4, ext5, reply_count, time, title, uname, url, webname
+[14/Jul/2017 01:21:19] "GET /data_display/show/ HTTP/1.1" 500 106132
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 14 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, mytest, sessions.
+Run 'python manage.py migrate' to apply them.
+July 14, 2017 - 01:21:00
+Django version 1.11.3, using settings 'secondHand.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 22, 0, 513862), datetime.datetime(2017, 7, 12, 1, 22, 0, 513862)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:22:01] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 23, 1, 322866), datetime.datetime(2017, 7, 12, 1, 23, 1, 322866)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:23:01] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 23, 22, 588184), datetime.datetime(2017, 7, 12, 1, 23, 22, 588184)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:23:22] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 25, 16, 431727), datetime.datetime(2017, 7, 12, 1, 25, 16, 431727)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:25:16] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 25, 27, 24122), datetime.datetime(2017, 7, 12, 1, 25, 27, 24122)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:25:27] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 26, 27, 882633), datetime.datetime(2017, 7, 12, 1, 26, 27, 882633)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:26:28] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 26, 48, 75011), datetime.datetime(2017, 7, 12, 1, 26, 48, 75011)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:26:48] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 26, 56, 108727), datetime.datetime(2017, 7, 12, 1, 26, 56, 108727)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:26:56] "GET /data_display/show/ HTTP/1.1" 200 277
+Not Found: /favicon.ico
+[14/Jul/2017 01:27:33] "GET /favicon.ico HTTP/1.1" 404 2194
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 27, 40, 519990), datetime.datetime(2017, 7, 12, 1, 27, 40, 519990)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:27:40] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 27, 42, 584370), datetime.datetime(2017, 7, 12, 1, 27, 42, 584370)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:27:43] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 30, 39, 113958), datetime.datetime(2017, 7, 12, 1, 30, 39, 113958)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:30:39] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 32, 1, 270144), datetime.datetime(2017, 7, 12, 1, 32, 1, 270144)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:32:01] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 32, 58, 195983), datetime.datetime(2017, 7, 12, 1, 32, 58, 195983)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:32:58] "GET /data_display/show/ HTTP/1.1" 200 277
+/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:101: Warning: (1292L, u"Incorrect datetime value: '[datetime.datetime(2017, 7, 14, 1, 33, 0, 292432), datetime.datetime(2017, 7, 12, 1, 33, 0, 292432)]' for column 'create_time' at row 1")
+  return self.cursor.execute(query, args)
+[14/Jul/2017 01:33:00] "GET /data_display/show/ HTTP/1.1" 200 277
