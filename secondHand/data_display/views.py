@@ -11,6 +11,10 @@ def data_display(request):
     startdate = enddate + timedelta(days=-1)
     item_list = Secondhand.objects.filter(create_time__range=[startdate,enddate]).order_by('-create_time')
 
+    # reduce items to less than 2000
+    if len(item_list)>2000:
+        item_list = item_list[:2000]
+
     # process
     len_list = len(item_list)
     for i in range(len_list):
