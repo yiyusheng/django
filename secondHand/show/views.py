@@ -2,10 +2,10 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from data_display.models import Secondhand
+from show.models import Secondhand
 from datetime import datetime,timedelta
 
-def data_display(request):
+def show(request):
     # extract data
     enddate = datetime.utcnow()
     startdate = enddate + timedelta(days=-1)
@@ -22,6 +22,6 @@ def data_display(request):
         item_list[i].ext2 = item_list[i].ext2==None and '-1' or item_list[i].ext2
 
     # return
-    return(render(request,'data_display/data_display.html',
+    return(render(request,'show/show.html',
         {'item_list':item_list,
          'len_list': len_list}))
