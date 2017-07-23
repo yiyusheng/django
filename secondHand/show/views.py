@@ -22,6 +22,6 @@ def show(request):
         item_list[i].ext2 = item_list[i].ext2==None and '-1' or item_list[i].ext2
 
     # return
-    return(render(request,'show/show.html',
+    return(render(request,'show.html',
         {'item_list':item_list,
          'len_list': len_list}))
