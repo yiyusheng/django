@@ -21,7 +21,7 @@
                 <td>{{l.webname}}</td>
                 <td>{{l.ext2}}</td>
                 <td><a href="{{l.url}}">{{l.title|truncatechars:75}}</a></td>
-                <td>{{l.time}}</td>
+                <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
             </tr>
         {% endfor %}
     </table>
