@@ -9,19 +9,22 @@ def show(request):
     # extract data
     enddate = datetime.utcnow()
     startdate = enddate + timedelta(days=-1)
-    item_list = Secondhand.objects.filter(create_time__range=[startdate,enddate]).order_by('-time')
-
-    # reduce items to less than 2000
-    if len(item_list)>2000:
-        item_list = item_list[:2000]
-
+    
+    if request.method == 'GET' and 'keywords' in request.GET and len(request.GET['keywords'])>0 and ('webname' not in request.GET or len(request.GET['webname'])==0):
+        item_list = Secondhand.objects.filter(title__contains=request.GET['keywords']).order_by('-time')
+    elif request.method == 'GET' and 'webname' in request.GET and len(request.GET['webname'])>0 and ('keywords' not in request.GET or len(request.GET['keywords'])==0):
+        item_list = Secondhand.objects.filter(webname=request.GET['webname']).order_by('-time')[:2000]
+    elif request.method == 'GET' and 'webname' in request.GET and len(request.GET['webname'])>0 and 'keywords' in request.GET and len(request.GET['keywords'])>0 :
+        item_list = Secondhand.objects.filter(webname=request.GET['webname'],title__contains=request.GET['keywords']).order_by('-time')[:2000]
+    else:
+        item_list = Secondhand.objects.filter(create_time__range=[startdate,enddate]).order_by('-time')[:2000]
+    
     # process
     len_list = len(item_list)
-    for i in range(len_list):
-        item_list[i].create_time += timedelta(hours=+8)
-        item_list[i].ext2 = item_list[i].ext2==None and '-1' or item_list[i].ext2
+    webname = Secondhand.objects.values('webname').distinct()
 
     # return
     return(render(request,'show.html',
         {'item_list':item_list,
-         'len_list': len_list}))
+         'len_list': len_list,
+         'webname': webname}))

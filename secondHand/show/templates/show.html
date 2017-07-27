@@ -6,24 +6,32 @@
 
 </head>
 <body>
-<form action="/search/" method="get">
-      <input type="text" name="keywords">
-        <input type="Submit" value="Search">
+
+<form action="/show/" method="get">
+      {% for w in webname%}
+        <input type='radio' name='webname' value={{w.webname}}><a href='/show?webname={{w.webname}}'>{{w.webname}}</a>
+      {% endfor %}
+      <br>
+      <input type="text" name="keywords"><input type="Submit" value="Search">
+      <input type='button' value='Return' onclick="window.location.href='/'">
+        
 </form>
 
-    <table>
-        <td> SOURCE </td> 
-        <td> PRICE </td>
-        <td> TITLE({{len_list}})</td>
-        <td> TIME </td>
-        {% for l in item_list %}
-            <tr>
-                <td>{{l.webname}}</td>
-                <td>{{l.ext2}}</td>
-                <td><a href="{{l.url}}">{{l.title|truncatechars:75}}</a></td>
-                <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
-            </tr>
-        {% endfor %}
-    </table>
+
+<table>
+    <td> SOURCE </td> 
+    <td> PRICE </td>
+    <td> TITLE({{len_list}})</td>
+    <td> TIME </td>
+    {% for l in item_list %}
+        <tr>
+            <td>{{l.webname}}</td>
+            <td>{{l.ext2}}</td>
+            <td><a href="{{l.url}}">{{l.title|truncatechars:75}}</a></td>
+            <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
 </body>
 </html>
