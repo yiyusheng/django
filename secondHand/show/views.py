@@ -9,7 +9,7 @@ def show(request):
     # extract data
     enddate = datetime.utcnow()
     startdate = enddate + timedelta(days=-1)
-    item_list = Secondhand.objects.filter(create_time__range=[startdate,enddate]).order_by('-create_time')
+    item_list = Secondhand.objects.filter(create_time__range=[startdate,enddate]).order_by('-time')
 
     # reduce items to less than 2000
     if len(item_list)>2000:
