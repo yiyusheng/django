@@ -9,7 +9,7 @@
 
 <form action="/show/" method="get">
       {% for w in webname%}
-        <input type='radio' name='webname' value={{w.webname}}><a href='/show?webname={{w.webname}}'>{{w.webname}}</a>
+        <input type='checkbox' name={{w.webname}} value=1><a href='/show?{{w.webname}}=1'>{{w.webname}}</a>
       {% endfor %}
       <br>
       <input type="text" name="keywords"><input type="Submit" value="Search">
