@@ -2,33 +2,34 @@
 <html lang="en">
 <head>
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
-    <title>Date</title>
-
+    <title>Flea Town(跳蚤屯)</title>
+    <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
 </head>
 <body>
 
 <form action="/show/" method="get">
       {% for w in webname%}
-        <input type='checkbox' name={{w.webname}} value=1><a href='/show?{{w.webname}}=1'>{{w.webname}}</a>
+        <input type="checkbox" name={{w.webname}} value=1><a href='/show/?{{w.webname}}=1'>{{w.webname}}</a>
       {% endfor %}
       <br>
-      <input type="text" name="keywords"><input type="Submit" value="Search">
-      <input type='button' value='Return' onclick="window.location.href='/'">
+      <input type="text" style="width: 500px;height:12px" name="keywords"><input type="Submit" value="Search">
+      <input type="button" value="Return" onclick="window.location.href='/'">
+      
         
 </form>
 
 
-<table>
-    <td> SOURCE </td> 
+<table style="float:left" border="1">
     <td> PRICE </td>
-    <td> TITLE({{len_list}})</td>
+    <td> TITLE  [{{len_list}} items]  [Server Time: {{server_time|date:'Y-m-d H:i:s'}} GMT+8]</td>
     <td> TIME </td>
+    <td> SOURCE </td> 
     {% for l in item_list %}
         <tr>
-            <td>{{l.webname}}</td>
             <td>{{l.ext2}}</td>
             <td><a href="{{l.url}}">{{l.title|truncatechars:75}}</a></td>
             <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
+            <td><a href='/show/?{{l.webname}}=1'>{{l.webname}}</a></td>
         </tr>
     {% endfor %}
 </table>

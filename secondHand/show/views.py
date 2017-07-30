@@ -23,12 +23,13 @@ def show(request):
     if keywords=='' and len(getWebname)==0:
         item_list = Secondhand.objects.filter(create_time__range=[startdate,enddate]).order_by('-time')[:maxItems]
     elif keywords!='' and len(getWebname)==0:
-        item_list = Secondhand.objects.filter(title__contains=keywords).order_by('-time')[:maxItems]
+        item_list = Secondhand.objects.filter(title__icontains=keywords).order_by('-time')[:maxItems]
     else:
-        item_list = Secondhand.objects.filter(webname__in=getWebname,title__contains=keywords).order_by('-time')[:maxItems]
+        item_list = Secondhand.objects.filter(webname__in=getWebname,title__icontains=keywords).order_by('-time')[:maxItems]
     
     # return
     return(render(request,'show.html',
         {'item_list':item_list,
          'len_list': len(item_list),
-         'webname': webname}))
+         'webname': webname,
+         'server_time':enddate+timedelta(hours=8)}))
