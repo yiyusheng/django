@@ -12,16 +12,17 @@
         <input type="checkbox" name={{w.webname}} value=1><a href='/show/?{{w.webname}}=1'>{{w.webname}}</a>
       {% endfor %}
       <br>
-      <input type="text" style="width: 500px;height:12px" name="keywords"><input type="Submit" value="Search">
-      <input type="button" value="Return" onclick="window.location.href='/'">
-      
-        
+      <input type="text" style="width: 500px;height:12px" name="keywords">
+      <input type="Submit" value="Search">
+      <input type="button" value="Return Home Page" onclick="window.location.href='/'">
+      <br>
+      <span>Details: [Return items:{{len_list}}] [Server Time: {{server_time|date:'Y-m-d H:i:s'}} GMT+8]</span>   
 </form>
 
 
 <table style="float:left" border="1">
     <td> PRICE </td>
-    <td> TITLE  [{{len_list}} items]  [Server Time: {{server_time|date:'Y-m-d H:i:s'}} GMT+8]</td>
+    <td> TITLE </td>
     <td> TIME </td>
     <td> SOURCE </td> 
     {% for l in item_list %}
