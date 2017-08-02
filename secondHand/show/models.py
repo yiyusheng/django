@@ -10,42 +10,29 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-class DjangoMigrations(models.Model):
-    app = models.CharField(max_length=255)
-    name = models.CharField(max_length=255)
-    applied = models.DateTimeField()
+class Advertiser(models.Model):
+    uname = models.CharField(max_length=100, blank=True, null=True)
+    create_time = models.DateTimeField(blank=True, null=True)
+    webname = models.CharField(max_length=20, blank=True, null=True)
+    week_count = models.CharField(max_length=100, blank=True, null=True)
+    month_count = models.CharField(max_length=500, blank=True, null=True)
+    update_time = models.DateTimeField(blank=True, null=True)
+    update_count = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'django_migrations'
+        db_table = 'advertiser'
+        unique_together = (('uname', 'webname'),)
+
+
 
 
 class Secondhand(models.Model):
     title = models.CharField(max_length=200)
     uname = models.CharField(max_length=100, blank=True, null=True)
-    time = models.CharField(max_length=100, blank=True, null=True)
+    time = models.DateTimeField(blank=True, null=True)
     reply_count = models.CharField(max_length=100, blank=True, null=True)
-    create_time = models.CharField(max_length=100, blank=True, null=True)
-    webname = models.CharField(max_length=20)
-    url = models.CharField(primary_key=True, max_length=100)
-    ext1 = models.CharField(max_length=500, blank=True, null=True)
-    ext2 = models.CharField(max_length=500, blank=True, null=True)
-    ext3 = models.CharField(max_length=500, blank=True, null=True)
-    ext4 = models.CharField(max_length=1000, blank=True, null=True)
-    ext5 = models.CharField(max_length=10000, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'secondHand'
-        unique_together = (('url', 'title', 'webname'),)
-
-
-class Sh0713(models.Model):
-    title = models.CharField(max_length=200)
-    uname = models.CharField(max_length=100, blank=True, null=True)
-    time = models.CharField(max_length=100, blank=True, null=True)
-    reply_count = models.CharField(max_length=100, blank=True, null=True)
-    create_time = models.CharField(max_length=100, blank=True, null=True)
+    create_time = models.DateTimeField(blank=True, null=True)
     webname = models.CharField(max_length=20)
     url = models.CharField(max_length=100)
     ext1 = models.CharField(max_length=500, blank=True, null=True)
@@ -53,7 +40,11 @@ class Sh0713(models.Model):
     ext3 = models.CharField(max_length=500, blank=True, null=True)
     ext4 = models.CharField(max_length=1000, blank=True, null=True)
     ext5 = models.CharField(max_length=10000, blank=True, null=True)
+    update_count = models.IntegerField(blank=True, null=True)
+    update_time = models.DateTimeField(blank=True, null=True)
+    advertiser = models.IntegerField(blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'sh0713'
+        db_table = 'secondHand'
+        unique_together = (('url', 'title', 'webname'),)

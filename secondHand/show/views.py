@@ -5,31 +5,37 @@ from django.shortcuts import render
 from show.models import Secondhand
 from datetime import datetime,timedelta
 
+
 def show(request):
     # Data proprepare
-    enddate = datetime.utcnow()
-    startdate = enddate + timedelta(days=-1)
+    now = datetime.utcnow()
+    day1ago = now + timedelta(days=-1)
     webname = Secondhand.objects.values('webname').distinct()
     webnameList = [i.values()[0] for i in list(webname)]
-    maxItems = 2000
+    maxItems = 2000 
     
     # extract data 
     getDict = request.GET
     getWebname = len(getDict)>0 and set(webnameList).intersection(getDict.keys()) or ''
     keywords = (len(getDict)>0 and 'keywords' in getDict) and getDict['keywords'] or ''
+#    keywords = keywords.strip()
+    uname = (len(getDict)>0 and 'uname' in getDict) and getDict['uname'] or ''
+    so = Secondhand.objects.filter(advertiser=0)
     
-    keywords = keywords.strip()
-    
-    if keywords=='' and len(getWebname)==0:
-        item_list = Secondhand.objects.filter(create_time__range=[startdate,enddate]).order_by('-time')[:maxItems]
-    elif keywords!='' and len(getWebname)==0:
-        item_list = Secondhand.objects.filter(title__icontains=keywords).order_by('-time')[:maxItems]
+    if len(keywords)+len(getWebname)+len(uname)==0 or len(getWebname)==0:
+        item_list = so.filter(create_time__range=[day1ago,now]).order_by('-time')[:maxItems]
     else:
-        item_list = Secondhand.objects.filter(webname__in=getWebname,title__icontains=keywords).order_by('-time')[:maxItems]
+        if keywords!='':
+            so = so.filter(title__icontains=keywords)
+        if getWebname!='':
+            so = so.filter(webname__in=getWebname)
+        if uname!='':
+            so = so.filter(uname=uname)
+        item_list = so.order_by('-time')[:maxItems]
     
     # return
     return(render(request,'show.html',
         {'item_list':item_list,
          'len_list': len(item_list),
          'webname': webname,
-         'server_time':enddate+timedelta(hours=8)}))
+         'server_time':now+timedelta(hours=8)}))

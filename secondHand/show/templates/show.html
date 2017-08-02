@@ -12,9 +12,10 @@
         <input type="checkbox" name={{w.webname}} value=1><a href='/show/?{{w.webname}}=1'>{{w.webname}}</a>
       {% endfor %}
       <br>
+      <input type="button" value="Home Page" onclick="window.location.href='/'">
       <input type="text" style="width: 500px;height:12px" name="keywords">
       <input type="Submit" value="Search">
-      <input type="button" value="Return Home Page" onclick="window.location.href='/'">
+      
       <br>
       <span>Details: [Return items:{{len_list}}] [Server Time: {{server_time|date:'Y-m-d H:i:s'}} GMT+8]</span>   
 </form>
@@ -28,9 +29,9 @@
     {% for l in item_list %}
         <tr>
             <td>{{l.ext2}}</td>
-            <td><a href="{{l.url}}">{{l.title|truncatechars:75}}</a></td>
+            <td><a href="{{l.url}}">{{l.title|truncatechars:50}}</a>[<a href="/show/?uname={{l.uname}}">{{l.uname}}</a>]</td>
             <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
-            <td><a href='/show/?{{l.webname}}=1'>{{l.webname}}</a></td>
+            <td><a href="/show/?{{l.webname}}=1">{{l.webname}}</a></td>
         </tr>
     {% endfor %}
 </table>
