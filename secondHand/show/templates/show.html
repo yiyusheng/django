@@ -17,19 +17,23 @@
       <input type="Submit" value="Search">
       
       <br>
-      <span>Details: [Return items:{{len_list}}] [Server Time: {{server_time|date:'Y-m-d H:i:s'}} GMT+8]</span>   
+      <span>Details: [Return items:{{len_list}}] 
+      [Server Time: {{server_time|date:'Y-m-d H:i:s'}} GMT+8]
+      [Seller update time: {{seller_time|date:'Y-m-d H:i:s'}} GMT+8]</span>   
 </form>
 
 
 <table style="float:left" border="1">
+    <td> AUTHOR </td>
     <td> PRICE </td>
     <td> TITLE </td>
     <td> TIME </td>
     <td> SOURCE </td> 
     {% for l in item_list %}
         <tr>
+            <td><a href="/show/?uname={{l.uname}}">{{l.uname}}</a></td>
             <td>{{l.ext2}}</td>
-            <td><a href="{{l.url}}">{{l.title|truncatechars:50}}</a>[<a href="/show/?uname={{l.uname}}">{{l.uname}}</a>]</td>
+            <td><a href="{{l.url}}">{{l.title|truncatechars:30}}</a></td>
             <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
             <td><a href="/show/?{{l.webname}}=1">{{l.webname}}</a></td>
         </tr>

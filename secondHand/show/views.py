@@ -2,15 +2,16 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from show.models import Secondhand
+from show.models import Secondhand,Advertiser
 from datetime import datetime,timedelta
-
+from django.db.models import Max
 
 def show(request):
     # Data proprepare
     now = datetime.utcnow()
     day1ago = now + timedelta(days=-1)
     webname = Secondhand.objects.values('webname').distinct()
+    seller_update_time = Advertiser.objects.all().aggregate(Max('update_time'))
     webnameList = [i.values()[0] for i in list(webname)]
     maxItems = 2000 
     
@@ -22,7 +23,7 @@ def show(request):
     uname = (len(getDict)>0 and 'uname' in getDict) and getDict['uname'] or ''
     so = Secondhand.objects.filter(advertiser=0)
     
-    if len(keywords)+len(getWebname)+len(uname)==0 or len(getWebname)==0:
+    if len(keywords)+len(getWebname)+len(uname)==0 or len(getDict)==0:
         item_list = so.filter(create_time__range=[day1ago,now]).order_by('-time')[:maxItems]
     else:
         if keywords!='':
@@ -38,4 +39,6 @@ def show(request):
         {'item_list':item_list,
          'len_list': len(item_list),
          'webname': webname,
-         'server_time':now+timedelta(hours=8)}))
+         'server_time':now+timedelta(hours=8),
+         'seller_time':seller_update_time['update_time__max'],
+         }))
