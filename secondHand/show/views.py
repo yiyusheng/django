@@ -17,7 +17,7 @@ def show(request):
     webname = Secondhand.objects.values('webname').distinct()
     webnameList = [i.values()[0] for i in list(webname)]
 
-    maxItems = 2000 
+    maxItems = 500 
     customList = ['mac','surface','xbox',
             'ps4','kindle','kpw','ipad',
             'thinkpad','iphone7','moto']
@@ -44,7 +44,6 @@ def show(request):
                 maxItems = 50
         if getWebname!='':
             so = so.filter(webname__in=getWebname)
-            maxItems = 500
         if uname!='':
             so = so.filter(uname=uname)
         item_list = so.order_by('-time')[:maxItems]
