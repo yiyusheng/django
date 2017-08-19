@@ -20,7 +20,8 @@ def show(request):
     maxItems = 500 
     customList = ['mac','surface','xbox',
             'ps4','kindle','kpw','ipad',
-            'thinkpad','iphone7','moto']
+            'thinkpad','iphone7','moto',
+            'miix','xps','watch','new balance']
     
     # Get data 
     getDict = request.GET
