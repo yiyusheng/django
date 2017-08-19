@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from show.models import Secondhand,Advertiser
 from datetime import datetime,timedelta
-from django.db.models import Max
+from django.db.models import Max,Q
+import operator
 
 def show(request):
     # Data proprepare
@@ -13,7 +14,10 @@ def show(request):
     webname = Secondhand.objects.values('webname').distinct()
     seller_update_time = Advertiser.objects.all().aggregate(Max('update_time'))
     webnameList = [i.values()[0] for i in list(webname)]
-    maxItems = 2000 
+    maxItems = 500 
+    customList = ['mac','surface','xbox',
+            'ps4','kindle','kpw','ipad',
+            'thinkpad','iphone7','moto']
     
     # extract data 
     getDict = request.GET
@@ -27,9 +31,15 @@ def show(request):
         item_list = so.filter(create_time__range=[day1ago,now]).order_by('-time')[:maxItems]
     else:
         if keywords!='':
-            so = so.filter(title__icontains=keywords)
+            if keywords=='customized':
+                so = so.filter(reduce(operator.or_, [Q(title__icontains=q) for q in customList]))
+                maxItems = 100
+            else:
+                so = so.filter(title__icontains=keywords)
+                maxItems = 50
         if getWebname!='':
             so = so.filter(webname__in=getWebname)
+            maxItems = 500
         if uname!='':
             so = so.filter(uname=uname)
         item_list = so.order_by('-time')[:maxItems]
