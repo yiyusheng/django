@@ -21,6 +21,13 @@ def show(request):
     keywords = (len(getDict)>0 and 'keywords' in getDict) and getDict['keywords'] or ''
 #    keywords = keywords.strip()
     uname = (len(getDict)>0 and 'uname' in getDict) and getDict['uname'] or ''
+    so = Secondhand.objects.extra(select={'is_ad':
+            '''SELECT * FROM secondHand WHERE NOT EXIST 
+            (SELECT 1 FROM advertiser ad WHERE ad.uname=sh.uname AND ad.webname=sh.webname'''})
+    so = Secondhand.objects.extra(
+            tables = ['advertiser'],
+            where = ['advertiser.uname=secondHand.uname or advertiser.webname=secondHand.webname'],
+            )
     so = Secondhand.objects.filter(advertiser=0)
     
     if len(keywords)+len(getWebname)+len(uname)==0 or len(getDict)==0:
