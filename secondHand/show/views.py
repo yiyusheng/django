@@ -21,7 +21,9 @@ def show(request):
     customList = ['mac','surface','xbox',
             'ps4','kindle','kpw','ipad',
             'thinkpad','iphone7','moto',
-            'miix','xps','watch','new balance']
+            'miix','xps','watch','new balance',
+            '外星人','ikbc','电动车','asics',
+            '路由器']
     
     # Get data 
     getDict = request.GET
@@ -37,12 +39,15 @@ def show(request):
         item_list = so.filter(create_time__range=[day1ago,now]).order_by('-time')[:maxItems]
     else:
         if keywords!='':
+            maxItems = 50
             if keywords=='customized':
                 so = so.filter(reduce(operator.or_, [Q(title__icontains=q) for q in customList]))
                 maxItems = 100
+            elif ' ' in keywords:
+                split_keywords = keywords.split(' ')
+                so = so.filter(reduce(operator.and_, [Q(title__icontains=q) for q in split_keywords]))
             else:
                 so = so.filter(title__icontains=keywords)
-                maxItems = 50
         if getWebname!='':
             so = so.filter(webname__in=getWebname)
         if uname!='':
