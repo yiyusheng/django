@@ -5,11 +5,12 @@ from django.shortcuts import render
 from show.models import Secondhand,Advertiser
 from datetime import datetime,timedelta
 from django.db.models import Max,Q
+from django.utils import timezone
 import operator
 
 def show(request):
     # Data proprepare
-    now = datetime.utcnow()
+    now = timezone.now()
     day1ago = now + timedelta(days=-1)
     day3ago = now + timedelta(days=-3)
     seller_update_time = Advertiser.objects.all().aggregate(Max('update_time'))
@@ -17,13 +18,17 @@ def show(request):
     webname = Secondhand.objects.values('webname').distinct()
     webnameList = [i.values()[0] for i in list(webname)]
 
-    maxItems = 500 
-    customList = ['mac','surface','xbox',
-            'ps4','kindle','kpw','ipad',
+    customList = [
+            'mac','surface','xbox',
+            'ps4','kindle','kpw',
             'thinkpad','iphone7','moto',
-            'miix','xps','watch','new balance',
-            '外星人','ikbc','电动车','asics',
-            '路由器']
+            'miix','xps','watch',
+            'new balance','asics','ipod',
+            '外星人','ikbc','电动车',
+            '路由器','yoga','mbp',
+            'switch','psv','venue',
+            'ipad'
+            ]
     
     # Get data 
     getDict = request.GET
@@ -36,22 +41,26 @@ def show(request):
     so = Secondhand.objects.exclude(uname__in=ad)
     
     if len(keywords)+len(getWebname)+len(uname)==0 or len(getDict)==0:
+        maxItems = 1000 
         item_list = so.filter(create_time__range=[day1ago,now]).order_by('-time')[:maxItems]
     else:
         if keywords!='':
-            maxItems = 50
             if keywords=='customized':
-                so = so.filter(reduce(operator.or_, [Q(title__icontains=q) for q in customList]))
-                maxItems = 100
+                so = so.filter(create_time__range=[day3ago,now]).filter(reduce(operator.or_, [Q(title__icontains=q) for q in customList]))
+                maxItems = 200
             elif ' ' in keywords:
                 split_keywords = keywords.split(' ')
                 so = so.filter(reduce(operator.and_, [Q(title__icontains=q) for q in split_keywords]))
+                maxItems = 100
             else:
                 so = so.filter(title__icontains=keywords)
+                maxItems = 100
         if getWebname!='':
             so = so.filter(webname__in=getWebname)
+            maxItems = 1000 
         if uname!='':
             so = so.filter(uname=uname)
+            maxItems = 1000 
         item_list = so.order_by('-time')[:maxItems]
     
     # return
