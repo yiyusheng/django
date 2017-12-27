@@ -19,15 +19,11 @@ def show(request):
     webnameList = [i.values()[0] for i in list(webname)]
 
     customList = [
-            'mac','surface','xbox',
-            'ps4','kindle','kpw',
-            'thinkpad','iphone7','moto',
-            'miix','xps','watch',
-            'new balance','asics','ipod',
-            '外星人','ikbc','电动车',
-            '路由器','yoga','mbp',
-            'switch','psv','venue',
-            'ipad'
+            'mac','mbp','ipod','ipad','watch',
+            'surface','miix','yoga','venue','thinkpad','xps',
+            'kindle','kpw','ps4','psv','xbox','switch',
+            'ikbc',
+            '1050','1060','1070','1080'
             ]
     
     # Get data 
