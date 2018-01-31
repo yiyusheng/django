@@ -1,0 +1,119 @@
+html,
+:root {
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Roboto, Ubuntu, "DejaVu Sans", Arial, "PingFang SC", "Hiragino Sans GB", "Source Han Sans", "Microsoft YaHei UI", "Microsoft Yahei", "Heiti SC", sans-serif;
+    font-size: 16px;
+    color: #3D464D;
+}
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+body form {
+    margin: 10px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table,
+td,
+th {
+    border: none;
+}
+td {
+    padding: 6px 12px;
+    height: 40px;
+}
+th {
+    height: 50px;
+}
+tbody tr:nth-child(odd) {
+    background-color: #f7f9fa;
+}
+tbody tr:hover {
+    background-color: #f4faff;
+}
+tr {
+    border-bottom: 1px solid #d0d4d9;
+}
+a {
+    text-decoration: none;
+    color: #007ee5;
+    cursor: pointer;
+}
+form input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input[type=button] {
+    color: #007ee5;
+    border-color: #007ee5;
+    background-color: white;
+    background: -webkit-linear-gradient(white, #f4faff);
+    background: linear-gradient(white, #f4faff);
+    display: inline-block;
+    padding: 7px 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input[type=button]:hover {
+    background: #f4faff;
+}
+input[type=button]:active {
+    background: -webkit-linear-gradient(#f4faff, #e3f1fc);
+    background: linear-gradient(#f4faff, #e3f1fc);
+}
+input[type=submit] {
+    display: inline-block;
+    padding: 7px 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    border-color: #0071ce;
+    background-color: #007ee5;
+    background: -webkit-linear-gradient(#007ee5, #0071ce);
+    background: linear-gradient(#007ee5, #0071ce);
+}
+input[type=submit]:hover {
+    background: #007ee5;
+}
+input[type=submit]:active {
+    background: #0071ce;
+}
+input[type=text] {
+    -webkit-appearance: none;
+    height: 34px !important;
+    width: 100%;
+    padding: 5px 7px;
+    box-sizing: border-box;
+    font-size: 13px;
+    text-align: left;
+    color: #47525d;
+    border: 1px solid rgba(37, 40, 43, 0.2);
+    border-radius: 3px;
+    background-color: white;
+    background-clip: padding-box;
+}
+input[type=text]:focus {
+    border-color: #72b6ec;
+    outline: 0;
+}
+input[type=text]:disabled {
+    background-color: #f7f9fa;
+}
+form span {
+    display: block;
+    color: #7b8994;
+    font-size: 14px;
+    margin: 10px 0;
+}
