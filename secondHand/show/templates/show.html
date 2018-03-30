@@ -32,9 +32,9 @@
     <td> SOURCE </td> 
     {% for l in item_list %}
         <tr>
-            <td><a href="/show/?uname={{l.uname}}">{{l.uname|truncatechars:10}}</a></td>
+            <td><a href="/show/?uname={{l.uname}}">{{l.uname|truncatechars:20}}</a></td>
             <td>{{l.ext2}}</td>
-            <td><a href="{{l.url}}">{{l.title|truncatechars:30}}</a></td>
+            <td><a href="{{l.url}}">{{l.title|truncatechars:50}}</a></td>
             <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
             <td><a href="/show/?{{l.webname}}=1">{{l.webname}}</a></td>
         </tr>

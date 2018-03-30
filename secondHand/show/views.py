@@ -21,7 +21,7 @@ def show(request):
     customList = [
             'mac','mbp','ipod','ipad','watch',
             'surface','miix','yoga','venue','thinkpad','xps',
-            'kindle','kpw','ps4','psv','xbox','switch',
+            'kindle','kpw','ps4','psv','xbox','switch','ns',
             'ikbc',
             '1050','1060','1070','1080'
             ]
