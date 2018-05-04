@@ -4,5 +4,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class DataDisplayConfig(AppConfig):
-    name = 'data_display'
+class SecondhandConfig(AppConfig):
+    name = 'Secondhand'

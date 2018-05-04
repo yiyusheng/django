@@ -1,0 +1,69 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+    <title>Word</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
+    <!-- 引入 ECharts 文件 使用 static 关键字-->
+    <script src="{% static 'js/echarts.min.js' %}"></script>
+
+</head>
+</html>
+<body>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="main" style="width:1280px;height:850px;"></div>
+    <script type="text/javascript">
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+                title: {
+                    text:{{keyword|safe}}
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['word']
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: '',
+                    data: {{create_time|safe}}
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [
+                    {
+                        name:'word',
+                        type:'line',
+                        data:{{count|safe}}
+                        //data:[
+                        //{% for i in item_list %}
+                         //    [{{i.time|safe}},{{i.count|safe}}],
+                        //{% endfor %}
+                        //  ]
+                    }
+                ]
+};
+        
+        // 使用刚指定的配置项和数据显示图表
+        myChart.setOption(option);
+    </script>
+</body>

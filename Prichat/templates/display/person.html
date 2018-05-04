@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>          
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+    <title>Person</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
+</head>         
+<body>          
+                
+<form action="/words_frequent_display/" method="get">
+
+<table style="float:left" border="1">
+    <td> AUTHOR </td>
+    <td> GROUP </td>
+    <td> TIME </td>
+    <td> SOURCE </td> 
+    {% for l in cl %}
+        <tr> 
+            <td>{{l.nickname|truncatechars:20}}</td>
+            <td>{{l.group_name|truncatechars:20}}</td>
+            <td>{{l.create_time|date:'Y-m-d H:i:s'}}</td>
+            <td>{{l.content}}</a></td>                          
+        </tr>
+    {% endfor %}
+</table>        
+                
+</body>         
+</html>

@@ -1,4 +1,4 @@
-"""secondHand URL Configuration
+"""www URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.views.generic.base import RedirectView
 
 urlpatterns = [
-    url(r'^', include('show.urls')),
-    url(r'^show/', include('show.urls')),
-#    url(r'^iframe/', include('iframe.urls')),
-#    url(r'^admin/', admin.site.urls),
-    url(r'^favicon\.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
-
+    url(r'^admin/', admin.site.urls),
+    url(r'^secondhand/', include('Secondhand.urls')),
+    url(r'^prichat/', include('Prichat.urls')),
+    url(r'', include('Secondhand.urls')),
+    #url(r'^favicon\.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
+    #url(r'^style\.css$',RedirectView.as_view(url=r'static/css/style.css')),
 ]

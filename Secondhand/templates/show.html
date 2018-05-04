@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<form action="/show/" method="get">
+<form action="/secondhand/" method="get">
       {% for w in webname%}
-        <input type="checkbox" name={{w.webname}} value=1><a href='/show/?{{w.webname}}=1'>{{w.webname}}</a>
+        <input type="checkbox" name={{w.webname}} value=1><a href='/secondhand/?{{w.webname}}=1'>{{w.webname}}</a>
       {% endfor %}
       <br>
       <input type="button" value="Home Page" onclick="window.location.href='/'">
-      <input type="text" style="width: 500px;height:12px" name="keywords">
+      <input type="text" style="width: 500px;height:12px" name="keyword">
       <input type="Submit" value="Search">
       
       <br>
@@ -32,11 +32,11 @@
     <td> SOURCE </td> 
     {% for l in item_list %}
         <tr>
-            <td><a href="/show/?uname={{l.uname}}">{{l.uname|truncatechars:20}}</a></td>
+            <td><a href="/secondhand/?uname={{l.uname}}">{{l.uname|truncatechars:20}}</a></td>
             <td>{{l.ext2}}</td>
             <td><a href="{{l.url}}">{{l.title|truncatechars:50}}</a></td>
             <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
-            <td><a href="/show/?{{l.webname}}=1">{{l.webname}}</a></td>
+            <td><a href="/secondhand/?{{l.webname}}=1">{{l.webname}}</a></td>
         </tr>
     {% endfor %}
 </table>
