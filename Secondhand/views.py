@@ -25,6 +25,7 @@ def secondhand(request):
             'ikbc',
             '1050','1060','1070','1080'
             ]
+    blackList = ['口红','喷雾']
     
     # Get data 
     getDict = request.GET

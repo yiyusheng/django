@@ -2,13 +2,23 @@
 <html lang="en">
 <head>          
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
-    <title>Person</title>
+    <title>Chat</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
 </head>         
 <body>          
                 
-<form action="/words_frequent_display/" method="get">
+<form action="/prichat/chat" method="get">
+    Group: {% for g in group_name %}
+    <a href='/prichat/chat?group={{g}}'>{{g}}</a>&nbsp;&nbsp;
+    {% endfor %}
+    <br>
+    Name: {% for n in nickname %}
+    <a href='/prichat/chat?name={{n}}'>{{n}}</a>&nbsp;&nbsp;
+    {% endfor %}
+    <br>
+    <input type="text" style="width: 500px;height:12px" name="keyword">
+    <input type="Submit" value="Search Chat logs">
 
 <table style="float:left" border="1">
     <td> AUTHOR </td>
