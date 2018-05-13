@@ -13,7 +13,7 @@
     <a href='/prichat/chat?group={{g}}'>{{g}}</a>&nbsp;&nbsp;
     {% endfor %}
     <br>
-    Name: {% for n in nickname %}
+    Name: {% for n in user %}
     <a href='/prichat/chat?name={{n}}'>{{n}}</a>&nbsp;&nbsp;
     {% endfor %}
     <br>
@@ -27,9 +27,9 @@
     <td> SOURCE </td> 
     {% for l in cl %}
         <tr> 
-            <td>{{l.nickname|truncatechars:20}}</td>
+            <td>{{l.user|truncatechars:20}}</td>
             <td>{{l.group_name|truncatechars:20}}</td>
-            <td>{{l.create_time|date:'Y-m-d H:i:s'}}</td>
+            <td>{{l.time|date:'Y-m-d H:i:s'}}</td>
             <td>{{l.content}}</a></td>                          
         </tr>
     {% endfor %}

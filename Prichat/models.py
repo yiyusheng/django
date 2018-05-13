@@ -12,13 +12,13 @@ from django.db import models
 
 class ChatLogs(models.Model):
     id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    create_time = models.DateTimeField(blank=True, null=True)
+    time = models.DateTimeField(blank=True, null=True)
     content = models.CharField(max_length=255, blank=True, null=True)
-    group_number = models.CharField(max_length=255, blank=True, null=True)
+    group_id = models.CharField(max_length=255, blank=True, null=True)
     group_name = models.CharField(max_length=255, blank=True, null=True)
-    qq = models.CharField(max_length=255, blank=True, null=True)
-    nickname = models.CharField(max_length=255, blank=True, null=True)
-    mark = models.CharField(max_length=255, blank=True, null=True)
+    user_id = models.CharField(max_length=255, blank=True, null=True)
+    user = models.CharField(max_length=255, blank=True, null=True)
+    group_type = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -37,7 +37,7 @@ class DjangoMigrations(models.Model):
 
 class WordCount(models.Model):
     id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    create_time = models.DateTimeField(blank=True, null=True)
+    time = models.DateTimeField(blank=True, null=True)
     word = models.CharField(unique=True, max_length=255, blank=True, null=True)
     count = models.IntegerField(blank=True, null=True)
 
@@ -48,9 +48,10 @@ class WordCount(models.Model):
 
 class WordCountHourly(models.Model):
     id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    create_time = models.DateTimeField(blank=True, null=True)
+    time = models.DateTimeField(blank=True, null=True)
     word = models.CharField(max_length=255, blank=True, null=True)
     count = models.IntegerField(blank=True, null=True)
+    weighted_count = models.DecimalField(blank=True, null=True,max_digits=11,decimal_places=4)
 
     class Meta:
         managed = False

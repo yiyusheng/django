@@ -18,29 +18,30 @@ REMOTE_HOST = "https://pyecharts.github.io/assets/js"
 
 def get_chatlogs_count():
     # get data
-    select_data = {"date": """DATE_FORMAT(create_time,'%%Y-%%m-%%d %%H:00')"""}
-    dt_raw = ChatLogs.objects.extra(select=select_data).values('date').annotate(count=Count('content')).values('date','count')
+    select_data = {"timeh": """DATE_FORMAT(time,'%%Y-%%m-%%d %%H:00')"""}
+    dt_raw = ChatLogs.objects.extra(select=select_data).values('timeh').annotate(count=Count('content')).values('timeh','count')
     dt = pd.DataFrame(list(dt_raw))
-    dt['date'] = pd.to_datetime(dt['date'],format='%Y-%m-%d %H:%M')
+    dt['timeh'] = pd.to_datetime(dt['timeh'],format='%Y-%m-%d %H:%M')
 
   # package data
     fg = pe.Bar('每小时聊天记录数',
           width=1600,height=900,title_pos='center',title_top='bottom')
-    fg.add('数量',dt['date'],dt['count'])
+    fg.add('数量',dt['timeh'],dt['count'])
     return fg
 
 def get_chatlogs_count_group():
 
   # get data
-    select_data = {"date": """DATE_FORMAT(create_time,'%%Y-%%m-%%d %%H:00')"""}
-    dt_raw = ChatLogs.objects.extra(select=select_data).values('group_name','date').order_by().annotate(count=Count('group_name')).values('group_name','date','count')
+    select_data = {"timeh": """DATE_FORMAT(time,'%%Y-%%m-%%d %%H:00')"""}
+    dt_raw = ChatLogs.objects.extra(select=select_data).values('group_name','timeh').order_by().annotate(count=Count('group_name')).values('group_name','timeh','count')
     dt = pd.DataFrame(list(dt_raw))
 
   # prepare data
-    dt['date'] = pd.to_datetime(dt['date'],format='%Y-%m-%d %H:%M')
+    dt['timeh'] = pd.to_datetime(dt['timeh'],format='%Y-%m-%d %H:%M')
     group_name_unique = pd.unique(dt['group_name'])
-    dt = dt.pivot_table(index='date',columns='group_name',values='count')
+    dt = dt.pivot_table(index='timeh',columns='group_name',values='count')
     dt = dt.fillna(0)
+    #dt = dt.reset_index()
 
   # package data into object of pyecharts
     fg = pe.Bar(title='各群每小时聊天记录数',
@@ -81,9 +82,9 @@ def word(request):
 # Query data 
     df = pd.DataFrame()
     for i in range(len_keys):
-        object_data = WordCountHourly.objects.filter(word__iexact=request_values[i]).values('create_time','word','count')
+        object_data = WordCountHourly.objects.filter(word__iexact=request_values[i]).values('time','word','count')
         tmp_df = pd.DataFrame(list(object_data))
-        tmp_df = tmp_df.rename(columns={'create_time':'time'})
+        tmp_df = tmp_df.rename(columns={'time':'time'})
         if len(pd.unique(tmp_df['word']))!=1:
             tmp_df = tmp_df['count'].groupby(tmp_df['time']).sum()
             tmp_df = tmp_df.reset_index()
@@ -115,8 +116,6 @@ def word(request):
           width=1600,height=900,title_pos='center',title_top='3%')
     for w in words_unique:
         fg.add(w,df.index,df[w],is_datazoom_show=True)
-    for w in words_unique:
-        1
 
     # Return data
     myechart=fg.render_embed()
@@ -129,6 +128,7 @@ def word(request):
 
 # Create your views here.
 def chat(request):
+# Parse request
     groupFlag = False
     nameFlag = False
     keywordFlag = False
@@ -144,27 +144,28 @@ def chat(request):
         keyword = request.GET['keyword']
         keywordFlag = True
 
-    nameList = ['空深空','AK','天乐','trdxz','梦雨','BitMEX_Jack','神级','鱼籽']
+# generate nameList and groupList
+    nameList = ['AK','空深空','天乐','trdxz','八哥谈币','梦雨','BitMEX_Jack','神级','鱼籽','钱来来','落叶风双']
     groupList = ChatLogs.objects.values('group_name').distinct()
     groupList = [i.values()[0] for i in list(groupList)]
 
-    # Get chat logs from special name
+# Get chat logs from special name
     maxItems = 1000
     co = ChatLogs.objects.exclude(content='')
     if keywordFlag:
-        data = co.filter(content__icontains=keyword).order_by('-create_time')[:maxItems]
+        data = co.filter(content__icontains=keyword).order_by('-time')[:maxItems]
     else:
         if groupFlag and not nameFlag:
-            data = co.filter(group_name=group).order_by('-create_time')[:maxItems]
+            data = co.filter(group_name=group).order_by('-time')[:maxItems]
         elif nameFlag and not groupFlag:
-            data = co.filter(nickname = name).order_by('-create_time')[:maxItems]
+            data = co.filter(user = name).order_by('-time')[:maxItems]
         elif groupFlag and nameFlag:
-            data = co.filter(group_name=group,nickname = name).order_by('-create_time')[:maxItems]
+            data = co.filter(group_name=group,user = name).order_by('-time')[:maxItems]
         else:
-            data = co.filter(nickname = 'AK').order_by('-create_time')[:maxItems]
+            data = co.filter(group_name = '爆仓疗养院').order_by('-time')[:maxItems]
     
     
     return render(request,'chat.html',
             {'cl':data,
             'group_name':groupList,
-            'nickname':nameList})
+            'user':nameList})
