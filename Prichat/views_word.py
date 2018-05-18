@@ -22,7 +22,7 @@ def word(request):
     permit_key = ['k1','k2','k3','k4','k5','k6','k7','k8','k9','k10']
     valueLists=[]
     if len(set(permit_key).intersection(getDict.keys()))==0:
-        valueLists=['btc','bch','ltc','eos','eth','etc']
+        valueLists=['大饼','btc','bch','ltc','eos','eth','etc']
         len_keys = len(valueLists)
     else:
         keys = list(set(permit_key).intersection(getDict.keys()))
@@ -73,7 +73,8 @@ def word(request):
     df['time'] = df['time'].values.astype(np.int64)//10**9
     df['time'] = df['time'].apply(lambda x: datetime.fromtimestamp(x/time_unit/3600*time_unit*3600))
     df = df.groupby(['time','word']).agg({'count':'sum','weighted_count':'sum'})
-    df['weighted_count'] = np.array(df['weighted_count'],dtype=float)
+    df['weighted_count'] = np.array(df['weighted_count'],dtype=float)*100
+    df['weighted_count'] = df['weighted_count'].round(2)
     df = df.reset_index()
 
     words_unique = pd.unique(df['word'])
@@ -85,7 +86,7 @@ def word(request):
     # PLOT FIGURES
     fg_number = pe.Line(title='关键词数量趋势',
           width=1600,height=450,title_top='50%',title_pos='center')
-    fg_frequent = pe.Line(title='关键词频率趋势',
+    fg_frequent = pe.Line(title='关键词频率趋势(每百句话中出现次数)',
           width=1600,height=450,title_top='6%',title_pos='center')
     for w in words_unique:
         fg_frequent.add(w,df_frequent.index,df_frequent[w])

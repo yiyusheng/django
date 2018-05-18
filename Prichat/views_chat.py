@@ -34,7 +34,7 @@ def chat(request):
         keywordFlag = True
 
 # generate nameList and groupList
-    nameList = ['AK','空深空','天乐','trdxz','八哥谈币','梦雨','BitMEX_Jack','神级','鱼籽','钱来来','落叶风双']
+    nameList = ['AK','空深空','天乐','trdxz','八哥谈币','梦雨','BitMEX_Jack','神级','鱼籽','钱来来','落叶风双','古乐天','Goldman Sachs']
     groupList = ChatLogs.objects.values('group_name').distinct()
     groupList = [i.values()[0] for i in list(groupList)]
 
