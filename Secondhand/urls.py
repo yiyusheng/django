@@ -15,8 +15,10 @@
 #
 #
 from django.conf.urls import url
-from . import views
+from . import views,views_word_subscribe
 
 urlpatterns = [
+        url(r'^word_subscribe',views_word_subscribe.word_subscribe,name='word_subscribe'),
+        url(r'^word_unsubscribe',views_word_subscribe.word_unsubscribe,name='word_unsubscribe'),
         url(r'^$',views.secondhand,name='secondhand'),
 ]

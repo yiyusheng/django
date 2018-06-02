@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+    <title>取消订阅</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
+</head>
+<body>
+
+    <div class="page-header">
+        <a href="{% url 'word_subscribe' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    </div>
+
+    <h1>取消关键词{{keyword}}的订阅?</h1>(是的话，请输入对应sckey)
+        <form method="GET" action="/secondhand/word_unsubscribe">{% csrf_token %}
+            sckey:<input type='text' style='width:500px;height:12px' name="sckey">
+            <input type='hidden' name='user' value={{user}}>
+            <input type='hidden' name='keyword' value={{keyword}}>
+            <input type="Submit" value="submit">
+        </form>
+
+
+    <table style="float:left" border="1">
+        <td> 用户 </td>
+        <td> 关键词 </td>
+        <td> 订阅时间 </td>
+        <td> 触发次数 </td>
+        <td> 操作 </td>
+        {% for l in ws %}
+            <tr>
+                <td>{{l.user}}</td>
+                <td><a href="/secondhand/?keyword={{l.word}}">{{l.word}}</a></td>
+                <td>{{l.time|date:'Y-m-d H:i:s'}}</td>
+                <td>{{l.counts}}</td>
+                <td><a href="/secondhand/word_unsubscribe?keyword={{l.word}}&user={{l.user}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -38,18 +38,18 @@ def word(request):
     # REQUEST.GET: interval for scaling time
     if 'time' in request.GET:
         time_unit = getDict['time']
-        if time_unit.isdigit() and int(time_unit)>0 and int(time_unit)<144:
+        if time_unit.isdigit() and int(time_unit)>0 and int(time_unit)<144*60*60*60*60*60*60*60*60:
             time_unit = int(time_unit)
         else:
-            time_unit = 6
+            time_unit = 480
     else:
-        time_unit = 6
+        time_unit = 480
 
     # REQUEST.GET: get recent days data 
     if 'days' in request.GET and getDict['days'].isdigit():
         days = int(getDict['days'])
     else:
-        days = 7
+        days = 30
 
     # QUERY DATA
     df = pd.DataFrame()
@@ -61,27 +61,34 @@ def word(request):
         tmp_df = pd.DataFrame(list(object_data))
         if(len(tmp_df)==0):
             continue
-    # merge without case
+        # merge for different case
         if len(pd.unique(tmp_df['word']))!=1:
             tmp_df = tmp_df.groupby('time').agg({'count':'sum','weighted_count':'sum'})
             tmp_df = tmp_df.reset_index()
             tmp_df['word'] = valueLists[i]
         df = pd.concat([df,tmp_df])
 
+    if len(df)==0:
+        return HttpResponse('<h1>Word was not found</h1>')
     # SCALE DATA
     df['time'] = pd.to_datetime(df['time'],format='%Y-%m-%d %H:%M')
     df['time'] = df['time'].values.astype(np.int64)//10**9
-    df['time'] = df['time'].apply(lambda x: datetime.fromtimestamp(x/time_unit/3600*time_unit*3600))
+    df['time'] = df['time'].apply(lambda x: datetime.utcfromtimestamp(x/time_unit/60*time_unit*60))
     df = df.groupby(['time','word']).agg({'count':'sum','weighted_count':'sum'})
     df['weighted_count'] = np.array(df['weighted_count'],dtype=float)*100
     df['weighted_count'] = df['weighted_count'].round(2)
     df = df.reset_index()
-
     words_unique = pd.unique(df['word'])
+
     df_number = df.pivot_table(index='time',columns='word',values='count')
-    df_frequent = df.pivot_table(index='time',columns='word',values='weighted_count')
     df_number = df_number.fillna(0)
+    df_number = df_number.reset_index()
+    df_number.time = df_number.time.dt.tz_localize('UTC').dt.tz_convert('Asia/Shanghai')
+
+    df_frequent = df.pivot_table(index='time',columns='word',values='weighted_count')
     df_frequent = df_frequent.fillna(0)
+    df_frequent = df_frequent.reset_index()
+    df_frequent.time = df_frequent.time.dt.tz_localize('UTC').dt.tz_convert('Asia/Shanghai')
 
     # PLOT FIGURES
     fg_number = pe.Line(title='关键词数量趋势',
@@ -89,8 +96,8 @@ def word(request):
     fg_frequent = pe.Line(title='关键词频率趋势(每百句话中出现次数)',
           width=1600,height=450,title_top='6%',title_pos='center')
     for w in words_unique:
-        fg_frequent.add(w,df_frequent.index,df_frequent[w])
-        fg_number.add(w,df_number.index,df_number[w])
+        fg_frequent.add(w,df_frequent.time,df_frequent[w])
+        fg_number.add(w,df_number.time,df_number[w])
         #fg_number.add(w,df_number.index,df_number[w],is_datazoom_show=True)
 
     grid = pe.Grid(width=1600,height=900)

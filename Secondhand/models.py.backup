@@ -25,6 +25,8 @@ class Advertiser(models.Model):
         unique_together = (('uname', 'webname'),)
 
 
+
+
 class Secondhand(models.Model):
     title = models.CharField(max_length=200)
     uname = models.CharField(max_length=100, blank=True, null=True)
@@ -46,18 +48,3 @@ class Secondhand(models.Model):
         managed = False
         db_table = 'secondHand'
         unique_together = (('url', 'title', 'webname'),)
-
-
-class WordSubscribe(models.Model):
-    id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    time = models.DateTimeField(blank=True, null=True)
-    word = models.CharField(max_length=191, blank=True, null=True)
-    user = models.CharField(max_length=191, blank=True, null=True)
-    sckey = models.CharField(max_length=191, blank=True, null=True)
-    counts = models.IntegerField(blank=True, null=True)
-    enable = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'word_subscribe'
-        unique_together = (('sckey', 'word'),)

@@ -63,7 +63,7 @@ if __name__=='__main__':
         print 'special time:%s' %(ts_now)
     else:
         # for last hour
-        ts_now = datetime.now().replace(minute=0,second=0,microsecond=0)-timedelta(hours=1)
+        ts_now = datetime.utcnow().replace(minute=0,second=0,microsecond=0)-timedelta(hours=1)
     sc = sqlcon()
     data = get_chats(sc,ts_now)
     word_list = data_parse(data)

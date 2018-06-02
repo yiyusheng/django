@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+    <title>关键词订阅</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
+</head>
+<body>
+
+    <div class="page-header">
+        <a href="{% url 'word_subscribe' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    </div>
+
+    {% block content %}
+        <h1>Subscribe Word</h1>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    {% endblock %}
+
+    <br>
+
+    <table style="float:left" border="1">
+        <td> 用户 </td>
+        <td> 关键词 </td>
+        <td> 订阅时间 </td>
+        <td> 触发次数 </td>
+        <td> 操作 </td>
+        {% for l in ws %}
+            <tr>
+                <td>{{l.user}}</td>
+                <td><a href="/secondhand/?keyword={{l.word}}">{{l.word}}</a></td>
+                <td>{{l.time|date:'Y-m-d H:i:s'}}</td>
+                <td>{{l.counts}}</td>
+                <td><a href="/secondhand/word_unsubscribe?keyword={{l.word}}&user={{l.user}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
