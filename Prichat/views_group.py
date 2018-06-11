@@ -29,7 +29,7 @@ def get_chatlogs_count():
     fg.add('数量',dt['timeh'],dt['count'])
     return fg
 
-def get_chatlogs_count_group(days):
+def get_chatlogs_count_group(days,time_unit):
 
   # get data
     select_data = {"timeh": """DATE_FORMAT(time,'%%Y-%%m-%%d %%H:00')"""}
@@ -40,13 +40,20 @@ def get_chatlogs_count_group(days):
     dt_raw = od.extra(select=select_data).values('group_name','timeh').order_by().annotate(count=Count('group_name')).values('group_name','timeh','count')
     dt = pd.DataFrame(list(dt_raw))
 
-  # prepare data
+  # SCCALE DATA
     dt['timeh'] = pd.to_datetime(dt['timeh'],format='%Y-%m-%d %H:%M')
+    dt['timeh'] = dt['timeh'].values.astype(np.int64)//10**9
+    dt['timeh'] = dt['timeh'].apply(lambda x: datetime.utcfromtimestamp(x/time_unit/60*time_unit*60))
+    dt = dt.groupby(['timeh','group_name']).agg({'count':'sum'})
+    dt = dt.reset_index()
+
+  # DCAST data
     group_name_unique = pd.unique(dt['group_name'])
     dt = dt.pivot_table(index='timeh',columns='group_name',values='count')
     dt = dt.fillna(0)
     dt = dt.reset_index()
     dt.timeh = dt.timeh.dt.tz_localize('UTC').dt.tz_convert('Asia/Shanghai')
+
 
   # package data into object of pyecharts
     fg = pe.Bar(title='各群每小时聊天记录数',
@@ -59,13 +66,18 @@ def get_chatlogs_count_group(days):
 
 def group(request):
     # 可视化展示页面
-    if 'days' in request.GET and getDict['days'].isdigit():
-        days = int(getDict['days'])
+    if 'days' in request.GET and request.GET['days'].isdigit():
+        days = int(request.GET['days'])
     else:
         days = 14
 
-    fg = get_chatlogs_count_group(days)
+    if 'time' in request.GET and request.GET['time'].isdigit():
+        time_unit = int(request.GET['time'])
+        time_unit = max(60,min(time_unit,1440*7))
+    else:
+        time_unit = 60
 
+    fg = get_chatlogs_count_group(days,time_unit)
     myechart=fg.render_embed()
     host=REMOTE_HOST
     script_list=fg.get_js_dependencies()

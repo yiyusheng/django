@@ -25,7 +25,9 @@ def secondhand(request):
             'ikbc',
             '1050','1060','1070','1080'
             ]
-    blackList = ['口红','喷雾']
+    blackList = ['口红','喷雾','悦木之源','长裤',
+            '鞋','耐克','包','子弹头','裙','乳液','短袖','衣',
+            ]
     
     # Get data 
     getDict = request.GET
@@ -38,12 +40,13 @@ def secondhand(request):
     so = Secondhand.objects.exclude(uname__in=ad)
     
     if len(keyword)+len(getWebname)+len(uname)==0 or len(getDict)==0:
-        maxItems = 1000 
+        maxItems = 200 
         item_list = so.filter(create_time__range=[day1ago,now]).order_by('-time')[:maxItems]
     else:
         if keyword!='':
             if keyword=='customized':
                 so = so.filter(create_time__range=[day3ago,now]).filter(reduce(operator.or_, [Q(title__icontains=q) for q in customList]))
+                so = so.exclude(reduce(operator.or_, [Q(title__icontains=q) for q in blackList]))
                 maxItems = 200
             elif ' ' in keyword:
                 split_keyword = keyword.split(' ')
@@ -54,7 +57,7 @@ def secondhand(request):
                 maxItems = 100
         if getWebname!='':
             so = so.filter(webname__in=getWebname)
-            maxItems = 1000 
+            maxItems = 200 
         if uname!='':
             so = so.filter(uname=uname)
             maxItems = 1000 
@@ -65,6 +68,6 @@ def secondhand(request):
         {'item_list':item_list,
          'len_list': len(item_list),
          'webname': webname,
-         'server_time':now+timedelta(hours=8),
+         'server_time':now,
          'seller_time':seller_update_time['update_time__max'],
          }))
