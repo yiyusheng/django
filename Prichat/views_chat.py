@@ -11,7 +11,7 @@ from datetime import datetime
 import pandas as pd
 import numpy as np
 import pyecharts as pe
-import json, math, time
+import json, math, time, operator
 
 REMOTE_HOST = "https://pyecharts.github.io/assets/js"
 
@@ -32,28 +32,32 @@ def chat(request):
     if 'keyword' in request.GET:
         keyword = request.GET['keyword']
         keywordFlag = True
+        split_keyword = keyword.split(' ')
+
+    if 'name' not in request.GET and 'keyword' not in request.GET and group not in request.GET:
+        group = '爆仓疗养院'
+        groupFlag = True
 
 # generate nameList and groupList
-    nameList = ['AK','空深空','天乐','trdxz','八哥谈币','梦雨','BitMEX_Jack','神级','鱼籽','钱来来','落叶风双','古乐天','Goldman Sachs']
+    nameList = ['AK','空深空','天乐','trdxz','RoseWhite','狗庄Hello','八哥谈币','BitMEX_Jack','神级','落叶风双','Goldman Sachs']
     groupList = ChatLogs.objects.values('group_name').distinct()
-    groupList = [i.values()[0] for i in list(groupList)]
+    groupList = [i.values()[0] for i in list(groupList) if 'uin' not in i.values()[0]]
+    
 
 # Get chat logs from special name
     maxItems = 1000
-    co = ChatLogs.objects.exclude(content='')
+    data = ChatLogs.objects.exclude(content='')
     if keywordFlag:
-        data = co.filter(content__icontains=keyword).order_by('-time')[:maxItems]
-    else:
-        if groupFlag and not nameFlag:
-            data = co.filter(group_name=group).order_by('-time')[:maxItems]
-        elif nameFlag and not groupFlag:
-            data = co.filter(user = name).order_by('-time')[:maxItems]
-        elif groupFlag and nameFlag:
-            data = co.filter(group_name=group,user = name).order_by('-time')[:maxItems]
-        else:
-            data = co.filter(group_name = '爆仓疗养院').order_by('-time')[:maxItems]
-    
-    
+        data = data.filter(reduce(operator.and_, [Q(content__icontains=q) for q in split_keyword]))
+
+    if nameFlag:
+        data = data.filter(user = name)
+
+    if groupFlag:
+        data = data.filter(group_name=group)
+
+    data = data.order_by('-time')[:maxItems]
+
     return render(request,'chat.html',
             {'cl':data,
             'group_name':groupList,

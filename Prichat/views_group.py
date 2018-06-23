@@ -39,6 +39,7 @@ def get_chatlogs_count_group(days,time_unit):
 
     dt_raw = od.extra(select=select_data).values('group_name','timeh').order_by().annotate(count=Count('group_name')).values('group_name','timeh','count')
     dt = pd.DataFrame(list(dt_raw))
+    dt = dt[~dt['group_name'].str.contains('uin')]
 
   # SCCALE DATA
     dt['timeh'] = pd.to_datetime(dt['timeh'],format='%Y-%m-%d %H:%M')

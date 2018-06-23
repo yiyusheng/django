@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-                                                                         
-import requests, time, pymysql, urllib
+import requests, time, pymysql, urllib, re
 import pandas as pd
 from datetime import datetime,timedelta
 from urllib.parse import quote
@@ -30,29 +30,36 @@ if __name__ == '__main__':
         key = unique_key[i]
         user = dt_word_key['user'].unique()
         words = dt_word_key['word']
-        contents = []
-        title = []
+        desp = []
+        text = []
 
         for w in words:
             idx = dt_items['title'].str.contains(w,case=False)
             if any(idx)==True:
-                cur.execute("UPDATE word_subscribe SET counts=counts+%s WHERE word=%s and sckey=%s",(sum(idx),w,key))
-                cur.connection.commit()
-                contents.append([w+'  \n',dt_items['mkd'][idx].str.cat()+'  \n'])
-                title.append(w)
-                print("[%s] User:%s\t\tWord:%s\t\tCount:%d" % (datetime.now().strftime('%Y-%m-%d %H:%M:%S'),user,w,sum(idx)))
 
-        if len(title)>1:
-            title = '+'.join(title)
-            contents = [x for b in contents for x in b]
-            contents = ''.join(contents)
-            print(contents)
-            url = 'https://sc.ftqq.com/'+key+'.send?'+'text='+title+'&desp='+contents
+                # if the first former char of unique_key[i] is alpha and the first following char of unique_key[i] is alpha then remove the item
+                unique_key_split = dt_items['title'][idx].apply(lambda x: re.split(w,x,flags=re.IGNORECASE))
+                char_former = unique_key_split.apply(lambda x: True if len(x[0])==0 else not x[0][-1].isalpha())
+                char_follower = unique_key_split.apply(lambda x: True if len(x[1])==0 else not x[1][0].isalpha())
+                idx = idx & (char_former | char_follower)
+
+                if any(idx)==True:
+                    cur.execute("UPDATE word_subscribe SET counts=counts+%s WHERE word=%s and sckey=%s",(sum(idx),w,key))
+                    cur.connection.commit()
+                    desp.append([w+'  \n',dt_items['mkd'][idx].str.cat()+'  \n'])
+                    text.append(w)
+                    print("[%s] User:%s\t\tWord:%s\t\tCount:%d" % (datetime.now().strftime('%Y-%m-%d %H:%M:%S'),user,w,sum(idx)))
+
+        if len(text)>1:
+            text = '+'.join(text)
+            desp = [x for b in desp for x in b]
+            desp = ''.join(desp)
+            url = 'https://sc.ftqq.com/'+key+'.send?'+'text='+text+'&desp='+desp
             rtn = urllib.request.urlopen(quote(url,safe=":?=/&"))
-        elif len(title)==1:
-            title = title[0]
-            content = contents[0][1]
-            url = 'https://sc.ftqq.com/'+key+'.send?'+'text='+title+'&desp='+content
+        elif len(text)==1:
+            text = text[0]
+            content = desp[0][1]
+            url = 'https://sc.ftqq.com/'+key+'.send?'+'text='+text+'&desp='+content
             rtn = urllib.request.urlopen(quote(url,safe=":?=/&"))
         else:
             pass
