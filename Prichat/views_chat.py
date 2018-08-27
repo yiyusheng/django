@@ -34,12 +34,12 @@ def chat(request):
         keywordFlag = True
         split_keyword = keyword.split(' ')
 
-    if 'name' not in request.GET and 'keyword' not in request.GET and group not in request.GET:
+    if 'name' not in request.GET and 'keyword' not in request.GET and 'group' not in request.GET:
         group = '爆仓疗养院'
         groupFlag = True
 
 # generate nameList and groupList
-    nameList = ['AK','空深空','天乐','trdxz','RoseWhite','狗庄Hello','八哥谈币','BitMEX_Jack','神级','落叶风双','Goldman Sachs']
+    nameList = ['AK','空深空','天乐','trdxz','RoseWhite','colour','REKT','八哥谈币','BitMEX_Jack','神级','落叶风双','Goldman Sachs']
     groupList = ChatLogs.objects.values('group_name').distinct()
     groupList = [i.values()[0] for i in list(groupList) if 'uin' not in i.values()[0]]
     

@@ -18,16 +18,16 @@ def secondhand(request):
     webname = Secondhand.objects.values('webname').distinct()
     webnameList = [i.values()[0] for i in list(webname)]
 
-    customList = [
-            'mac','mbp','ipod','ipad','watch',
+    whiteList = [
+            'mac','mbp','ipod','ipad','watch','airpod',
             'surface','miix','yoga','venue','thinkpad','xps',
             'kindle','kpw','ps4','psv','xbox','switch','ns',
             'ikbc',
             '1050','1060','1070','1080'
             ]
-    blackList = ['口红','喷雾','悦木之源','长裤',
-            '鞋','耐克','包','子弹头','裙','乳液','短袖','衣','靴',
-            '吸奶器','精华露',
+    blackList = ['口红','喷雾','悦木之源','裤',
+            '鞋','耐克','子弹头','裙','乳液','短袖','衣','靴',
+            '吸奶器','精华露','霜','面膜','眼影',
             ]
     
     # Get data 
@@ -46,7 +46,7 @@ def secondhand(request):
     else:
         if keyword!='':
             if keyword=='customized':
-                so = so.filter(create_time__range=[day3ago,now]).filter(reduce(operator.or_, [Q(title__icontains=q) for q in customList]))
+                so = so.filter(create_time__range=[day3ago,now]).filter(reduce(operator.or_, [Q(title__icontains=q) for q in whiteList]))
                 so = so.exclude(reduce(operator.or_, [Q(title__icontains=q) for q in blackList]))
                 maxItems = 200
             elif ' ' in keyword:

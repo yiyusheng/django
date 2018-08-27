@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.db.models import Max,Q,Count
 from django.utils import timezone
-from Prichat.models import ChatLogs,WordCount,WordCountHourly,PriceBitmex
+from Prichat.models import ChatLogs,WordCount,WordCountHourly,BitmexPrice
 from datetime import datetime,timedelta
 
 import pandas as pd
@@ -32,7 +32,7 @@ def price(request):
     # QUERY DATA
     now = timezone.now()
     day_ago = now - timedelta(days=days)
-    od = PriceBitmex.objects.filter(timestamp__range=[day_ago,now],symbol='XBTUSD').values('timestamp','symbol','open','high','low','close','volume')
+    od = BitmexPrice.objects.filter(timestamp__range=[day_ago,now],symbol='XBTUSD').values('timestamp','symbol','open','high','low','close','volume')
     df = pd.DataFrame(list(od))
     df['time'] = pd.to_datetime(df['timestamp'],format='%Y-%m-%d %H:%M')
     df['open'] = pd.to_numeric(df['open'])
