@@ -9,8 +9,14 @@
 <body>
 
 <form action="/secondhand/" method="get">
-      {% for w in webname%}
-        <input type="checkbox" name={{w.webname}} value=1><a href='/secondhand/?{{w.webname}}=1'>{{w.webname}}</a>
+      ValidSite:
+      {% for w in validSite%}
+        <input type="checkbox" name={{w}} value=1><a href='/secondhand/?{{w}}=1'>{{w}}</a>
+      {% endfor %}
+      <br>
+      InvalidSite:
+      {% for w in invalidSite%}
+        <input type="checkbox" name={{w}} value=1><a href='/secondhand/?{{w}}=1'>{{w}}</a>
       {% endfor %}
       <br>
       <input type="button" value="Home Page" onclick="window.location.href='/'">

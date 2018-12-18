@@ -17,12 +17,14 @@ def secondhand(request):
 
     webname = Secondhand.objects.values('webname').distinct()
     webnameList = [i.values()[0] for i in list(webname)]
+    invalidWebList = ['dospy','gfanWeb','it168','smzdm','tgbusWeb','imp3']
+    validWebList = list(set(webnameList) - set(invalidWebList))
 
     whiteList = [
             'mac','mbp','ipod','ipad','watch','airpod',
             'surface','miix','yoga','venue','thinkpad','xps',
             'kindle','kpw','ps4','psv','xbox','switch','ns',
-            'ikbc',
+            'ikbc','电动车',
             '1050','1060','1070','1080'
             ]
     blackList = ['口红','喷雾','悦木之源','裤',
@@ -68,7 +70,8 @@ def secondhand(request):
     return(render(request,'show.html',
         {'item_list':item_list,
          'len_list': len(item_list),
-         'webname': webname,
+         'validSite': validWebList,
+         'invalidSite': invalidWebList,
          'server_time':now,
          'seller_time':seller_update_time['update_time__max'],
          }))
