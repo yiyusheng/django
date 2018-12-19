@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from django.views.generic.base import RedirectView
+from . import index
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url(r'^secondhand/', include('Secondhand.urls')),
     url(r'^prichat/', include('Prichat.urls')),
-    url(r'', include('Secondhand.urls')),
+    url(r'^$', index.index,name='index'),
+    #url(r'^admin/', admin.site.urls),
     #url(r'^favicon\.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
     #url(r'^style\.css$',RedirectView.as_view(url=r'static/css/style.css')),
 ]

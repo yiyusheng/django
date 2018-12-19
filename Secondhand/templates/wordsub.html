@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
-    <title>取消订阅</title>
+    <title>关键词订阅</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
 </head>
 <body>
 
     <div class="page-header">
-        <a href="{% url 'word_subscribe' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="{% url 'word_sub' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
     </div>
 
-    <h1>取消关键词{{keyword}}的订阅?</h1>(是的话，请输入对应sckey)
-        <form method="GET" action="/secondhand/word_unsubscribe">{% csrf_token %}
-            sckey:<input type='text' style='width:500px;height:12px' name="sckey">
-            <input type='hidden' name='user' value={{user}}>
-            <input type='hidden' name='keyword' value={{keyword}}>
-            <input type="Submit" value="submit">
+    {% block content %}
+        <h1>Subscribe Word</h1>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+            <br>本服务使用<a href="http://sc.ftqq.com">Server酱</a>推送信息，使用前请先从Server酱获取sckey.
         </form>
+    {% endblock %}
 
+    <br>
 
     <table style="float:left" border="1">
         <td> 用户 </td>
@@ -33,7 +35,7 @@
                 <td><a href="/secondhand/?keyword={{l.word}}">{{l.word}}</a></td>
                 <td>{{l.time|date:'Y-m-d H:i:s'}}</td>
                 <td>{{l.counts}}</td>
-                <td><a href="/secondhand/word_unsubscribe?keyword={{l.word}}&user={{l.user}}">Delete</a></td>
+                <td><a href="/secondhand/wordunsub?keyword={{l.word}}&user={{l.user}}">Delete</a></td>
             </tr>
         {% endfor %}
     </table>

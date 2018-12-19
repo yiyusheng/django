@@ -67,7 +67,7 @@ def secondhand(request):
         item_list = so.order_by('-time')[:maxItems]
     
     # return
-    return(render(request,'show.html',
+    return(render(request,'secondhand.html',
         {'item_list':item_list,
          'len_list': len(item_list),
          'validSite': validWebList,

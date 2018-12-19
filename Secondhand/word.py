@@ -12,7 +12,7 @@ import pymysql
 #from django.db.models import Max,Q
 #import operator
 
-def word_subscribe(request):
+def sub(request):
     if request.method == 'POST':
         form = wordSubscribeForm(request.POST)
         if form.is_valid():
@@ -21,15 +21,15 @@ def word_subscribe(request):
             post.enable = 1
             post.counts = 0
             post.save()
-        return redirect('word_subscribe')
+        return redirect('word_sub')
     else:
         form = wordSubscribeForm()
         ws = WordSubscribe.objects.filter(enable=1)
-        return render(request,'word_subscribe.html',
+        return render(request,'wordsub.html',
                 {'form':form,
                  'ws':ws,})
 
-def word_unsubscribe(request):
+def unsub(request):
     if request.method == 'GET' and 'user' in request.GET and 'keyword' in request.GET:
         user = request.GET['user']
         conn = pymysql.connect(host='127.0.0.1',user='root',passwd='qwer1234',db='scrapy',charset='utf8mb4')
@@ -41,16 +41,16 @@ def word_unsubscribe(request):
             cur.execute("DELETE FROM word_subscribe WHERE sckey=%s and word=%s",
                     (sckey,keyword))
             rtn = cur.connection.commit()
-            return redirect('word_subscribe')
+            return redirect('word_sub')
         else:
             ws = WordSubscribe.objects.filter(enable=1,user=user)
-            return render(request,'word_unsubscribe.html',
+            return render(request,'wordunsub.html',
                     {'user':user,
                      'keyword':keyword,
                      'ws':ws,})
             
     else:
-        return redirect('word_subscribe')
+        return redirect('word_sub')
             
 
 
