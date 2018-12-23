@@ -19,6 +19,8 @@ def secondhand(request):
     webnameList = [i.values()[0] for i in list(webname)]
     invalidWebList = ['dospy','gfanWeb','it168','smzdm','tgbusWeb','imp3']
     validWebList = list(set(webnameList) - set(invalidWebList))
+    validWebList.sort()
+    invalidWebList.sort()
 
     whiteList = [
             'mac','mbp','ipod','ipad','watch','airpod',
