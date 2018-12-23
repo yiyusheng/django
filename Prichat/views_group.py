@@ -30,7 +30,17 @@ def get_chatlogs_count():
     return fg
 
 def get_chatlogs_count_group(days,time_unit):
-
+    blackList = [
+      'python-qqbot交流群',
+      '青瑶的音乐交流群一群',
+      'AppleTV喵群',
+      'splatoon乌贼幼稚园',
+      '玩鱼雷的踢了.jpg',
+      '冬瓜的菜园子',
+      '大武汉BTC群',
+      'splatoon乌贼烧烤大排档',
+      '比记金牌炒米粉店再次',
+        ]
   # get data
     select_data = {"timeh": """DATE_FORMAT(time,'%%Y-%%m-%%d %%H:00')"""}
     now = timezone.now()                                                                       
@@ -50,6 +60,7 @@ def get_chatlogs_count_group(days,time_unit):
 
   # DCAST data
     group_name_unique = pd.unique(dt['group_name'])
+    group_name_unique = np.setdiff1d(group_name_unique,np.array(blackList))
     dt = dt.pivot_table(index='timeh',columns='group_name',values='count')
     dt = dt.fillna(0)
     dt = dt.reset_index()
