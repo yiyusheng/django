@@ -13,7 +13,7 @@
     </div>
 
     <h1>取消关键词{{keyword}}的订阅?</h1>(是的话，请输入对应sckey)
-        <form method="GET" action="/secondhand/wordunsub">{% csrf_token %}
+        <form method="GET" action="/secondhand/wordunsub/">{% csrf_token %}
             sckey:<input type='text' style='width:500px;height:12px' name="sckey">
             <input type='hidden' name='user' value={{user}}>
             <input type='hidden' name='keyword' value={{keyword}}>

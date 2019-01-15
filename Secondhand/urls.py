@@ -15,12 +15,13 @@
 #
 #
 from django.conf.urls import url
-from . import secondhand,word
+from . import web,mobile,word
 from django.http import HttpResponse
 
 urlpatterns = [
         url(r'^robots\.txt$', lambda r: HttpResponse('User-agent: *\nDisallow: /admin', content_type='text/plain')),
-        url(r'^wordsub$',word.sub,name='word_sub'),
-        url(r'^wordunsub$',word.unsub,name='word_unsub'),
-        url(r'^$',secondhand.secondhand,name='secondhand'),
+        url(r'^wordsub/$',word.sub,name='word_sub'),
+        url(r'^wordunsub/$',word.unsub,name='word_unsub'),
+        url(r'^mobile/$',mobile.secondhand,name='mobile'),
+        url(r'^$',web.secondhand,name='secondhand'),
 ]

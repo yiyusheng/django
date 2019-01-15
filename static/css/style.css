@@ -117,3 +117,40 @@ form span {
     font-size: 14px;
     margin: 10px 0;
 }
+
+.threadlist li {
+    position: relative;
+    border-bottom: 1px solid #d9d8d8;
+    line-height: 80px;
+    list-style-type:none; 
+}
+
+.threadlist .title {
+    font-size: 48px;
+    color: black;
+    display: block;
+    line-height: 60px;
+    padding: 5px 10px;
+}
+
+.threadlist .info-left {
+    float:left;
+    color: #a5a5a5;
+    font-size: 30px;
+    padding: 1px 30px
+}
+
+.threadlist .info-middle {
+    float:middle;
+    color: #a5a5a5;
+    font-size: 30px;
+    padding: 1px 30px
+}
+
+.threadlist .info-right {
+    float:right;
+    color: #a5a5a5;
+    font-size: 30px;
+    padding: 1px 30px
+}
+
