@@ -2,28 +2,31 @@
 <html lang="en">
 <head>
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flea Town(跳蚤屯)</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
 </head>
 <body>
 
-<form action="/secondhand/" method="get">
+<form action="./" method="get">
       ValidSite:
       {% for w in validSite%}
-        <input type="checkbox" name={{w}} value=1><a href='/secondhand/?{{w}}=1'>{{w}}</a>
+        <input type="checkbox" name={{w}} value=1><a href='./?{{w}}=1'>{{w}}</a>
       {% endfor %}
       <br>
       InvalidSite:
       {% for w in invalidSite%}
-        <input type="checkbox" name={{w}} value=1><a href='/secondhand/?{{w}}=1'>{{w}}</a>
+        <input type="checkbox" name={{w}} value=1><a href='./?{{w}}=1'>{{w}}</a>
       {% endfor %}
       <br>
-      <input type="button" value="Home Page" onclick="window.location.href='/'">
-      <input type="text" style="width: 500px;height:12px" name="keyword">
-      <input type="Submit" value="Search">
-      <input type="button" value="订阅管理" onclick="window.location.href='/secondhand/wordsub/'">
-      
+      <div class="toolbar">
+        <input type="button" value="Home Page" onclick="window.location.href='./'">
+        <input type="button" value="Subscribe" onclick="window.location.href='./wordsub/'">
+        <input type="text" name="keyword" class="searchbox">
+        <input type="Submit" value="Search" class="searchbtn">
+      </div>
+
       <br>
       <span>Details: [Return items:{{len_list}}] 
       [Server Time: {{server_time|date:'Y-m-d H:i:s'}} GMT+8]
@@ -31,19 +34,21 @@
 </form>
 
 
-<table style="float:left" border="1">
-    <td> AUTHOR </td>
-    <td> PRICE </td>
-    <td> TITLE </td>
-    <td> TIME </td>
-    <td> SOURCE </td> 
+<table>
+    <tr>
+        <th class="tableTitle"> TITLE </th>
+        <th class="tablePrice"> PRICE </th>
+        <th class="tableAuthor"> AUTHOR </th>
+        <th class="tableTime"> TIME </th>
+        <th class="tableSource"> SOURCE </th>
+    </tr>
     {% for l in item_list %}
         <tr>
-            <td><a href="/secondhand/?uname={{l.uname}}">{{l.uname|truncatechars:20}}</a></td>
-            <td>{{l.ext2}}</td>
-            <td><a href="{{l.url}}">{{l.title|truncatechars:50}}</a></td>
-            <td>{{l.time|date:'Y-m-d H:i:00'}}</td>
-            <td><a href="/secondhand/?{{l.webname}}=1">{{l.webname}}</a></td>
+            <td class="tableTitle"><a href="{{l.url}}">{{l.title|truncatechars:50}}</a></td>
+            <td class="tablePrice">{{l.ext2}}</td>
+            <td class="tableAuthor"><a href="/secondhand/?uname={{l.uname}}">{{l.uname|truncatechars:20}}</a></td>
+            <td class="tableTime">{{l.time|date:'Y-m-d H:i:00'}}</td>
+            <td class="tableSource"><a href="/secondhand/?{{l.webname}}=1">{{l.webname}}</a></td>
         </tr>
     {% endfor %}
 </table>

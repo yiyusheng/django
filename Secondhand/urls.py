@@ -22,6 +22,5 @@ urlpatterns = [
         url(r'^robots\.txt$', lambda r: HttpResponse('User-agent: *\nDisallow: /admin', content_type='text/plain')),
         url(r'^wordsub/$',word.sub,name='word_sub'),
         url(r'^wordunsub/$',word.unsub,name='word_unsub'),
-        url(r'^mobile/$',mobile.secondhand,name='mobile'),
-        url(r'^$',web.secondhand,name='secondhand'),
+        url(r'.*',web.secondhand,name='secondhand'),
 ]

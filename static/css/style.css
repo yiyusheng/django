@@ -11,21 +11,25 @@ body {
 body form {
     margin: 10px;
 }
+.searchbox {
+    max-width: 600px;
+    width: calc(100% - 260px) !important;
+}
 table {
     border-collapse: collapse;
     width: 100%;
+    border-top: 1px solid #e0e0e0 !important;
 }
-table,
-td,
-th {
+table, tr, td, th {
     border: none;
 }
-td {
+tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+th,td {
     padding: 6px 12px;
     height: 40px;
-}
-th {
-    height: 50px;
+    text-align: left;
 }
 tbody tr:nth-child(odd) {
     background-color: #f7f9fa;
@@ -33,8 +37,16 @@ tbody tr:nth-child(odd) {
 tbody tr:hover {
     background-color: #f4faff;
 }
-tr {
-    border-bottom: 1px solid #d0d4d9;
+.tableTitle {
+    width: 40%;
+}
+.tablePrice {
+    width: 10%;
+    max-width: 100px;
+}
+.tableAuthor {
+    width: 20%;
+    max-width: 200px;
 }
 a {
     text-decoration: none;
@@ -68,7 +80,7 @@ input[type=button]:active {
     background: -webkit-linear-gradient(#f4faff, #e3f1fc);
     background: linear-gradient(#f4faff, #e3f1fc);
 }
-input[type=submit] {
+input[type=submit], button[type=submit] {
     display: inline-block;
     padding: 7px 12px;
     font-weight: 600;
@@ -84,10 +96,10 @@ input[type=submit] {
     background: -webkit-linear-gradient(#007ee5, #0071ce);
     background: linear-gradient(#007ee5, #0071ce);
 }
-input[type=submit]:hover {
+input[type=submit]:hover, button[type=submit]:hover {
     background: #007ee5;
 }
-input[type=submit]:active {
+input[type=submit]:active, button[type=submit]:active {
     background: #0071ce;
 }
 input[type=text] {
@@ -154,3 +166,42 @@ form span {
     padding: 1px 30px
 }
 
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .searchbox {
+        max-width: 520px;
+        width: calc(100% - 80px) !important;
+    }
+    tr:first-child {
+        display: none;
+    }
+    tr td {
+        float: left;
+        height: auto;
+        padding: 0 12px;
+    }
+    .tableTitle {
+        width: calc(100vw - 124px);
+        line-height: 36px;
+        padding-top: 8px;
+    }
+    .tablePrice {
+        width: 76px;
+        line-height: 36px;
+        padding-top: 8px;
+    }
+    .tableAuthor, .tableTime, .tableSource, .tableAuthor a, .tableSource a {
+        color: #a0a0a0;
+        font-size: 12px;
+        line-height: 24px;
+        padding-bottom: 8px;
+    }
+    .tableAuthor, .tableTime {
+        width: calc(40% - 24px);
+    }
+    .tableSource {
+        width: calc(20% - 24px);
+    }
+}
