@@ -17,7 +17,7 @@ def secondhand(request):
 
     webname = Secondhand.objects.values('webname').distinct()
     webnameList = [i.values()[0] for i in list(webname)]
-    invalidWebList = ['dospy','it168','smzdm','tgbus','imp3']
+    invalidWebList = ['8080','dospy','it168','smzdm','tgbus','imp3']
     validWebList = list(set(webnameList) - set(invalidWebList))
     validWebList.sort()
     invalidWebList.sort()
