@@ -35,7 +35,7 @@ def chat(request):
         split_keyword = keyword.split(' ')
 
     if 'name' not in request.GET and 'keyword' not in request.GET and 'group' not in request.GET:
-        group = '爆仓疗养院'
+        group = 'Bitmex'
         groupFlag = True
 
 # generate nameList and groupList
