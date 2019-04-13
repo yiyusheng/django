@@ -25,7 +25,7 @@ SECRET_KEY = 'e=%3q$(c700o7uhl*i&q+ay@v#@(_m*vg2p!j6t)kut@=8c%h8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'167.160.185.157',u'127.0.0.1',u'202.114.10.146',u'sh1.soundrain.net',u'sh2.soundrain.net',u'216.144.232.135',u'localhost',u'pye.tw',u'8bt.tw',u'8btc.tw',u'splatoon.tw',u'splatoon2.tw',u'switch-games.tw',u'ns-games.tw',u'xenoblade2.tw',u'xenoblade.tw',u'btc-coin.tw',u'coinwallet.tw',u'coinwallets.tw',u'wallets.tw',u'bit-main.tw',u'ljw.tw',u'ylq.tw',]
+ALLOWED_HOSTS = [u'167.160.185.157',u'127.0.0.1',u'202.114.10.146',u'sh1.soundrain.net',u'sh2.soundrain.net',u'216.144.232.135',u'localhost',u'pye.tw',u'8bt.tw',u'8btc.tw',u'splatoon.tw',u'splatoon2.tw',u'switch-games.tw',u'ns-games.tw',u'xenoblade2.tw',u'xenoblade.tw',u'btc-coin.tw',u'coinwallet.tw',u'coinwallets.tw',u'wallets.tw',u'bit-main.tw',u'ljw.tw',u'ylq.tw','node146.wallets.tw']
 
 
 # Application definition

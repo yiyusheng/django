@@ -1,11 +1,11 @@
-# -*- coding:utf-8 -*-                                                                         
-import requests, time, pymysql, urllib, re
+# -*- coding:utf-8 -*-
+import time, pymysql, urllib, re
 import pandas as pd
 from datetime import datetime,timedelta
 from urllib.parse import quote
 
 if __name__ == '__main__':
-    ts_lasthour = datetime.utcnow().replace(minute=0,second=0,microsecond=0)-timedelta(hours=22)
+    ts_lasthour = datetime.utcnow().replace(minute=0,second=0,microsecond=0)-timedelta(hours=1)
     conn = pymysql.connect(host='127.0.0.1',user='root',passwd='qwer1234',db='scrapy',charset='utf8mb4')
     cur = conn.cursor()
 
@@ -43,7 +43,6 @@ if __name__ == '__main__':
                 char_follower = unique_key_split.apply(lambda x: True if len(x[1])==0 else not x[1][0].encode('UTF-8').isalpha())
                 bool_char = char_former.values | char_follower.values
                 idx = [idx[i] for i in range(len(bool_char)) if bool_char[i] == True]
-                print(idx,unique_key_split,char_former,char_follower)
 
                 if any(idx)==True:
                     cur.execute("UPDATE word_subscribe SET counts=counts+%s WHERE word=%s and sckey=%s",(len(idx),w,key))
@@ -57,11 +56,11 @@ if __name__ == '__main__':
             desp = [x for b in desp for x in b]
             desp = ''.join(desp)
             url = 'https://sc.ftqq.com/'+key+'.send?'+'text='+text+'&desp='+desp
-            #rtn = urllib.request.urlopen(quote(url,safe=":?=/&"))
+            rtn = urllib.request.urlopen(quote(url,safe=":?=/&"))
         elif len(text)==1:
             text = text[0]
             content = desp[0][1]
             url = 'https://sc.ftqq.com/'+key+'.send?'+'text='+text+'&desp='+content
-            #rtn = urllib.request.urlopen(quote(url,safe=":?=/&"))
+            rtn = urllib.request.urlopen(quote(url,safe=":?=/&"))
         else:
             pass

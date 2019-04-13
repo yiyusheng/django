@@ -15,7 +15,7 @@
 #
 #
 from django.conf.urls import url
-from . import web,mobile,word
+from . import web,word
 from django.http import HttpResponse
 
 urlpatterns = [
