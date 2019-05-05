@@ -15,6 +15,9 @@ body form {
     max-width: 600px;
     width: calc(100% - 260px) !important;
 }
+.pagination {
+    float:right
+}
 table {
     border-collapse: collapse;
     width: 100%;

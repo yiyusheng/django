@@ -6,6 +6,7 @@ from Secondhand.models import Secondhand,Advertiser
 from datetime import datetime,timedelta
 from django.db.models import Max,Q
 from django.utils import timezone
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import operator
 
 def secondhand(request):
@@ -17,7 +18,7 @@ def secondhand(request):
 
     webname = Secondhand.objects.values('webname').distinct()
     webnameList = [i.values()[0] for i in list(webname)]
-    invalidWebList = ['8080','dospy','it168','smzdm','tgbus','imp3']
+    invalidWebList = ['dospy','it168','smzdm','tgbus','imp3']
     validWebList = list(set(webnameList) - set(invalidWebList))
     validWebList.sort()
     invalidWebList.sort()
@@ -68,6 +69,17 @@ def secondhand(request):
             maxItems = 1000 
         item_list = so.order_by('-time')[:maxItems]
     
+    # paginator
+    paginator = Paginator(item_list,12)
+    page = request.GET.get('page')
+
+    try:
+        item_list = paginator.page(page)
+    except PageNotAnInteger:
+        item_list = paginator.page(1)
+    except EmptyPage:
+        item_list = paginator.page(paginator.num_pages)
+
     # return
     return(render(request,'secondhand.html',
         {'item_list':item_list,
