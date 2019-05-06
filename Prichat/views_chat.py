@@ -41,7 +41,7 @@ def chat(request):
 # generate nameList and groupList
     nameList = ['AK','空深空','天乐','trdxz','RoseWhite','colour','REKT','八哥谈币','BitMEX_Jack','神级','落叶风双','Goldman Sachs']
     groupList = ChatLogs.objects.values('group_name').distinct()
-    groupList = [i.values()[0] for i in list(groupList) if 'uin' not in i.values()[0]]
+    groupList = [list(i.values())[0] for i in groupList if 'uin' not in list(i.values())[0]]
     
 
 # Get chat logs from special name

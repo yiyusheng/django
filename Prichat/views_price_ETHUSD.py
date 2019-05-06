@@ -10,7 +10,7 @@ from datetime import datetime,timedelta
 
 import pandas as pd
 import numpy as np
-import pyecharts as pe
+import pyecharts.charts as pe
 import json, math, time, pytz
 
 REMOTE_HOST = "https://pyecharts.github.io/assets/js"
@@ -32,7 +32,7 @@ def price(request):
     # QUERY DATA
     now = timezone.now()
     day_ago = now - timedelta(days=days)
-    od = BitmexPrice.objects.filter(timestamp__range=[day_ago,now],symbol='XBTUSD').values('timestamp','symbol','open','high','low','close','volume')
+    od = BitmexPrice.objects.filter(timestamp__range=[day_ago,now],symbol='ETHUSD').values('timestamp','symbol','open','high','low','close','volume')
     df = pd.DataFrame(list(od))
     df['time'] = pd.to_datetime(df['timestamp'],format='%Y-%m-%d %H:%M')
     df['open'] = pd.to_numeric(df['open'])

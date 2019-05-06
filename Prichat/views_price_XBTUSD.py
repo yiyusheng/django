@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.template import loader
-from django.http import HttpResponse
 from django.shortcuts import render
 from django.db.models import Max,Q,Count
 from django.utils import timezone
@@ -10,10 +9,22 @@ from datetime import datetime,timedelta
 
 import pandas as pd
 import numpy as np
-import pyecharts as pe
+import pyecharts.charts as pe
+from pyecharts import options as opts
 import json, math, time, pytz
 
-REMOTE_HOST = "https://pyecharts.github.io/assets/js"
+from jinja2 import Environment, FileSystemLoader
+from pyecharts.globals import CurrentConfig
+from django.http import HttpResponse
+
+CurrentConfig.GLOBAL_ENV = Environment(loader=FileSystemLoader("./Prichat/templates"))
+
+from pyecharts import options as opts
+from pyecharts.charts import Kline
+
+#REMOTE_HOST = "https://pyecharts.github.io/assets/js"
+#CurrentConfig.GLOBAL_ENV = Environment(loader=FileSystemLoader("./Prichat/templates"))
+
 
 # keyword display
 def price(request):
@@ -32,7 +43,7 @@ def price(request):
     # QUERY DATA
     now = timezone.now()
     day_ago = now - timedelta(days=days)
-    od = BitmexPrice.objects.filter(timestamp__range=[day_ago,now],symbol='ETHUSD').values('timestamp','symbol','open','high','low','close','volume')
+    od = BitmexPrice.objects.filter(timestamp__range=[day_ago,now],symbol='XBTUSD').values('timestamp','symbol','open','high','low','close','volume')
     df = pd.DataFrame(list(od))
     df['time'] = pd.to_datetime(df['timestamp'],format='%Y-%m-%d %H:%M')
     df['open'] = pd.to_numeric(df['open'])
@@ -54,16 +65,29 @@ def price(request):
 
     # PLOT FIGURES
     df_values = df[['open','close','low','high']].values.tolist()
-    fg = pe.Kline(title='k线图',
-          width=1600,height=900,title_top='3%',title_pos='center')
+    print(df_values[0],df['time'])
+    fig = (
+            Kline()
+            .add_xaxis("{}".format(i+1) for i in range(len(df.time)))
+            #.add_xaxis(df['time'])
+            .add_yaxis('Price',df_values)
+            .set_global_opts(
+                title_opts=opts.TitleOpts(title="XBTUSD-k线图")
+                )
+            )
+
+    return HttpResponse(fig.render_embed())
+    '''
+    fg = pe.Kline(title='k线图',width=1600,height=900,title_top='3%',title_pos='center')
     fg.add(df['symbol'][0],df['time'],df_values,is_datazoom_show=True,mark_point=['max','min'])
 
     # GENERATE HTML
-    myechart=fg.render_embed()
+    myechart=fig.render_embed()
     host=REMOTE_HOST
-    script_list=fg.get_js_dependencies()
+    script_list=fig.get_js_dependencies()
     return render(request,"price.html",
-                        {"myechart":myechart,
+                        {"fig":fig.render_embed()
                         "host":host,
                         "script_list":script_list})
+    '''
 
