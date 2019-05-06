@@ -7,43 +7,19 @@ from datetime import datetime,timedelta
 from django.db.models import Max,Q
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from functools import reduce
 import operator,re
-
-
-'''
-#from django.template import Library, Node, resolve_variable
-register = Library()
-class AddGetParameter(Node):
-    def __init__(self, values):
-        self.values = values
-        
-    def render(self, context):
-        req = resolve_variable('request', context)
-        params = req.GET.copy()
-        for key, value in self.values.items():
-            params[key] = value.resolve(context)
-        return '?%s' %  params.urlencode()
-
-
-@register.tag
-def add_get(parser, token):
-    pairs = token.split_contents()[1:]
-    values = {}
-    for pair in pairs:
-        s = pair.split('=', 1)
-        values[s[0]] = parser.compile_filter(s[1])
-    return AddGetParameter(values)
-'''
 
 def secondhand(request):
     # Data proprepare
+    num_items = 20
     now = timezone.now()
     day1ago = now + timedelta(days=-1)
     day3ago = now + timedelta(days=-3)
     seller_update_time = Advertiser.objects.all().aggregate(Max('update_time'))
 
     webname = Secondhand.objects.values('webname').distinct()
-    webnameList = [i.values()[0] for i in list(webname)]
+    webnameList = [list(i.values())[0] for i in webname]
     invalidWebList = ['dospy','it168','smzdm','tgbus','imp3']
     validWebList = list(set(webnameList) - set(invalidWebList))
     validWebList.sort()
@@ -96,7 +72,7 @@ def secondhand(request):
         item_list = so.order_by('-time')[:maxItems]
     
     # paginator
-    paginator = Paginator(item_list,12)
+    paginator = Paginator(item_list,num_items)
     page = request.GET.get('page')
 
     try:

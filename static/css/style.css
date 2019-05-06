@@ -15,7 +15,15 @@ body form {
     max-width: 600px;
     width: calc(100% - 260px) !important;
 }
+.stat {
+    display: block;
+    color: #7b8994;
+    font-size: 14px;
+    margin: 10px 0;
+    float:left;
+}
 .pagination {
+    margin: 10px 0;
     float:right
 }
 table {
@@ -125,12 +133,6 @@ input[type=text]:focus {
 }
 input[type=text]:disabled {
     background-color: #f7f9fa;
-}
-form span {
-    display: block;
-    color: #7b8994;
-    font-size: 14px;
-    margin: 10px 0;
 }
 
 .threadlist li {
