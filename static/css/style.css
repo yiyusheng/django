@@ -22,8 +22,15 @@ body form {
     margin: 10px 0;
     float:left;
 }
-.pagination {
+.top-bar {
+    margin:10px 10px
+}
+.pagination-top {
     margin: 10px 0;
+    float:right
+}
+.pagination-buttom {
+    margin: 10px 10px 30px;
     float:right
 }
 table {

@@ -29,13 +29,13 @@
       </div>
 </form>
 
-<div>
+<div class='top-bar'>
       <div>
         <span class='stat'>Details: [Return items:{{len_list}}] 
         [Server Time: {{server_time|date:'Y-m-d H:i:s'}} GMT+8]
         [Seller update time: {{seller_time|date:'Y-m-d H:i:s'}} GMT+8]</span>   
       </div>
-      <div class="pagination">
+      <div class="pagination-top">
         {% if item_list.has_previous %}
           <a href="{% add_get_parameter page=item_list.previous_page_number %}">上一页</a>
         {% endif %}
@@ -67,8 +67,7 @@
     {% endfor %}
 </table>
 
-<br>
-<div class="pagination">
+<div class="pagination-buttom">
   {% if item_list.has_previous %}
     <a href="{% add_get_parameter page=item_list.previous_page_number %}">上一页</a>
   {% endif %}
