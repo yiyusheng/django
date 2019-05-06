@@ -6,6 +6,7 @@
     <title>Flea Town(跳蚤屯)</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
+    <script src="static/js/secondhand.js"></script>
 </head>
 <body>
 
@@ -56,13 +57,15 @@
 <br>
 <div class="pagination">
   {% if item_list.has_previous %}
-    <a href="?page={{ item_list.previous_page_number }}">上一页</a>
+  <a href="?page={{ item_list.previous_page_number }}">上一页</a>
   {% endif %}
   <span class="current">
     第 {{ item_list.number }} 页 / 共 {{ item_list.paginator.num_pages }} 页
   </span>
   {% if item_list.has_next %}
-    <a href="?page={{ item_list.next_page_number }}">下一页</a>
+  <a href="{% add_get page={{item_list.next_page_number}}}">下一页</a>
+  <a href="?page={{ item_list.next_page_number  }}">下一页</a>
+  <a href="javascript:secondhand.prefixUrl();">下一页</a>
   {% endif %}
 </div>
 
