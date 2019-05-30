@@ -41,7 +41,7 @@ def secondhand(request):
     getWebname = len(getDict)>0 and set(webnameList).intersection(getDict.keys()) or ''
     keyword = (len(getDict)>0 and 'keyword' in getDict) and getDict['keyword'] or ''
     uname = (len(getDict)>0 and 'uname' in getDict) and getDict['uname'] or ''
-    num_items = (len(getDict)>0 and 'numitem' in getDict) and getDict['numitem'] or 27
+    num_items = (len(getDict)>0 and 'numitem' in getDict) and getDict['numitem'] or 20
 
     # Extract data
     ad = Advertiser.objects.filter(update_time__range=[day3ago,now]).values_list('uname',flat=True)
