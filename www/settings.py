@@ -25,7 +25,7 @@ SECRET_KEY = 'e=%3q$(c700o7uhl*i&q+ay@v#@(_m*vg2p!j6t)kut@=8c%h8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'127.0.0.1',u'localhost',u'202.114.10.146','node146.wallets.tw','ss01.wallets.tw',u'wallets.tw',u'frp.wallets.tw',u'ss03.wallets.tw']
+ALLOWED_HOSTS = [u'127.0.0.1',u'localhost',u'202.114.10.146','node146.wallets.tw','ss01.wallets.tw',u'wallets.tw',u'frp.wallets.tw']
 
 
 # Application definition
