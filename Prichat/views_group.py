@@ -1,34 +1,27 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.template import loader
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.db.models import Max,Q
-from django.db.models import Count
-from Prichat.models import ChatLogs,WordCount,WordCountHourly
-from datetime import datetime,timedelta
-from django.utils import timezone
-
 import pandas as pd
 import numpy as np
-import json, math, time
-from pyecharts.charts import Bar
+import pyecharts.charts as pe
+import json, math, time, pytz
+
+from django.template import loader
+from django.shortcuts import render
+from django.db.models import Max,Q,Count
+from django.utils import timezone
+from django.http import HttpResponse
+
+from Prichat.models import ChatLogs,WordCount,WordCountHourly
+from Prichat.models import ChatLogs,WordCount,WordCountHourly,BitmexPrice
+from datetime import datetime,timedelta
 from pyecharts import options as opts
+from pyecharts import components as cpns
+from pyecharts.charts import Kline
+from pyecharts.charts import Bar
+from pyecharts.globals import CurrentConfig
+from jinja2 import Environment, FileSystemLoader
 
-REMOTE_HOST = "https://pyecharts.github.io/assets/js"
-def get_chatlogs_count():
-    # get data
-    select_data = {"timeh": """DATE_FORMAT(time,'%%Y-%%m-%%d %%H:00')"""}
-    dt_raw = ChatLogs.objects.extra(select=select_data).values('timeh').annotate(count=Count('content')).values('timeh','count')
-    dt = pd.DataFrame(list(dt_raw))
-    dt['timeh'] = pd.to_datetime(dt['timeh'],format='%Y-%m-%d %H:%M')
-
-  # package data
-    dt['timeh'] = dt['timeh'].dt.tz_convert('Asia/Shanghai')
-    fg = pe.Bar('每小时聊天记录数',
-          width=1600,height=900,title_pos='center',title_top='bottom')
-    fg.add('数量',dt['timeh'],dt['count'])
-    return fg
+CurrentConfig.GLOBAL_ENV = Environment(loader=FileSystemLoader("./Prichat/templates"))
 
 def get_chatlogs_count_group(days,time_unit):
     blackList = [
@@ -55,7 +48,7 @@ def get_chatlogs_count_group(days,time_unit):
   # SCCALE DATA
     dt['timeh'] = pd.to_datetime(dt['timeh'],format='%Y-%m-%d %H:%M')
     dt['timeh'] = dt['timeh'].values.astype(np.int64)//10**9
-    dt['timeh'] = dt['timeh'].apply(lambda x: datetime.utcfromtimestamp(x/time_unit/60*time_unit*60))
+    dt['timeh'] = dt['timeh'].apply(lambda x: datetime.utcfromtimestamp(int(x/time_unit/60)*time_unit*60))
     dt = dt.groupby(['timeh','group_name']).agg({'count':'sum'})
     dt = dt.reset_index()
 
@@ -68,17 +61,6 @@ def get_chatlogs_count_group(days,time_unit):
     dt.timeh = dt.timeh.dt.tz_localize('UTC').dt.tz_convert('Asia/Shanghai')
 
     return dt
-
-'''
-  # package data into object of pyecharts
-    fg = pe.Bar(title='各群每小时聊天记录数',
-          width=1600,height=900,title_pos='center',title_top='3%')
-    for gn in group_name_unique:
-        fg.add(gn,dt.timeh,dt[gn],is_stack=True,is_balel_show=True,is_datazoom_show=True)
-    
-  # return
-    return fg
-'''
 
 def group(request):
     # 可视化展示页面
@@ -94,30 +76,24 @@ def group(request):
         time_unit = 60
 
     dt=get_chatlogs_count_group(days,time_unit)
+
+    # PLOT FIGURES
+    df_values = dt['Bitmex'].values.tolist()
+    df_time = dt['timeh'].dt.strftime('%Y-%m-%d %H:%M:%S').values.tolist()
+    print(df_values[0:2],df_time[0:2],len(dt))
     fig = (
-        Bar(init_opts=opts.InitOpts(width="1600px", height="800px"))
-        .add_xaxis(xaxis_data=dt.timeh)
-        .add_yaxis(
-            series_name="bar", yaxis_data=dt['Bitmex'], label_opts=opts.LabelOpts(is_show=False)
+        Bar(init_opts=opts.InitOpts(width="1366px", height="768px"))
+        .add_xaxis(df_time)
+        .add_yaxis(series_name="bar", yaxis_data=df_values, label_opts=opts.LabelOpts(is_show=False)
         )
         .set_global_opts(
-            title_opts=opts.TitleOpts(title="各群每小时聊天记录数"),
+            title_opts=opts.TitleOpts(title="Bitmex每小时聊天记录数"),
             xaxis_opts=opts.AxisOpts(splitline_opts=opts.SplitLineOpts(is_show=False)),
             yaxis_opts=opts.AxisOpts(
                 axistick_opts=opts.AxisTickOpts(is_show=True),
                 splitline_opts=opts.SplitLineOpts(is_show=True),
             ),
+            datazoom_opts=[opts.DataZoomOpts()],
         )
     )
     return HttpResponse(fig.render_embed())
-'''
-
-    fg = get_chatlogs_count_group(days,time_unit)
-    myechart=fg.render_embed()
-    host=REMOTE_HOST
-    script_list=fg.get_js_dependencies()
-    return render(request,"group.html",
-                        {"myechart":myechart,
-                        "host":host,
-                        "script_list":script_list})
-'''

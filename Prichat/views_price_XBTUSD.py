@@ -1,29 +1,25 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import pandas as pd
+import numpy as np
+import pyecharts.charts as pe
+import json, math, time, pytz
+
 from django.template import loader
 from django.shortcuts import render
 from django.db.models import Max,Q,Count
 from django.utils import timezone
-from Prichat.models import ChatLogs,WordCount,WordCountHourly,BitmexPrice
-from datetime import datetime,timedelta
-
-import pandas as pd
-import numpy as np
-import pyecharts.charts as pe
-from pyecharts import options as opts
-import json, math, time, pytz
-
-from jinja2 import Environment, FileSystemLoader
-from pyecharts.globals import CurrentConfig
 from django.http import HttpResponse
 
-CurrentConfig.GLOBAL_ENV = Environment(loader=FileSystemLoader("./Prichat/templates"))
-
+from Prichat.models import ChatLogs,WordCount,WordCountHourly,BitmexPrice
+from datetime import datetime,timedelta
 from pyecharts import options as opts
+from pyecharts import components as cpns
 from pyecharts.charts import Kline
+from pyecharts.globals import CurrentConfig
+from jinja2 import Environment, FileSystemLoader
 
-#REMOTE_HOST = "https://pyecharts.github.io/assets/js"
-#CurrentConfig.GLOBAL_ENV = Environment(loader=FileSystemLoader("./Prichat/templates"))
+CurrentConfig.GLOBAL_ENV = Environment(loader=FileSystemLoader("./Prichat/templates"))
 
 
 # keyword display
@@ -33,7 +29,7 @@ def price(request):
     if 'days' in request.GET and getDict['days'].isdigit():
         days = int(getDict['days'])
     else:
-        days = 7
+        days = 3
 
     if 'time' in request.GET and getDict['time'].isdigit():
         time_unit = int(getDict['time'])
@@ -54,7 +50,8 @@ def price(request):
 
     # SCALE DATA
     df['time'] = df['time'].values.astype(np.int64)//10**9
-    df['time'] = df['time'].apply(lambda x: datetime.utcfromtimestamp(x/time_unit/60*time_unit*60))
+    df['time'] = df['time'].apply(lambda x: datetime.utcfromtimestamp(int(x/time_unit/60)*time_unit*60))
+    print(df['time'])
     df = df.groupby(['time','symbol']).agg({'open':'first',
                                    'low':'min',
                                    'high':'max',
@@ -65,29 +62,20 @@ def price(request):
 
     # PLOT FIGURES
     df_values = df[['open','close','low','high']].values.tolist()
-    print(df_values[0],df['time'])
+    df_time = df['time'].dt.strftime('%Y-%m-%d %H:%M:%S').values.tolist()
+    print(df_time[0:2],df_values[0:2],len(df_time),len(df_values))
     fig = (
-            Kline()
-            .add_xaxis("{}".format(i+1) for i in range(len(df.time)))
-            #.add_xaxis(df['time'])
+            Kline(init_opts=opts.InitOpts(width="1366px", height="768px"))
+            .add_xaxis(df_time)
             .add_yaxis('Price',df_values)
             .set_global_opts(
-                title_opts=opts.TitleOpts(title="XBTUSD-k线图")
+		yaxis_opts=opts.AxisOpts(is_scale=True),
+		xaxis_opts=opts.AxisOpts(
+                    type_=None,is_scale=True,
+                    splitarea_opts=opts.SplitAreaOpts(is_show=True, areastyle_opts=opts.AreaStyleOpts(opacity=1))),
+                datazoom_opts=[opts.DataZoomOpts()],
+                title_opts=opts.TitleOpts(title="XBTUSD-k线图"),
                 )
             )
 
     return HttpResponse(fig.render_embed())
-    '''
-    fg = pe.Kline(title='k线图',width=1600,height=900,title_top='3%',title_pos='center')
-    fg.add(df['symbol'][0],df['time'],df_values,is_datazoom_show=True,mark_point=['max','min'])
-
-    # GENERATE HTML
-    myechart=fig.render_embed()
-    host=REMOTE_HOST
-    script_list=fig.get_js_dependencies()
-    return render(request,"price.html",
-                        {"fig":fig.render_embed()
-                        "host":host,
-                        "script_list":script_list})
-    '''
-
