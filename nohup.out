@@ -1,0 +1,2385 @@
+Watching for file changes with StatReloader
+[08/Oct/2022 20:03:21] "GET /secondhand/ HTTP/1.1" 200 12842
+[08/Oct/2022 20:03:22] "GET /static/css/style.css HTTP/1.1" 200 4529
+[08/Oct/2022 20:03:22] "GET /static/images/favicon.ico HTTP/1.1" 200 67646
+[08/Oct/2022 20:03:53] "GET /secondhand/?keyword=customized HTTP/1.1" 200 12830
+[08/Oct/2022 20:04:23] "GET /secondhand/?keyword=customized HTTP/1.1" 200 12830
+[08/Oct/2022 20:04:43] "GET /secondhand/?keyword=customized&page=2 HTTP/1.1" 200 13400
+[08/Oct/2022 20:05:25] "GET /secondhand/?keyword=customized&page=3 HTTP/1.1" 200 13334
+[08/Oct/2022 20:06:06] "GET /secondhand/?keyword=customized&page=4 HTTP/1.1" 200 13406
+[08/Oct/2022 20:06:39] "GET /secondhand/?keyword=customized&page=5 HTTP/1.1" 200 12958
+[08/Oct/2022 22:46:29] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03RE¼yVjä\x1c\x99 V0\x0fý\x04:ÚGs\x8a,Îs°µ\x1f&\x0e´Öqk\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[08/Oct/2022 22:46:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[08/Oct/2022 22:46:31] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x031jïðoh\x18ÛüóÐpñL\x9e\x16\x81/Å\x81\x8fÄ>wl\x1bê'-ìãº\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+[08/Oct/2022 22:46:31] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[08/Oct/2022 22:46:31] "GET / HTTP/1.1" 400 65152
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[09/Oct/2022 03:11:10] "GET / HTTP/1.1" 400 65260
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[09/Oct/2022 08:58:12] "GET / HTTP/1.1" 400 65254
+[09/Oct/2022 10:46:43] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13412
+[09/Oct/2022 10:50:42] "GET /secondhand/?keyword=customized&page=2 HTTP/1.1" 200 12982
+[09/Oct/2022 10:51:15] "GET /secondhand/ HTTP/1.1" 200 13191
+[09/Oct/2022 10:51:20] "GET / HTTP/1.1" 200 2191
+Not Found: /favicon.ico
+[09/Oct/2022 10:51:20] "GET /favicon.ico HTTP/1.1" 404 2305
+[09/Oct/2022 10:51:40] "GET /prichat/chat/ HTTP/1.1" 200 217181
+[09/Oct/2022 10:54:52] "GET /prichat/chat?group=%E7%9B%88%E9%93%BE%E8%B5%84%E6%9C%AC HTTP/1.1" 301 0
+[09/Oct/2022 10:55:12] "GET /prichat/chat/?group=%E7%9B%88%E9%93%BE%E8%B5%84%E6%9C%AC HTTP/1.1" 200 233960
+[09/Oct/2022 10:55:18] "GET /prichat/chat?group=Deribit%E4%B8%AD%E5%9B%BD%E5%AE%98%E6%96%B9%E7%BE%A41 HTTP/1.1" 301 0
+[09/Oct/2022 10:55:31] "GET /prichat/chat/?group=Deribit%E4%B8%AD%E5%9B%BD%E5%AE%98%E6%96%B9%E7%BE%A41 HTTP/1.1" 200 21508
+[09/Oct/2022 10:55:46] "GET /prichat/chat?group=%E7%88%86%E4%BB%93%E7%96%97%E5%85%BB%E9%99%A2 HTTP/1.1" 301 0
+[09/Oct/2022 10:56:00] "GET /prichat/chat/?group=%E7%88%86%E4%BB%93%E7%96%97%E5%85%BB%E9%99%A2 HTTP/1.1" 200 226184
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.47', 36326)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[09/Oct/2022 11:02:25] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ý\x07\x87²m¨\x87Î·\x00\x9b7±\x88Ä\x873Ç')
+[09/Oct/2022 11:02:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[09/Oct/2022 11:02:26] "GET / HTTP/1.1" 400 64754
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[09/Oct/2022 11:02:26] "GET / HTTP/1.1" 400 65201
+[09/Oct/2022 11:02:27] code 505, message Invalid HTTP version (2.0)
+[09/Oct/2022 11:02:27] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[09/Oct/2022 12:19:14] "GET / HTTP/1.1" 400 65008
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[09/Oct/2022 13:19:28] "GET / HTTP/1.0" 400 64731
+[09/Oct/2022 15:25:25] code 400, message Bad request version ('À\x14À')
+[09/Oct/2022 15:25:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Oct/2022 15:25:26] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03æu^,\x8búTÀx¶Â\x05ñ\x84Qz\x0f/\x98/*Ï\x06sã$R$è\x8açÔ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[09/Oct/2022 15:25:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[09/Oct/2022 15:25:26] "GET / HTTP/1.1" 400 65152
+[09/Oct/2022 16:18:55] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÕÔñâ\x86\x08')
+[09/Oct/2022 16:18:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Oct/2022 16:23:10] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13268
+[09/Oct/2022 16:27:29] "GET /secondhand/?keyword=%E5%85%85%E7%94%B5%E5%99%A8 HTTP/1.1" 200 13492
+[09/Oct/2022 16:27:41] "GET /secondhand/?keyword=mate HTTP/1.1" 200 13221
+[09/Oct/2022 16:29:51] "GET /secondhand/?51NB=1 HTTP/1.1" 200 13227
+[09/Oct/2022 16:29:54] "GET /secondhand/?8080=1 HTTP/1.1" 200 13016
+[09/Oct/2022 16:29:58] "GET /secondhand/?51NB=1 HTTP/1.1" 200 13227
+[09/Oct/2022 16:30:01] "GET /secondhand/?HIFIDIY=1 HTTP/1.1" 200 13266
+[09/Oct/2022 16:30:04] "GET /secondhand/?Right=1 HTTP/1.1" 200 13174
+[09/Oct/2022 16:30:06] "GET /secondhand/?deyi=1 HTTP/1.1" 200 12819
+[09/Oct/2022 16:30:07] "GET /secondhand/?dgtle=1 HTTP/1.1" 200 13654
+[09/Oct/2022 16:30:09] "GET /secondhand/?erji=1 HTTP/1.1" 200 12746
+[09/Oct/2022 16:30:14] "GET /secondhand/?feng=1 HTTP/1.1" 200 12554
+[09/Oct/2022 16:30:21] "GET /secondhand/?fengniao=1 HTTP/1.1" 200 13265
+[09/Oct/2022 16:30:24] "GET /secondhand/?fengniao=1 HTTP/1.1" 200 13265
+[09/Oct/2022 16:30:26] "GET /secondhand/?gfan=1 HTTP/1.1" 200 12759
+[09/Oct/2022 16:30:42] "GET /secondhand/?nga=1 HTTP/1.1" 200 12672
+[09/Oct/2022 16:30:45] "GET /secondhand/?smthSC=1 HTTP/1.1" 200 12916
+[09/Oct/2022 16:30:46] "GET /secondhand/?smthSD=1 HTTP/1.1" 200 12805
+[09/Oct/2022 16:30:47] "GET /secondhand/?stage1st=1 HTTP/1.1" 200 13217
+[09/Oct/2022 16:30:49] "GET /secondhand/?v2ex=1 HTTP/1.1" 200 12267
+[09/Oct/2022 16:30:51] "GET /secondhand/?xitek=1 HTTP/1.1" 200 12887
+[09/Oct/2022 16:32:37] "GET /secondhand/?HIFIDIY=1 HTTP/1.1" 200 13266
+[09/Oct/2022 16:32:44] "GET /secondhand/?feng=1 HTTP/1.1" 200 12554
+[09/Oct/2022 16:32:47] "GET /secondhand/?fengniao=1 HTTP/1.1" 200 13265
+[09/Oct/2022 16:33:08] "GET /secondhand/?nga=1 HTTP/1.1" 200 12672
+[09/Oct/2022 16:33:11] "GET /secondhand/?v2ex=1 HTTP/1.1" 200 12267
+[09/Oct/2022 16:33:12] "GET /secondhand/?xitek=1 HTTP/1.1" 200 12887
+/home/yiyusheng/Code/Python/www/Secondhand/web.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 08, 2022 - 20:03:21
+Django version 2.2, using settings 'www.settings'
+Starting development server at http://0:8888/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 09, 2022 - 16:33:27
+Django version 2.2, using settings 'www.settings'
+Starting development server at http://0:8888/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[09/Oct/2022 16:35:16] "GET /secondhand/?xitek=1 HTTP/1.1" 200 12887
+[09/Oct/2022 16:35:24] "GET /secondhand/?v2ex=1 HTTP/1.1" 200 12267
+[09/Oct/2022 16:35:46] "GET /secondhand/wordsub/ HTTP/1.1" 200 3734
+[10/Oct/2022 00:22:39] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ú®Êm6\x86}\\Îu\x96\x04Öuí®\x15isåsø\x18§\x83ÌÄ\x9f3_6"\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[10/Oct/2022 00:22:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Oct/2022 00:22:39] code 400, message Bad request version ('À\x14À')
+[10/Oct/2022 00:22:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 00:22:40] "GET / HTTP/1.1" 400 65161
+[10/Oct/2022 01:49:46] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03>§\r\x7f×\x04\x1c©ö{\x07>\r\x1a£%`J[ÐÁ\x1dxc\x0câBAx¸\x05')
+[10/Oct/2022 01:49:46] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Oct/2022 01:49:46] code 400, message Bad request syntax ('{"id": 1, "method": "mining.subscribe", "params": ["cpuminer/2.5.1"]}')
+[10/Oct/2022 01:49:46] "{"id": 1, "method": "mining.subscribe", "params": ["cpuminer/2.5.1"]}" 400 -
+[10/Oct/2022 01:49:47] code 400, message Bad request syntax ('{"id": 1, "method": "mining.subscribe", "params": ["MinerName/1.0.0", "EthereumStratum/1.0.0"]}')
+[10/Oct/2022 01:49:47] "{"id": 1, "method": "mining.subscribe", "params": ["MinerName/1.0.0", "EthereumStratum/1.0.0"]}" 400 -
+[10/Oct/2022 01:49:47] code 400, message Bad request syntax ('{"id":1,"method":"eth_submitLogin","worker":"eth1.0","params":["0xec2cfe09fbf4bea3b3510dcb6d6dbae14ce12e8b","x"],"jsonrpc":"2.0"}')
+[10/Oct/2022 01:49:47] "{"id":1,"method":"eth_submitLogin","worker":"eth1.0","params":["0xec2cfe09fbf4bea3b3510dcb6d6dbae14ce12e8b","x"],"jsonrpc":"2.0"}" 400 -
+[10/Oct/2022 01:49:47] code 400, message Bad request syntax ('{"id":1,"jsonrpc":"2.0","method":"login","params":{"login":"46AHskeX4H8eSUQLqxpmMCErP3BcBgDLH6wfEEf1s2DhEuZpgrUCvE69c5Pu4ZwyVtEYj1Jag5vxSDDtU7m7cCfiRgFb8ys","pass":"x","agent":"XMRig/6.15.3 (Windows NT 10.0; Win64; x64) libuv/1.42.0 msvc/2019","algo":["cn/1","cn/2","cn/r","cn/fast","cn/half","cn/xao","cn/rto","cn/rwz","cn/zls","cn/double","cn/ccx","cn-lite/1","cn-heavy/0","cn-heavy/tube","cn-heavy/xhv","cn-pico","cn-pico/tlo","cn/upx2","rx/0","rx/wow","rx/arq","rx/graft","rx/sfx","rx/keva","argon2/chukwa","argon2/chukwav2","argon2/ninja","astrobwt"]}}')
+[10/Oct/2022 01:49:47] "{"id":1,"jsonrpc":"2.0","method":"login","params":{"login":"46AHskeX4H8eSUQLqxpmMCErP3BcBgDLH6wfEEf1s2DhEuZpgrUCvE69c5Pu4ZwyVtEYj1Jag5vxSDDtU7m7cCfiRgFb8ys","pass":"x","agent":"XMRig/6.15.3 (Windows NT 10.0; Win64; x64) libuv/1.42.0 msvc/2019","algo":["cn/1","cn/2","cn/r","cn/fast","cn/half","cn/xao","cn/rto","cn/rwz","cn/zls","cn/double","cn/ccx","cn-lite/1","cn-heavy/0","cn-heavy/tube","cn-heavy/xhv","cn-pico","cn-pico/tlo","cn/upx2","rx/0","rx/wow","rx/arq","rx/graft","rx/sfx","rx/keva","argon2/chukwa","argon2/chukwav2","argon2/ninja","astrobwt"]}}" 400 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 01:49:48] "GET / HTTP/1.1" 400 65811
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 01:49:49] "POST / HTTP/1.1" 400 66385
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 01:49:49] "POST / HTTP/1.1" 400 66401
+[10/Oct/2022 08:28:59] "GET / HTTP/1.1" 200 2191
+Not Found: /favicon.ico
+[10/Oct/2022 08:28:59] "GET /favicon.ico HTTP/1.1" 404 2305
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 09:14:39] "GET / HTTP/1.1" 400 66187
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 09:14:43] "GET / HTTP/1.1" 400 65672
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[10/Oct/2022 09:14:46] "GET /favicon.ico HTTP/1.1" 400 66308
+[10/Oct/2022 09:16:47] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x12¥\x06ñ\x8f\x85ÓÊ\x88ãHäT\x0b|¸I[\x85\x19ãÏD¦ÉaHÝ«4k©\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[10/Oct/2022 09:16:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Oct/2022 09:16:48] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03+¶^yÝÄ4+ÖäU¡ækßI°~Ûn_÷\x82`f¹`\x04D\x80¸h\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[10/Oct/2022 09:16:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 09:16:50] "GET / HTTP/1.1" 400 65159
+[10/Oct/2022 10:18:07] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13041
+[10/Oct/2022 10:18:48] "GET /secondhand/?keyword=customized&page=2 HTTP/1.1" 200 13392
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 11:51:48] "GET / HTTP/1.1" 400 65493
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /manager/html
+[10/Oct/2022 11:51:49] "GET /manager/html HTTP/1.1" 400 65781
+[10/Oct/2022 11:53:59] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13121
+[10/Oct/2022 15:02:55] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13034
+[10/Oct/2022 15:04:38] "GET /secondhand/?keyword=customized&page=2 HTTP/1.1" 200 13241
+[10/Oct/2022 15:04:43] "GET /secondhand/ HTTP/1.1" 200 12908
+[10/Oct/2022 15:05:03] "GET /secondhand/?page=2 HTTP/1.1" 200 13053
+[10/Oct/2022 15:05:22] "GET /secondhand/?page=3 HTTP/1.1" 200 12900
+[10/Oct/2022 15:05:36] "GET /secondhand/?HIFIDIY=1 HTTP/1.1" 200 13319
+[10/Oct/2022 15:05:38] "GET /secondhand/?Right=1 HTTP/1.1" 200 13213
+[10/Oct/2022 15:05:39] "GET /secondhand/?deyi=1 HTTP/1.1" 200 12798
+[10/Oct/2022 15:05:40] "GET /secondhand/?dgtle=1 HTTP/1.1" 200 13573
+[10/Oct/2022 15:05:42] "GET /secondhand/?erji=1 HTTP/1.1" 200 12763
+[10/Oct/2022 15:05:43] "GET /secondhand/?nga=1 HTTP/1.1" 200 12671
+[10/Oct/2022 15:05:44] "GET /secondhand/?smthSC=1 HTTP/1.1" 200 12984
+[10/Oct/2022 15:05:45] "GET /secondhand/?smthSD=1 HTTP/1.1" 200 12776
+[10/Oct/2022 15:05:46] "GET /secondhand/?stage1st=1 HTTP/1.1" 200 13251
+[10/Oct/2022 15:05:46] "GET /secondhand/?v2ex=1 HTTP/1.1" 200 12407
+[10/Oct/2022 15:05:48] "GET /secondhand/?HIFIDIY=1 HTTP/1.1" 200 13319
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.61', 36592)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[10/Oct/2022 16:32:04] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03_Ã\x1c\x11»\x8b\x97Ø¥Ë~/YdÕ\x01è\x16ól)¿¹\x8fl\x91Ùè,\x10ã\x1f ARLa!\x1c>U×6jy®#bf:M÷0«yV¢Ã¼ëêÛÒ#\x14\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[10/Oct/2022 16:32:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 16:32:06] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 16:32:06] "GET / HTTP/1.1" 400 65208
+[10/Oct/2022 16:32:06] code 505, message Invalid HTTP version (2.0)
+[10/Oct/2022 16:32:06] "PRI * HTTP/2.0" 505 -
+[10/Oct/2022 17:06:16] code 400, message Bad request syntax ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ry\x94\x8f£,\x0fÂé\x0b.y\x0f\x8e\x9a]k\x85ìHLº\x8bMÎR\x06\x1e\x01'\x08é\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[10/Oct/2022 17:06:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Oct/2022 17:06:16] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03f\x9a@þ°6©Ýß.{[\x1e|\x18ä\x08\x1e\x01q»ÏE ü+qè)\x0f+È\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[10/Oct/2022 17:06:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Oct/2022 17:06:17] "GET / HTTP/1.1" 400 65159
+[10/Oct/2022 20:10:58] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03µÖ\x13)\x8a\x0e\x02|\x13¶Mg&s¿E\x99ÃÞCjØ+ª3ý\x8a£Ê[e$\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[10/Oct/2022 20:10:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('104.152.52.86', 46102)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[11/Oct/2022 01:52:21] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x031 \x84)Åvd\x97\x01¿\x0c\x180tY\x89Ô\x9aÙ\x10±£O\x99Eäàjv\x89\x94Á\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[11/Oct/2022 01:52:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[11/Oct/2022 01:52:22] code 400, message Bad request version ('À\x14À')
+[11/Oct/2022 01:52:22] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[11/Oct/2022 01:52:23] "GET / HTTP/1.1" 400 65161
+[11/Oct/2022 03:43:06] "GET / HTTP/1.1" 200 2191
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.47', 37298)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[11/Oct/2022 08:18:10] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03SÌùßgpc\x88\x1eçâ0pV\x85©z\x0b,Dít\x94¡\x95\x1a³nÅÏ\x8fy Tã§Zj\x04G\x17')
+[11/Oct/2022 08:18:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[11/Oct/2022 08:18:12] "GET / HTTP/1.1" 400 64762
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[11/Oct/2022 08:18:12] "GET / HTTP/1.1" 400 65209
+[11/Oct/2022 08:18:13] code 505, message Invalid HTTP version (2.0)
+[11/Oct/2022 08:18:13] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: '144.34.170.41.16clouds.com'. You may need to add '144.34.170.41.16clouds.com' to ALLOWED_HOSTS.
+Bad Request: /
+[11/Oct/2022 10:56:47] "GET / HTTP/1.1" 400 65342
+[11/Oct/2022 12:44:55] "GET /secondhand/?keyword=customized HTTP/1.1" 200 12902
+[11/Oct/2022 12:45:29] "GET /secondhand/ HTTP/1.1" 200 13347
+[11/Oct/2022 12:45:59] "GET /secondhand/?page=2 HTTP/1.1" 200 12889
+[11/Oct/2022 15:39:19] code 400, message Bad request syntax ("\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03ÊeGAñ9B\rïÌ\x93\x93ø\x053 \x1b(]\x07\x18\x83HM\x14(Û¶Ò\x85\x81¼\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\tÀ(À$À\x14À")
+[11/Oct/2022 15:39:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[11/Oct/2022 17:55:18] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x94\x14°^#\x85Î\x8ea/Ä%\x816r5\x85(\x86RÄÀ:Y¦S\x99\x9eiNì?\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[11/Oct/2022 17:55:18] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[11/Oct/2022 20:35:32] code 400, message Bad request version ('À\x14À')
+[11/Oct/2022 20:35:33] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[11/Oct/2022 20:35:33] code 400, message Bad request syntax ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Õ?5·\x0b©ô¨¾ö_ùR'H98MñvÉ\x98µë´lñ%7QÚ\xa0\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[11/Oct/2022 20:35:33] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[11/Oct/2022 20:35:34] "GET / HTTP/1.1" 400 65161
+[11/Oct/2022 21:07:50] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13196
+[11/Oct/2022 21:07:50] "GET /static/css/style.css HTTP/1.1" 200 4529
+[11/Oct/2022 21:07:50] "GET /static/images/favicon.ico HTTP/1.1" 200 67646
+[12/Oct/2022 05:51:14] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x7féèÉÑ<¦KYè\x12\\ÝÊ¿õ@ñü$eÀä=l&ï\x06S\x02ê³\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[12/Oct/2022 05:51:14] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Oct/2022 05:51:14] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ý\x9f\x9eþ&úÜ<\x910\x8e]\x92ÖÔ@~[\x05Í\x80\x897òz·,`K\x1b}_\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[12/Oct/2022 05:51:14] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Oct/2022 09:19:24] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13161
+[12/Oct/2022 09:22:35] "GET /secondhand/?keyword=customized&page=2 HTTP/1.1" 200 13284
+[12/Oct/2022 10:32:16] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13058
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Oct/2022 10:32:28] "GET / HTTP/1.1" 400 65264
+[12/Oct/2022 13:09:20] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÁYç2Ìøñ\x9aÃ§Ù§Ôú\x94ò\x10©_\x18ÀnÞ\x12ùSH«\x9aN@-\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[12/Oct/2022 13:09:20] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Oct/2022 14:36:38] code 400, message Bad request version ('À\x14À')
+[12/Oct/2022 14:36:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Oct/2022 14:36:38] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x0cY\x94\x85¤\x13Þ\x06ò0ß±\x14\x16ÿï3XïÈJL°áB\x89ð\x0bbP.à\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[12/Oct/2022 14:36:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Oct/2022 14:36:39] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Oct/2022 18:22:52] "GET / HTTP/1.1" 400 65196
+----------------------------------------
+Exception happened during processing of request from ('167.94.145.59', 56006)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[12/Oct/2022 19:01:09] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03g\x12\x8aw\x8dßaÍ4øñ§\rû¢#ç<\\¬\x0bµR0\x8cÂà\x96P\x08¸o ~:Ðæ\x1fnÆN\x1fÂX÷G4ÉêÅ\x03çìY}\x03£\x94ÿëêÜ^àÔ\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[12/Oct/2022 19:01:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Oct/2022 19:01:10] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Oct/2022 19:01:11] "GET / HTTP/1.1" 400 65208
+[12/Oct/2022 19:01:11] code 505, message Invalid HTTP version (2.0)
+[12/Oct/2022 19:01:11] "PRI * HTTP/2.0" 505 -
+[12/Oct/2022 23:40:58] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Y^ÔW¥\xa0üløé2\x86\x1dO²4Tl\x98Hµ\x1akM?\x01ØÅ\x82Dò\x06\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[12/Oct/2022 23:40:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Oct/2022 23:40:59] code 400, message Bad request version ("WDN«ë»ÄV'£2-\x8b+\x95\\")
+[12/Oct/2022 23:40:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 01:59:41] "GET / HTTP/1.0" 400 65295
+Invalid HTTP_HOST header: '144.34.170.41'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 05:54:05] "GET / HTTP/1.1" 400 65267
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[13/Oct/2022 05:54:06] "GET /favicon.ico HTTP/1.1" 400 65497
+[13/Oct/2022 08:38:17] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03yðjsB,î\r$\x19$Ý^÷\rY´³\x0e§Z«ÞÛÄG`k\x0ffÏÓ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[13/Oct/2022 08:38:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[13/Oct/2022 08:38:18] code 400, message Bad request version ('À\x14À')
+[13/Oct/2022 08:38:18] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 08:38:18] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /script
+[13/Oct/2022 08:58:32] "GET /script HTTP/1.1" 400 65556
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /login
+[13/Oct/2022 08:58:33] "GET /login HTTP/1.1" 400 65545
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /jenkins/login
+[13/Oct/2022 08:58:34] "GET /jenkins/login HTTP/1.1" 400 65633
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 08:58:34] "GET / HTTP/1.1" 400 65490
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /manager/html
+[13/Oct/2022 08:58:35] "GET /manager/html HTTP/1.1" 400 65778
+[13/Oct/2022 11:32:57] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13469
+[13/Oct/2022 11:39:04] "GET /secondhand/?keyword=customized&page=2 HTTP/1.1" 200 13206
+[13/Oct/2022 11:56:08] "GET / HTTP/1.1" 200 2191
+Not Found: /favicon.ico
+[13/Oct/2022 11:56:09] "GET /favicon.ico HTTP/1.1" 404 2305
+[13/Oct/2022 11:56:12] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13419
+[13/Oct/2022 13:21:40] "GET / HTTP/1.1" 200 2191
+[13/Oct/2022 13:42:46] "GET / HTTP/1.1" 200 2191
+Not Found: /favicon.ico
+[13/Oct/2022 13:42:46] "GET /favicon.ico HTTP/1.1" 404 2300
+[13/Oct/2022 13:52:09] "GET / HTTP/1.1" 200 2191
+Not Found: /favicon.ico
+[13/Oct/2022 13:52:10] "GET /favicon.ico HTTP/1.1" 404 2300
+[13/Oct/2022 13:52:12] "GET /secondhand/wordsub/ HTTP/1.1" 200 3734
+[13/Oct/2022 13:52:12] "GET /static/css/style.css HTTP/1.1" 200 4529
+[13/Oct/2022 13:52:13] "GET /static/images/favicon.ico HTTP/1.1" 200 67646
+[13/Oct/2022 13:52:19] "GET /secondhand/wordunsub/?keyword=NAS&user=Faninx HTTP/1.1" 200 1589
+[13/Oct/2022 13:52:22] "GET /secondhand/wordunsub/?keyword=NAS&user=Faninx HTTP/1.1" 200 1589
+[13/Oct/2022 13:52:27] "GET /secondhand/wordsub/ HTTP/1.1" 200 3734
+[13/Oct/2022 13:52:29] "GET /secondhand/wordunsub/?keyword=NAS&user=Faninx HTTP/1.1" 200 1589
+[13/Oct/2022 13:52:34] "GET /secondhand/wordunsub/?keyword=NAS&user=Faninx HTTP/1.1" 200 1589
+[13/Oct/2022 13:52:46] "GET /secondhand/wordunsub/?keyword=NAS&user=Faninx HTTP/1.1" 200 1589
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('TSTb7288ada2ecfbd3d2006bff348770afc')
+[13/Oct/2022 13:58:17] "TSTb7288ada2ecfbd3d2006bff348770afc" 400 -
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('TSTbdd60ff0b6bf832ce13ffef26d6a1a8f')
+[13/Oct/2022 13:58:17] "TSTbdd60ff0b6bf832ce13ffef26d6a1a8f" 400 -
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('647a38b2a47068535a98658ef0f7f6fa')
+[13/Oct/2022 13:58:17] "647a38b2a47068535a98658ef0f7f6fa" 400 -
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('TST00f03d10622bba1cdd7d452d872e576b')
+[13/Oct/2022 13:58:17] "TST00f03d10622bba1cdd7d452d872e576b" 400 -
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('46c85d5855720d1b8e10478d24258615')
+[13/Oct/2022 13:58:17] "46c85d5855720d1b8e10478d24258615" 400 -
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('TST\x06\x00\x00\x000.26.0\x06\x00\x00\x000.26.0')
+[13/Oct/2022 13:58:17] "TST   0.26.0   0.26.0" 400 -
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('TST91f0e93c45d1399d892642ae46d6f951')
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('TST3ecfeacfa947bad5c0e33232c53f2a49')
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('TST26a99ad1c618c0c0cdba09fdfeea13b1')
+[13/Oct/2022 13:58:17] "TST26a99ad1c618c0c0cdba09fdfeea13b1" 400 -
+[13/Oct/2022 13:58:17] "TST3ecfeacfa947bad5c0e33232c53f2a49" 400 -
+[13/Oct/2022 13:58:17] "TST91f0e93c45d1399d892642ae46d6f951" 400 -
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('c131f3442049bb930d0c6c3e4dd7ac05')
+[13/Oct/2022 13:58:17] "c131f3442049bb930d0c6c3e4dd7ac05" 400 -
+[13/Oct/2022 13:58:17] code 400, message Bad request syntax ('TST\x06\x00\x00\x000.25.0\x06\x00\x00\x000.25.0')
+[13/Oct/2022 13:58:17] "TST   0.25.0   0.25.0" 400 -
+[13/Oct/2022 14:51:45] "GET /secondhand/?keyword=customized HTTP/1.1" 200 13215
+[13/Oct/2022 14:51:49] "GET /secondhand/wordsub/ HTTP/1.1" 200 1521
+Invalid HTTP_HOST header: '144.34.170.41'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 15:36:41] "GET / HTTP/1.1" 400 65268
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[13/Oct/2022 15:36:42] "GET /favicon.ico HTTP/1.1" 400 65498
+[13/Oct/2022 15:46:56] code 400, message Bad request version ('À\x14À')
+[13/Oct/2022 15:46:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.60', 40662)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[13/Oct/2022 15:49:00] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ucf\x803Ø\x8d²¯\x03\x87]\x99Ú\x95\x07\x02D')
+[13/Oct/2022 15:49:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 15:49:01] "GET / HTTP/1.1" 400 64762
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 15:49:02] "GET / HTTP/1.1" 400 65209
+[13/Oct/2022 15:49:02] code 505, message Invalid HTTP version (2.0)
+[13/Oct/2022 15:49:02] "PRI * HTTP/2.0" 505 -
+[13/Oct/2022 17:58:17] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03h')
+[13/Oct/2022 17:58:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[13/Oct/2022 17:58:17] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¦ºSQì×D80Ø\x14\x0b\x99\x9e\x07±\x1f\x96zÖ=e(`$\x03=×\x93Øéc\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[13/Oct/2022 17:58:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 17:58:18] "GET / HTTP/1.1" 400 65161
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 21:20:25] "HEAD / HTTP/1.0" 400 64746
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Oct/2022 21:36:52] "GET / HTTP/1.1" 400 65216
+[14/Oct/2022 04:07:28] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03b\x97T`tn±ÄR\x1eÖ2\x84¢Á9OÐì\x81Ä´\x1b\x1f\x0e²\x1e\x94\x15}þ2\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[14/Oct/2022 04:07:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Oct/2022 04:07:28] code 400, message Bad request version ('À\x14À')
+[14/Oct/2022 04:07:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 04:07:28] "GET / HTTP/1.1" 400 65158
+[14/Oct/2022 04:21:13] code 400, message Bad request syntax ("\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x18\x874 \x180;L\x93\x9c\x86\xa0\x95ùë²Ø\x8féÿã\x1b\x03c¹\x84\x1a)\x13\x9cMQ\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\tÀ(À$À\x14À")
+[14/Oct/2022 04:21:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 10:21:15] "GET / HTTP/1.1" 400 65154
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 11:28:03] "GET / HTTP/1.1" 400 65743
+[14/Oct/2022 12:20:44] code 400, message Bad request version ('À\x14À')
+[14/Oct/2022 12:20:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Oct/2022 12:20:44] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03F\x86ðÈ7Óxå9Ü\x9eV(\x1eªéI°3æ\x9eooÌÀH-\x85x¦w\x04\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[14/Oct/2022 12:20:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 12:20:44] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 15:21:31] "GET / HTTP/1.1" 400 65269
+----------------------------------------
+Exception happened during processing of request from ('104.36.187.110', 50014)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 16:18:42] "GET / HTTP/1.1" 400 65196
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 17:06:01] "GET / HTTP/1.1" 400 65747
+[14/Oct/2022 22:19:58] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03`&¸èæ!\x0c\x10½\x96ùJ{3w7ÞÞ\x8aì]x\x1d*úS\x08\\\x18önÿ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[14/Oct/2022 22:19:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Oct/2022 22:19:59] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x06·TÓm\x08<O\x1e\x8b\x11ÏÀ\x1aÊ}OìkIÒÕÇ\x1dQ2÷f!\x1bK<\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[14/Oct/2022 22:19:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 22:20:00] "GET / HTTP/1.1" 400 65161
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[14/Oct/2022 23:33:45] "GET / HTTP/1.0" 400 65295
+----------------------------------------
+Exception happened during processing of request from ('109.248.6.30', 50466)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[15/Oct/2022 09:22:49] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03î@¬I¶èè\x0e,\x02\x7fGyq\x02á\x9d\x882Ð¨§-P\x01éó\x81£t\x8e\x90\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[15/Oct/2022 09:22:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Oct/2022 09:22:49] code 400, message Bad request version ('À\x14À')
+[15/Oct/2022 09:22:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 09:22:50] "GET / HTTP/1.1" 400 65161
+Invalid HTTP_HOST header: '144.34.170.41'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 10:07:37] "GET / HTTP/1.1" 400 65265
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[15/Oct/2022 10:07:37] "GET /favicon.ico HTTP/1.1" 400 65495
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 12:35:56] "GET / HTTP/1.1" 400 65746
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 13:08:49] "GET / HTTP/1.1" 400 65757
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[15/Oct/2022 13:08:50] "GET /favicon.ico HTTP/1.1" 400 65878
+[15/Oct/2022 13:38:34] "GET / HTTP/1.1" 200 2191
+Invalid HTTP_HOST header: '144.34.170.41.16clouds.com'. You may need to add '144.34.170.41.16clouds.com' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 15:47:13] "GET / HTTP/1.1" 400 65341
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 17:50:30] "GET / HTTP/1.1" 400 65210
+[15/Oct/2022 17:50:30] code 505, message Invalid HTTP version (2.0)
+[15/Oct/2022 17:50:30] "PRI * HTTP/2.0" 505 -
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.60', 44154)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[15/Oct/2022 18:04:10] code 400, message Bad request syntax ("\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ù\x04\x82#¬8\x98\x0eàã9büì@\x1a\x12±\x92\x18N^\xa0C\x0ft)\x83\x0cþGé \x06Eb¿\ry\x9d.âz÷\r\x16'â\x9eWb$")
+[15/Oct/2022 18:04:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 18:04:12] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 18:04:12] "GET / HTTP/1.1" 400 65208
+[15/Oct/2022 18:04:12] code 505, message Invalid HTTP version (2.0)
+[15/Oct/2022 18:04:12] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /admin/
+[15/Oct/2022 18:32:26] "GET /admin/ HTTP/1.1" 400 65333
+[15/Oct/2022 18:49:29] code 400, message Bad request version ('À\x14À')
+[15/Oct/2022 18:49:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Oct/2022 18:59:59] code 400, message Bad request version ('À\x14À')
+[15/Oct/2022 18:59:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Oct/2022 19:00:00] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x81\x86&~\x81\xa0\x00©þë\\äçX£\x91\x8ey\x84\x18W`v83\x02\x19\x85ÉÞ1\x1e\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[15/Oct/2022 19:00:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 19:00:00] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[15/Oct/2022 23:11:58] "GET / HTTP/1.1" 400 65269
+[16/Oct/2022 04:48:02] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03òÃDÈ\x9c\x85|\x01ö#@3\x8aäZ\x99$xö}I\x84\x0b\x16Ð\x98\x1fÒJ[ö\x11\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Oct/2022 04:48:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 04:48:02] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 04:48:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[16/Oct/2022 04:48:03] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[16/Oct/2022 05:26:49] "GET / HTTP/1.1" 400 65278
+[16/Oct/2022 15:04:35] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 15:04:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 15:11:49] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 15:11:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 15:11:49] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Qa³ð:\x8e>7û2Jª\x82\x8aù&\x85ÿx\x1aÓJ\x1d\x93\tU~Ób\x86\x06\x85\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Oct/2022 15:11:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[16/Oct/2022 15:11:50] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[16/Oct/2022 21:11:25] "GET / HTTP/1.1" 400 65743
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /qCGCLyY
+[16/Oct/2022 23:56:29] "GET /qCGCLyY HTTP/1.1" 400 65237
+[17/Oct/2022 01:47:00] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 01:47:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 01:47:00] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03-i/\x95S\x91\x19\x8cìÊdÓ\x1b|Â¥¦\\é\x04ÐF¹O\x87V\x04Ý¯\x0e\x12\x9b\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[17/Oct/2022 01:47:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[17/Oct/2022 01:47:01] "GET / HTTP/1.1" 400 65159
+[17/Oct/2022 10:24:14] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 10:24:14] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 11:14:06] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 11:14:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 11:14:06] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x91\x080Ü\xad\x9a\x0bºSÜá\x8dÅ\x1d¶2=×m3Å¾ì/\x0fi\x82O*\x1fÖª\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Oct/2022 11:14:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[17/Oct/2022 11:14:07] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[17/Oct/2022 17:52:01] "GET / HTTP/1.1" 400 65209
+[17/Oct/2022 17:52:02] code 505, message Invalid HTTP version (2.0)
+[17/Oct/2022 17:52:02] "PRI * HTTP/2.0" 505 -
+----------------------------------------
+Exception happened during processing of request from ('162.142.125.219', 39038)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[17/Oct/2022 18:52:22] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 18:52:22] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[17/Oct/2022 18:52:23] "GET / HTTP/1.1" 400 64763
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[17/Oct/2022 18:52:24] "GET / HTTP/1.1" 400 65210
+[17/Oct/2022 18:52:24] code 505, message Invalid HTTP version (2.0)
+[17/Oct/2022 18:52:24] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[17/Oct/2022 19:36:56] "GET / HTTP/1.1" 400 65286
+[17/Oct/2022 20:14:05] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¯î\x1c¶¸ixbyÊu,È<\x19×\x81\x80óo¢\x93i^éÀ\x0b\x08ä\x99\x82¿\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Oct/2022 20:14:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 20:14:06] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Á\x19\x0e\x1f2´õoT}ÜrÛ»\x89¾\x1bËÌU\x8aj±|Y\x1e=J\x170õP\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Oct/2022 20:14:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[17/Oct/2022 20:14:06] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 00:47:30] "GET / HTTP/1.0" 400 64740
+----------------------------------------
+Exception happened during processing of request from ('167.94.145.58', 44796)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[18/Oct/2022 06:10:15] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03÷\x92\x99kgÒ¼Zz¹ÁO.\x84ù\x88%\x18B\t¸í\x08_\x15^Ãèw\x98«ø Öþüá5ã\x047\x9aØ\x0cõ\x1b;Ñ\x17S å}½ã!\x8d;k\x1c¦ª\x80\x92ú\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[18/Oct/2022 06:10:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 06:10:17] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 06:10:17] "GET / HTTP/1.1" 400 65208
+[18/Oct/2022 06:10:18] code 505, message Invalid HTTP version (2.0)
+[18/Oct/2022 06:10:18] "PRI * HTTP/2.0" 505 -
+[18/Oct/2022 06:21:47] code 400, message Bad request version ('À\x14À')
+[18/Oct/2022 06:21:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Oct/2022 06:21:47] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ø?6i¦ð6~¾\x92H5/-Ú\x901ä»pµùÈFq\x05\x90.`ØOP\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[18/Oct/2022 06:21:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 06:21:47] "GET / HTTP/1.1" 400 65158
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 06:48:06] "GET / HTTP/1.0" 400 65294
+Invalid HTTP_HOST header: '144.34.170.41.16clouds.com'. You may need to add '144.34.170.41.16clouds.com' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 11:58:12] "GET / HTTP/1.1" 400 65342
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 12:05:12] "GET / HTTP/1.1" 400 65269
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 12:38:35] "GET / HTTP/1.1" 400 70013
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 12:58:35] "GET / HTTP/1.1" 400 70013
+[18/Oct/2022 15:17:44] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03vhMVëå\x8e6ð\x0eñáÀf¸\x98@CðcÐfÍÚ\x98Ùö\xadm/¸Ô\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À")
+[18/Oct/2022 15:17:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Oct/2022 15:54:51] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x07½7$Z¬BsV\x0fä¶íVõö\x9få$¡ éoB¤\x1eïWÚNJ\x87\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[18/Oct/2022 15:54:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Oct/2022 15:54:51] code 400, message Bad request version ('À\x14À')
+[18/Oct/2022 15:54:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 15:54:52] "GET / HTTP/1.1" 400 65159
+[18/Oct/2022 19:37:04] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[18/Oct/2022 19:37:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[18/Oct/2022 22:45:18] "GET / HTTP/1.1" 400 65154
+[19/Oct/2022 01:34:48] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03w(yØðjÕË~I\x8adrÑ\x01óÑ)ñh:\x80\x06Ú»\x10\x81v»ë¶\x98\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[19/Oct/2022 01:34:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[19/Oct/2022 01:34:49] code 400, message Bad request version ('À\x14À')
+[19/Oct/2022 01:34:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 01:34:51] "GET / HTTP/1.1" 400 65161
+----------------------------------------
+Exception happened during processing of request from ('167.94.146.57', 39952)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[19/Oct/2022 04:10:10] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03î\x81y)wFÅ\x06¹ëR\xad«áJ"¾ÿ\x16\x97¢\x07åÅ«\x1dä÷\x9c2àD »\x9a\x8538±\x08U\x87FzÁ\x1f%³É\x04tÿ\trÓ{\x02\x917(/´é&r\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[19/Oct/2022 04:10:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 04:10:12] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 04:10:13] "GET / HTTP/1.1" 400 65208
+[19/Oct/2022 04:10:13] code 505, message Invalid HTTP version (2.0)
+[19/Oct/2022 04:10:13] "PRI * HTTP/2.0" 505 -
+[19/Oct/2022 10:59:39] code 400, message Bad request version ('À\x14À')
+[19/Oct/2022 10:59:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[19/Oct/2022 10:59:39] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03~¥HY\x16ÒÿLv¡\\h4n\x87\x96qðÝ2¬ñFnÐÅÚ6C\x13´')
+[19/Oct/2022 10:59:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 10:59:40] "GET / HTTP/1.1" 400 65161
+[19/Oct/2022 11:22:21] "GET / HTTP/1.1" 200 2191
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.118', 39762)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[19/Oct/2022 11:42:29] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x035ñOí\x1cY\x9dÇ\x07\x07\x86÷V»ÊPUè+s\x1a×r\x8d\x19$²m\x1fl\xa0ò &\x94\x1f\x8clk¿\x8fÇµLRj·)3ã{[³þô«]\x03_¯(\x87Ã3"\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[19/Oct/2022 11:42:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 11:42:32] "GET / HTTP/1.1" 400 64763
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 11:42:32] "GET / HTTP/1.1" 400 65210
+[19/Oct/2022 11:42:33] code 505, message Invalid HTTP version (2.0)
+[19/Oct/2022 11:42:33] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 16:10:19] "GET / HTTP/1.1" 400 65196
+[19/Oct/2022 20:51:44] code 400, message Bad request version ('À\x14À')
+[19/Oct/2022 20:51:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[19/Oct/2022 20:51:45] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Âeá÷÷¤Þ\x94q\x0eá\x02Ç\x17«ï1R\x83â\x88v5¾É=§°"\x8cB±\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[19/Oct/2022 20:51:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 20:51:46] "GET / HTTP/1.1" 400 65160
+[19/Oct/2022 22:29:29] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03G*WsÛëG<.t§VY\x9bI\x0b\x8e\x85¢Ó]OËq±TÆ¥1VÖT\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[19/Oct/2022 22:29:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Oct/2022 22:46:56] "GET / HTTP/1.1" 400 65267
+[20/Oct/2022 06:51:13] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03%\x19~¯Ö¿67´\x83(õ\x83÷\x18A|¬«|°Âº\x95.Fåuauº\x0e\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[20/Oct/2022 06:51:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[20/Oct/2022 06:51:13] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03®/K]\ràw\x9f\x89H \x7fv\x92&S¯a\xad¯«\x86l\x11\x96&û/\x1e>ò¡\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[20/Oct/2022 06:51:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[20/Oct/2022 06:51:14] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[20/Oct/2022 11:56:47] "HEAD / HTTP/1.0" 400 64746
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /system_api.php
+[20/Oct/2022 11:56:47] "GET /system_api.php HTTP/1.1" 400 65564
+[20/Oct/2022 11:56:47] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x13péY§5«\x9a\x81~5\x860¸\x95w*Æâ}F»LU\x90'ª\x99è\xa0\x93< \r\x95m'S\x93+:ûÓÎ\x91ÇUÂg¡û²)¥¢\x17¸~µW\x1cY:ÊÍ\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[20/Oct/2022 11:56:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /c/version.js
+[20/Oct/2022 11:56:48] "GET /c/version.js HTTP/1.1" 400 65542
+[20/Oct/2022 11:56:48] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x05¿x¤[Ü{Ò{C¥>ÐOnV\x92J³ÕK¶Ý",ITw\x14ÿÁT 5^@ü|Ù³\x8c\x9dÒ²ªR \x1b\x13´Kt5ÍÚÕÏ\x9aíã\x1eíï^P\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À\'À')
+[20/Oct/2022 11:56:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /streaming/clients_live.php
+[20/Oct/2022 11:56:48] "GET /streaming/clients_live.php HTTP/1.1" 400 65696
+[20/Oct/2022 11:56:48] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x81~u\x999\x96\x1c¨ }§Æ\x08E³½\x80Ë\x81vªýXÍÝpr\x16\x07Â\x02\x9c Ñ^½ÅéÛÎ'r£\t\x8bÂ\x96ÔCù2\x91%\x97#'\\[î5L\x12Öv\x8a\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[20/Oct/2022 11:56:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /stalker_portal/c/version.js
+[20/Oct/2022 11:56:48] "GET /stalker_portal/c/version.js HTTP/1.1" 400 65707
+[20/Oct/2022 11:56:48] code 400, message Bad request version ("EÿXSÐsv_k)z\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[20/Oct/2022 11:56:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /stream/live.php
+[20/Oct/2022 11:56:48] "GET /stream/live.php HTTP/1.1" 400 65514
+[20/Oct/2022 11:56:49] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x9eMDõ\x80ò*\x8a:bz|5`\x8aå\x7fëA=ï\x99\x15ÿ¶\x17]í\x95ý·º Ó\t§.\x05\x8aZ¨2\x95\x1dv\x95h)Í°\x92ySgúI\x16\x81Ë"o1\x0f÷Î\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À\'À')
+[20/Oct/2022 11:56:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /flu/403.html
+[20/Oct/2022 11:56:49] "GET /flu/403.html HTTP/1.1" 400 65542
+[20/Oct/2022 11:56:49] code 400, message Bad request version ("\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[20/Oct/2022 11:56:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[20/Oct/2022 11:56:49] "GET / HTTP/1.1" 400 65410
+[20/Oct/2022 11:56:49] code 400, message Bad request version ("*«JéÄ(/Iß\x06ë\x9dG2¶U7Ë\x92l}[Gð=xÀ\x9c[ãDª\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[20/Oct/2022 11:56:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[20/Oct/2022 15:10:26] "GET / HTTP/1.1" 400 65210
+[20/Oct/2022 16:27:09] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x91t?±UzÉÝË´k®Þ[rÃºE\x192,Rfµ\x06Ë/Y63ñ\x84\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[20/Oct/2022 16:27:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[20/Oct/2022 16:27:09] code 400, message Bad request version ('À\x14À')
+[20/Oct/2022 16:27:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[20/Oct/2022 16:27:09] "GET / HTTP/1.1" 400 65159
+[20/Oct/2022 18:39:29] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03h$sº);Ðé0É\x82kËÂÌð\x8b\x13\x8b5\x96þÜßàb|»Â«$]\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[20/Oct/2022 18:39:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[21/Oct/2022 02:17:46] code 400, message Bad request version ('À\x14À')
+[21/Oct/2022 02:17:46] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[21/Oct/2022 02:17:47] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÇáÎb\x05\x0e~ÉK&Øü\rò\xa0%\x9f[¼q\x8bÉcä¤\x13a\x1dÏ¼+Ø\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[21/Oct/2022 02:17:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[21/Oct/2022 02:17:48] "GET / HTTP/1.1" 400 65160
+[21/Oct/2022 04:31:40] code 400, message Bad request syntax ('\x16\x03\x01\x00°\x01\x00\x00¬\x03\x03òY\x867\x01$ïù\x8eÉ°,nÛ\x10\xad\x1b´£ª%x\x1d½£õ},\x88õ \x9d\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[21/Oct/2022 04:31:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[21/Oct/2022 04:31:53] "GET / HTTP/1.1" 400 65179
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[21/Oct/2022 04:32:58] "GET /favicon.ico HTTP/1.1" 400 65155
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /robots.txt
+[21/Oct/2022 04:32:58] "GET /robots.txt HTTP/1.1" 400 65144
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /sitemap.xml
+[21/Oct/2022 04:33:00] "GET /sitemap.xml HTTP/1.1" 400 65155
+[21/Oct/2022 09:18:46] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03*\x9cÕ-\x87\x17e½\xa0')
+[21/Oct/2022 09:18:46] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('104.152.52.163', 41235)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[21/Oct/2022 12:49:20] "GET / HTTP/1.1" 400 65268
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[21/Oct/2022 14:17:14] "GET / HTTP/1.1" 400 65233
+----------------------------------------
+Exception happened during processing of request from ('104.36.187.110', 53212)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[21/Oct/2022 17:16:41] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x9b')
+[21/Oct/2022 17:16:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[21/Oct/2022 17:16:43] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03#\rN¨y³¤\x07Î=¾\x04ÝÍ\x05Åm«¬j\x94Ó£\t7o±â\x18Ô\\Å\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[21/Oct/2022 17:16:43] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[21/Oct/2022 17:16:43] "GET / HTTP/1.1" 400 65160
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.46', 34468)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[21/Oct/2022 19:43:45] code 400, message Bad request syntax ("\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03¤\x9eØß»ò¶Óóht.\x04\x94xýQë\x9fS\r²GÑæ²ù½'U£\x99 ©Ç+ú¥67ö\x872¶|¾z\x98\x89I\xa0:ÿ¹ÉÑ~Ij\x1e\x10\x80\x1dEo\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À")
+[21/Oct/2022 19:43:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[21/Oct/2022 19:43:47] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[21/Oct/2022 19:43:47] "GET / HTTP/1.1" 400 65208
+[21/Oct/2022 19:43:47] code 505, message Invalid HTTP version (2.0)
+[21/Oct/2022 19:43:47] "PRI * HTTP/2.0" 505 -
+[21/Oct/2022 21:06:39] code 400, message Bad request version ('À(À$À\x14À')
+[21/Oct/2022 21:06:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[22/Oct/2022 02:17:47] "GET / HTTP/1.0" 400 65295
+[22/Oct/2022 04:15:32] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03î±Q\x15Y\x13ë¤»d\x9c\x0b\x8bç\x01ÊJø\t\x95P\x9fàé¼QJY\x8ex\x12ê\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[22/Oct/2022 04:15:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[22/Oct/2022 04:15:32] code 400, message Bad request version ('À\x14À')
+[22/Oct/2022 04:15:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[22/Oct/2022 04:15:33] "GET / HTTP/1.1" 400 65161
+Invalid HTTP_HOST header: '144.34.170.41.16clouds.com'. You may need to add '144.34.170.41.16clouds.com' to ALLOWED_HOSTS.
+Bad Request: /
+[22/Oct/2022 05:38:59] "GET / HTTP/1.1" 400 65342
+[22/Oct/2022 13:34:04] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¶º×»×b\x9bs8ê\x9dh\x15ßÄNÇ\x80A@2¦\x1aÕ\x87*')
+[22/Oct/2022 13:34:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[22/Oct/2022 13:34:04] code 400, message Bad request syntax ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x88\x8f)ð«\x10\r'h\x0c\x14¼n¸\x83\x1aðÀ\x8aÓ#\x93uc\x9aï\x14^\x9c¥\x83\xad\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[22/Oct/2022 13:34:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[22/Oct/2022 13:34:05] "GET / HTTP/1.1" 400 65159
+[22/Oct/2022 15:54:34] "GET / HTTP/1.1" 200 2191
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[22/Oct/2022 18:57:35] "GET / HTTP/1.1" 400 65154
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[22/Oct/2022 22:22:44] "GET / HTTP/1.1" 400 65206
+[22/Oct/2022 22:46:39] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x83_\x17!öì\x98\x03\x1c½%Ý¿çç\x9e\x97<ÂW\x08GØ»:¾\x00\x1e\x1bMÌ®\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[22/Oct/2022 22:46:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[22/Oct/2022 22:58:33] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03wD9¦Èá÷DÞl\x15\x10\x17¯\x91MÌ')
+[22/Oct/2022 22:58:33] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[22/Oct/2022 22:58:33] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03IeÉ0`h¦ê=\x10Î\tÖÃ/T4|\x87Z\x14\x1dÁ\x8eÖ\x84\x96þ8N&i\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[22/Oct/2022 22:58:33] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[22/Oct/2022 22:58:34] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[23/Oct/2022 01:37:05] "GET / HTTP/1.1" 400 65196
+[23/Oct/2022 08:49:46] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03g´\x02\x89"zê3g\x15Q¢\x96\x93Â\x8a\x03¨\x11Ã~¹\'(ÒRîÑ\x03\x17°>\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[23/Oct/2022 08:49:46] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Oct/2022 08:49:46] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ê\x0c>otü\x7fx5o\x8cqé?àO\x96gXØEE5\t\x0c\\[ï\x02èÁ\\\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[23/Oct/2022 08:49:46] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[23/Oct/2022 08:49:47] "GET / HTTP/1.1" 400 65159
+[23/Oct/2022 09:30:32] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03p:É`ÔËå\x97\x9dÕÖ.\x8f\x08«O³1`ªg6\x995òIø\x80/RºÄ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[23/Oct/2022 09:30:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[23/Oct/2022 14:08:23] "GET / HTTP/1.1" 400 65258
+[23/Oct/2022 17:57:19] code 400, message Bad request version ('À\x14À')
+[23/Oct/2022 17:57:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Oct/2022 17:57:20] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ä\x07"æÁ\xadÙ\x10\x1aYÐ\x03\x03x\x92l.\x08rR\x9d\x9aqý\x9dþR½\x97¤/^\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[23/Oct/2022 17:57:20] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[23/Oct/2022 17:57:20] "GET / HTTP/1.1" 400 65161
+[24/Oct/2022 03:37:07] code 400, message Bad request version ('À\x14À')
+[24/Oct/2022 03:37:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[24/Oct/2022 03:37:07] code 400, message Bad request version ('À\x14À')
+[24/Oct/2022 03:37:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[24/Oct/2022 03:37:08] "GET / HTTP/1.1" 400 65160
+[24/Oct/2022 13:15:33] code 400, message Bad request version ('À\x14À')
+[24/Oct/2022 13:15:33] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[24/Oct/2022 13:15:33] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03=æ\x88C{²\x02ó47b\x96')
+[24/Oct/2022 13:15:33] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[24/Oct/2022 13:15:35] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[24/Oct/2022 17:13:00] "GET / HTTP/1.0" 400 64738
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[24/Oct/2022 17:13:01] "OPTIONS / HTTP/1.0" 400 64766
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /nice ports,/Trinity.txt.bak
+[24/Oct/2022 17:13:01] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 400 65047
+[24/Oct/2022 17:13:07] code 400, message Bad request syntax ('JRMI\x00\x02K')
+[24/Oct/2022 17:13:07] "JRMI K" 400 -
+[24/Oct/2022 17:13:07] code 400, message Bad request version ('INFO')
+[24/Oct/2022 17:13:07] "GET SERVER INFO" 400 -
+[24/Oct/2022 17:13:07] code 400, message Bad request version ('RTSP/1.0')
+[24/Oct/2022 17:13:07] "OPTIONS / RTSP/1.0" 400 -
+[24/Oct/2022 17:13:13] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[24/Oct/2022 17:13:13] "  (rþ          |                    " 400 -
+[24/Oct/2022 17:13:18] code 400, message Bad HTTP/0.9 request type ('\x00')
+[24/Oct/2022 17:13:18] "          versionbind   " 400 -
+[24/Oct/2022 17:13:18] code 400, message Bad request syntax ('HELP')
+[24/Oct/2022 17:13:18] "HELP" 400 -
+[24/Oct/2022 17:13:18] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[24/Oct/2022 17:13:18] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[24/Oct/2022 17:13:19] code 400, message Bad request version ('\x00/\x00')
+[24/Oct/2022 17:13:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[24/Oct/2022 17:13:19] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[24/Oct/2022 17:13:19] "   qjn0k¡¢" 400 -
+[24/Oct/2022 17:13:24] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[24/Oct/2022 17:13:24] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[24/Oct/2022 17:13:29] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[24/Oct/2022 17:13:29] "l          " 400 -
+[24/Oct/2022 17:13:29] code 400, message Bad request version ('SIP/2.0')
+[24/Oct/2022 17:13:29] "OPTIONS sip:nm SIP/2.0" 400 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[24/Oct/2022 19:08:18] "GET / HTTP/1.1" 400 65271
+[24/Oct/2022 21:01:35] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8d')
+[24/Oct/2022 21:01:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[24/Oct/2022 23:02:14] code 400, message Bad request version ('À\x14À')
+[24/Oct/2022 23:02:14] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[24/Oct/2022 23:02:15] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[25/Oct/2022 02:08:54] "GET / HTTP/1.0" 400 64739
+[25/Oct/2022 03:41:23] "GET / HTTP/1.1" 200 2191
+[25/Oct/2022 04:02:26] code 400, message Bad request version ('À(À$À\x14À')
+[25/Oct/2022 04:02:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[25/Oct/2022 09:22:05] code 400, message Bad request version ('5,')
+[25/Oct/2022 09:22:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[25/Oct/2022 09:22:06] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x039DBÓ\x9cªøèâfÝö\x9a\x1cÛ\x07WU\t\x05~\x14\x89w\x93sY<\x9c\xad\x18\x18\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[25/Oct/2022 09:22:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[25/Oct/2022 09:22:07] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[25/Oct/2022 11:45:54] "GET / HTTP/1.1" 400 65198
+[25/Oct/2022 18:57:16] "GET / HTTP/1.1" 200 2191
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[25/Oct/2022 19:00:58] "GET / HTTP/1.1" 400 65235
+[25/Oct/2022 19:35:03] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03 \x05+\x1cÓ\x98Om\x7f\x04"}ú0nîH"ù\x95_\x02û>lBÊJÁSúæ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[25/Oct/2022 19:35:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[25/Oct/2022 19:35:04] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¼5Ue\x87\x9dZ\x91\x82ù\x93\x15[\x0eWàª>cÊü\x97\x84]2ü\x8c')
+[25/Oct/2022 19:35:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[25/Oct/2022 19:35:04] "GET / HTTP/1.1" 400 65161
+[25/Oct/2022 21:51:15] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03cÇf5\x15_ü\x8b\x90èÀ÷\x82ôAn\xa0HQÝ¢Õ\x81\x9b\x87 áõ\x89¼\xa0m\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[25/Oct/2022 21:51:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41.16clouds.com'. You may need to add '144.34.170.41.16clouds.com' to ALLOWED_HOSTS.
+Bad Request: /
+[25/Oct/2022 22:49:24] "GET / HTTP/1.1" 400 65342
+[26/Oct/2022 04:57:26] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x96æöª\x00vªBÚà@üàGY\x9d&KþUXI')
+[26/Oct/2022 04:57:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[26/Oct/2022 04:57:26] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03H\x00¾6Å¹÷S\x00#æ©Ê\x05\x1e5\x03ÙÒÜo!_<Ç\x8aÀ\x85\xad¢a\x80\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[26/Oct/2022 04:57:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[26/Oct/2022 04:57:27] "GET / HTTP/1.1" 400 65160
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.119', 54622)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[26/Oct/2022 13:41:37] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\rö&¨ajÎhöÞ£Ø8~\x83#M\x1cÃÜ\x9c\x82÷\x9a§g\xadB\x0c\x85[B cÕ\x12ë×tzÄ\x87=¢Rô!\x86A\x02p\tg\x950RmÖ[q3Ã\x9eç\x07\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[26/Oct/2022 13:41:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[26/Oct/2022 13:41:39] "GET / HTTP/1.1" 400 64763
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[26/Oct/2022 13:41:39] "GET / HTTP/1.1" 400 65210
+[26/Oct/2022 13:41:40] code 505, message Invalid HTTP version (2.0)
+[26/Oct/2022 13:41:40] "PRI * HTTP/2.0" 505 -
+[26/Oct/2022 15:39:58] code 400, message Bad request version ('À\x14À')
+[26/Oct/2022 15:39:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[26/Oct/2022 15:39:59] code 400, message Bad request version ('À\x14À')
+[26/Oct/2022 15:39:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[26/Oct/2022 15:39:59] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[26/Oct/2022 19:43:58] "GET / HTTP/1.1" 400 65230
+[26/Oct/2022 22:24:15] code 400, message Bad request version ('À\x14À')
+[26/Oct/2022 22:24:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[27/Oct/2022 01:16:42] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03u<ye4w\x9fçïe\x8cU\x8d\x9aáø\t\x15bç³S\x1aê,D\x9fì\x91)Z\x1f\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[27/Oct/2022 01:16:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[27/Oct/2022 01:16:42] code 400, message Bad request version ('À\x14À')
+[27/Oct/2022 01:16:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 01:16:43] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 05:39:05] "GET / HTTP/1.1" 400 65195
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 07:00:50] "GET / HTTP/1.0" 400 65294
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 07:35:01] "HEAD / HTTP/1.0" 400 64747
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /system_api.php
+[27/Oct/2022 07:35:02] "GET /system_api.php HTTP/1.1" 400 65565
+[27/Oct/2022 07:35:02] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x81î}\x1eþ¢7·6\x83ÊT\x0ek\x0e©Ré\x8f\x01\x08æ\x0bÛ'\x1dò|k5b² |`Px¯\x11¶ø\x8b¦?\x8ajöï\x96liÑÉ>¬\x11\x8e$E\x9bòîL°\x15\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[27/Oct/2022 07:35:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /c/version.js
+[27/Oct/2022 07:35:03] "GET /c/version.js HTTP/1.1" 400 65543
+[27/Oct/2022 07:35:03] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\r\x1b\x86lÙûÁÅÇ\rî\x9a¹/M\x87l5\xa0kP~f\x13tìý>ÈZº× ó\x99*\x18òa(\x10\x0e*A\x98¦¥ý\x89\x15\x01^|\x08z|\x03\x1d>¼Ö\x08\x8fû\x99\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[27/Oct/2022 07:35:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /streaming/clients_live.php
+[27/Oct/2022 07:35:04] "GET /streaming/clients_live.php HTTP/1.1" 400 65697
+[27/Oct/2022 07:35:04] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Øù\xa0\x9f«\x9a6ü\x04/ð0\x96\x80\x97\x81C\x8fL\x18/x-|C\x0bÆ\x95¹éRt \x8c\x1f!*Z¿þ2k\x8fT¦ËØ\x8ccî[îK:·\tq\x96@±\x93ÊR\x06\x03\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[27/Oct/2022 07:35:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /stalker_portal/c/version.js
+[27/Oct/2022 07:35:05] "GET /stalker_portal/c/version.js HTTP/1.1" 400 65708
+[27/Oct/2022 07:35:05] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03rÀ\x86Aú|Ñ')
+[27/Oct/2022 07:35:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /stream/live.php
+[27/Oct/2022 07:35:08] "GET /stream/live.php HTTP/1.1" 400 65476
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /flu/403.html
+[27/Oct/2022 07:35:09] "GET /flu/403.html HTTP/1.1" 400 65543
+[27/Oct/2022 07:35:09] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03óH\x01ªj\x82\x80¿ÅÝLìÀKG³\x0cL\x8c\x8e\x1a3c\x94=\x9c\x88\x0b\x00è²" 6$\t\x91\x9cTðñI\x8bÔÃÎ\r\\\x964\\¸võÁ\x1dÏ\x8e|5\x10\x89|Û2\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À\'À')
+[27/Oct/2022 07:35:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 07:35:10] "GET / HTTP/1.1" 400 65411
+[27/Oct/2022 07:35:10] code 400, message Bad request version ("\x07\x8býùÚ^\x92ÿÜáT¿\x06òÜfÒ\x8e2\x99á½fL\x94\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[27/Oct/2022 07:35:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[27/Oct/2022 08:41:11] code 400, message Bad request version ('À\x14À')
+[27/Oct/2022 08:41:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.62', 44992)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[27/Oct/2022 09:58:13] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Î½Ô@.ïW*Òê=\x98')
+[27/Oct/2022 09:58:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 09:58:14] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 09:58:14] "GET / HTTP/1.1" 400 65208
+[27/Oct/2022 09:58:14] code 505, message Invalid HTTP version (2.0)
+[27/Oct/2022 09:58:14] "PRI * HTTP/2.0" 505 -
+----------------------------------------
+Exception happened during processing of request from ('104.36.187.110', 45656)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[27/Oct/2022 11:09:52] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03x¦\x08V¢T\x10G3tÜ(çSl\x0bx\\a\x93k7\x1c\x85\x89Nk¢øg\x8d\x7f\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[27/Oct/2022 11:09:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[27/Oct/2022 11:09:52] code 400, message Bad request syntax ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x1fç\x01÷!4S9apþÆ\x06dò\x80A>VÊ\x88+2Är\x1f'\x07&\\AR\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[27/Oct/2022 11:09:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 11:09:53] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 14:32:49] "GET / HTTP/1.1" 400 65282
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 17:36:58] "GET / HTTP/1.1" 400 65412
+[27/Oct/2022 18:21:52] code 400, message Bad request version ('À\x14À')
+[27/Oct/2022 18:21:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[27/Oct/2022 18:21:54] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03í\x81\x0c\x80^Þ\x91ä\x0b\x0eª_$ä9F¶WÍÒ\x17Ûè\x1a?3ãÝÑ4\x16\x8a\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[27/Oct/2022 18:21:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[27/Oct/2022 18:22:02] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[27/Oct/2022 18:33:41] "GET /favicon.ico HTTP/1.1" 400 65533
+[28/Oct/2022 02:50:24] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ä\\\x1cµï\x96yxLpÕ¨Åé¶l6\x1dÊ\x1fK\x01lÈéºÑqµ\tû¼\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[28/Oct/2022 02:50:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[28/Oct/2022 02:50:24] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ñÜ\x0c\x9fw\x8d\x13^ÒX×ºÙê²¸ù9\x84\x953!\x159kÍÚ Ån\x160\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[28/Oct/2022 02:50:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 02:50:25] "GET / HTTP/1.1" 400 65160
+[28/Oct/2022 04:41:53] code 400, message Bad request syntax ("\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03Â\x07xaê^W>É\x84²\x10\ryHmÜµq+²Y\x93.,å\x1eá»\x92àÖ\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\tÀ(À$À\x14À")
+[28/Oct/2022 04:41:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 05:22:19] "GET / HTTP/1.1" 400 65264
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 07:09:19] "GET / HTTP/1.1" 400 65268
+----------------------------------------
+Exception happened during processing of request from ('167.94.146.60', 36178)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[28/Oct/2022 08:06:54] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ÑÏ \x995-~-õBäà¯4x~\x89&µ³¢µ§p\x9dÚË-\x9bçÿq iË¸\x9ag0ð\x94\x84H>\x90$\x01]\xadÛ\x06ü7)\x1eò¥âXòiÎ\x14ùø\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[28/Oct/2022 08:06:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 08:06:55] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 08:06:56] "GET / HTTP/1.1" 400 65208
+[28/Oct/2022 08:06:56] code 505, message Invalid HTTP version (2.0)
+[28/Oct/2022 08:06:56] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /admin/
+[28/Oct/2022 08:25:12] "GET /admin/ HTTP/1.1" 400 65334
+----------------------------------------
+Exception happened during processing of request from ('167.94.145.59', 46960)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[28/Oct/2022 10:44:57] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x0399\x8e\x8eý8ÝÆLý\x0bH<\x14\x14ó\x98\x93\x8b8ê\x86\x1e\x89ö|\x1dc\x8e\x94\x18¼ Õ\x125i#¥ÐòÈ´C¿Z\xa08n<J\x08²¿Ç¥[\x02\x1aêhªl\x989\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[28/Oct/2022 10:44:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 10:44:59] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 10:45:00] "GET / HTTP/1.1" 400 65208
+[28/Oct/2022 10:45:00] code 505, message Invalid HTTP version (2.0)
+[28/Oct/2022 10:45:00] "PRI * HTTP/2.0" 505 -
+[28/Oct/2022 11:33:57] "GET / HTTP/1.1" 200 2191
+[28/Oct/2022 12:58:54] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x85\x83\x1bC\x03Ø6pd.\x16i±\x8b¢¶\x82æWSÝ\x7f\x1dYnÈ¡·íy\x0cÈ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[28/Oct/2022 12:58:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[28/Oct/2022 12:58:54] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8cõÇ\x06\x9dÿHgè~w\x07 :À·´\x9a`ìGÊ\x1dzûÝX\x1aRÏJs\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[28/Oct/2022 12:58:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 12:58:55] "GET / HTTP/1.1" 400 65158
+[28/Oct/2022 14:43:40] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¨N7dwÐOP\x8dnó"\x95X<\x14IjAúaµ®ÑO\x84\x0f}æïþý\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[28/Oct/2022 14:43:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[28/Oct/2022 16:19:13] "GET / HTTP/1.1" 200 2191
+[28/Oct/2022 17:26:34] code 400, message Bad HTTP/0.9 request type ('\x1aÞ\x01-\x00\x12\x00\x00\x00ù\x95ô9N\x08')
+[28/Oct/2022 17:26:34] " Þ-    ùô9N:¢¬!X " 400 -
+Invalid HTTP_HOST header: '144.34.170.41.16clouds.com'. You may need to add '144.34.170.41.16clouds.com' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 17:43:32] "GET / HTTP/1.1" 400 65341
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 19:47:44] "GET / HTTP/1.1" 400 65201
+[28/Oct/2022 22:56:25] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03P"¡hh\rßJJ×\x1c_\x1bN\x04z(i¼¥\x08ýaÅÖ\x1b¶ÇÎðÑ \x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[28/Oct/2022 22:56:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[28/Oct/2022 22:56:26] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x037\x90\x02jøKB.hÛ{¾IU(Í6\x14CkÀíÐ!¬3\x95ËÚ\x1b\x99+\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[28/Oct/2022 22:56:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[28/Oct/2022 22:56:27] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 03:33:52] "GET / HTTP/1.1" 400 65195
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 03:42:03] "GET / HTTP/1.1" 400 65154
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.61', 41858)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[29/Oct/2022 07:44:29] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x036\x0e\x01c\x8f\x84±©êó\x94FïU\x1ajIç\x9ey\x19Ê\x08\x03zÇ@¼9_#) À$\x99°ðs\x82fì\x9e&4¬\x82\x95ë¿B\x85T$\x9fG\x02Ò\x01\x90ò\x92DPñ\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[29/Oct/2022 07:44:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 07:44:31] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 07:44:31] "GET / HTTP/1.1" 400 65208
+[29/Oct/2022 07:44:31] code 505, message Invalid HTTP version (2.0)
+[29/Oct/2022 07:44:31] "PRI * HTTP/2.0" 505 -
+[29/Oct/2022 08:34:24] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x9eXøøÊ°\x94\x00°(²R\x16y^È\x195\x7fAQJ©ú}µt3$B\x02«\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[29/Oct/2022 08:34:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[29/Oct/2022 08:34:24] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03e\x99âÚñ:O{\x87Ùà\x8b\x9e÷B\x18\x17\x97Kåõ3ÖWÓ~\x91S"Í\x9b%\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[29/Oct/2022 08:34:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 08:34:25] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 10:42:11] "GET / HTTP/1.1" 400 65410
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[29/Oct/2022 10:42:12] "GET /favicon.ico HTTP/1.1" 400 65531
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /PSIA/index
+[29/Oct/2022 10:42:13] "GET /PSIA/index HTTP/1.1" 400 65530
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /onvif/index
+[29/Oct/2022 10:42:13] "POST /onvif/index HTTP/1.1" 400 65923
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /HNAP1
+[29/Oct/2022 10:42:14] "GET /HNAP1 HTTP/1.1" 400 65475
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.62', 60936)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[29/Oct/2022 13:17:30] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x9f¿¿\x82æ\x84t\x89ÇØÂ')
+[29/Oct/2022 13:17:30] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 13:17:32] "GET / HTTP/1.1" 400 64762
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 13:17:32] "GET / HTTP/1.1" 400 65209
+[29/Oct/2022 13:17:33] code 505, message Invalid HTTP version (2.0)
+[29/Oct/2022 13:17:33] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 15:41:05] "GET / HTTP/1.1" 400 65279
+[29/Oct/2022 18:02:41] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03/\xad\x9b«îUÈ«\x16®MÖì·âÝh\x89|°4{r\x98\x02¡L\x04ÖQØ\x15\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[29/Oct/2022 18:02:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[29/Oct/2022 18:02:41] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Æ^¨\x8c\x9fn²üËÓ\xad>QÕcÐò]Å*JÊB\x99]')
+[29/Oct/2022 18:02:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 18:02:44] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 22:46:53] "GET / HTTP/1.1" 400 65251
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[29/Oct/2022 23:10:51] "GET / HTTP/1.0" 400 65294
+[30/Oct/2022 03:48:41] code 400, message Bad request version ('À\x14À')
+[30/Oct/2022 03:48:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Oct/2022 03:48:42] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Å\x85\x14\x9c\x16´¸\x15¯\x12öY4d¨ª\x12Sþ@\x10\x1e\x83à\x0e4*ÎÛ«äº\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[30/Oct/2022 03:48:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[30/Oct/2022 03:48:42] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[30/Oct/2022 08:59:05] "GET / HTTP/1.1" 400 65267
+[30/Oct/2022 13:33:58] code 400, message Bad request version ('À\x14À')
+[30/Oct/2022 13:33:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Oct/2022 13:33:59] code 400, message Bad request version ('\x02')
+[30/Oct/2022 13:33:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[30/Oct/2022 13:34:00] "GET / HTTP/1.1" 400 65159
+[30/Oct/2022 20:53:27] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03-\x14ïjY|`\x8e×ì')
+[30/Oct/2022 20:53:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Oct/2022 22:59:19] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03//Ô²XÁ\x01(±\x00§$Ûº\x91¶lüTQÁ¶éý×\x86Öì\x95\x183Å\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[30/Oct/2022 22:59:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Oct/2022 22:59:19] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03a[\x12\x012ø\x0c]ÇÎ\x91\x9cÖÖ@\x80©\x1b\x1d÷DF\x13§Å\x00a± !Uº\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[30/Oct/2022 22:59:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[30/Oct/2022 22:59:20] "GET / HTTP/1.1" 400 65159
+[31/Oct/2022 00:03:40] code 400, message Bad request syntax ('\x16\x03\x01\x00°\x01\x00\x00¬\x03\x03Á!í÷Â"CñÔ|¨i\'ÎL³R\x1câÑ½ÿ¿ºBñ\t\x02È]çK\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[31/Oct/2022 00:03:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[31/Oct/2022 00:03:52] "GET / HTTP/1.1" 400 65180
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[31/Oct/2022 00:04:05] "GET /favicon.ico HTTP/1.1" 400 65156
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /robots.txt
+[31/Oct/2022 00:04:06] "GET /robots.txt HTTP/1.1" 400 65145
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /sitemap.xml
+[31/Oct/2022 00:04:08] "GET /sitemap.xml HTTP/1.1" 400 65156
+[31/Oct/2022 08:43:23] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ç¨!¡ÉÆj"\x01¥~Ì×\x10-\x8e\x88_p\x11û.\x85é)7\x85%z\x82.Ã\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[31/Oct/2022 08:43:23] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[31/Oct/2022 08:43:24] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[31/Oct/2022 08:47:33] "GET / HTTP/1.1" 400 65210
+[31/Oct/2022 08:47:34] code 505, message Invalid HTTP version (2.0)
+[31/Oct/2022 08:47:34] "PRI * HTTP/2.0" 505 -
+[31/Oct/2022 14:57:56] code 400, message Bad request version ('À\x14À')
+[31/Oct/2022 14:57:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[31/Oct/2022 18:47:24] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03_ð)my¿¦5®\x96\x08Ñ\x7fö¸â¬}_Õ\x10YzHT/3\x906\x0219\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[31/Oct/2022 18:47:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[31/Oct/2022 18:47:25] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¢*°0^<\x85\x96·\x1db1uö\x95,\x1dÝ)¡Xi½\x91*»\x9fd[»a.\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[31/Oct/2022 18:47:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[31/Oct/2022 18:47:26] "GET / HTTP/1.1" 400 65159
+[31/Oct/2022 20:15:04] code 400, message Bad request syntax ('\x16\x03\x01\x01 \x01\x00\x01\x1c\x03\x03\x8eÚ\x17/Ì¨E\x00\x0bÚÒ·Ë\x89\x03\x00W\x03¤Ø¥')
+[31/Oct/2022 20:15:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[31/Oct/2022 20:15:05] code 400, message Bad request syntax ("\x16\x03\x01\x00½\x01\x00\x00¹\x03\x03+\x11ðµfîÐ¿oo¦\x1bÄF\x8e6\x82\x9aÅd\x18\x10p\x84õ{ç[V%\x05.\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+[31/Oct/2022 20:15:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[31/Oct/2022 20:15:05] code 400, message Bad request version ('\x00\x00\x12À')
+[31/Oct/2022 20:15:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[31/Oct/2022 20:15:05] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x01eÎs\x17\x04\x81N\x04À°\x08ÁÑ\x9cn7Ø\x92')
+[31/Oct/2022 20:15:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[31/Oct/2022 20:15:06] "GET / HTTP/1.1" 400 65529
+[31/Oct/2022 20:15:07] code 400, message Bad request syntax ('\x16\x03\x01\x01 \x01\x00\x01\x1c\x03\x03òØ¨:ùâ\x1b6¬\x10\x1fv\x1ej4c\x13pcëQ.À')
+[31/Oct/2022 20:15:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[31/Oct/2022 20:15:07] code 400, message Bad request syntax ('\x16\x03\x01\x00½\x01\x00\x00¹\x03\x03ÏvW\x87L\x08e¬')
+[31/Oct/2022 20:15:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[31/Oct/2022 20:15:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x02sÙ#8\x87Ó°Ö\x82Ý9\x86\x19jzq\x874\x86\x92\x84óPÆ>,a')
+[31/Oct/2022 20:15:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[31/Oct/2022 20:15:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x01w')
+[31/Oct/2022 20:15:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[31/Oct/2022 20:15:08] "GET /favicon.ico HTTP/1.1" 400 65650
+----------------------------------------
+Exception happened during processing of request from ('104.152.52.90', 57323)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 08:12:32] "GET / HTTP/1.1" 400 65266
+[01/Nov/2022 08:47:12] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x002\x83¸eÿ·ÆþÑ\x81dsµFÏîÝgº\x95\x8d\x10ì$\x1ax2.\x14úv\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À")
+[01/Nov/2022 08:47:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Nov/2022 08:54:26] "GET / HTTP/1.1" 200 2191
+[01/Nov/2022 10:17:26] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Òô&¢#ËGzÌ\x80\x87¥,%o±9\x81=7\x8czóM\xad¯Dí$;åa\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[01/Nov/2022 10:17:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Nov/2022 10:17:27] code 400, message Bad request version ('À\x14À')
+[01/Nov/2022 10:17:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 10:17:28] "GET / HTTP/1.1" 400 65159
+[01/Nov/2022 11:23:22] "GET / HTTP/1.1" 200 2191
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.117', 44578)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[01/Nov/2022 11:47:43] code 400, message Bad request version ('À\x14À')
+[01/Nov/2022 11:47:43] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 11:47:45] "GET / HTTP/1.1" 400 64762
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 11:47:45] "GET / HTTP/1.1" 400 65209
+[01/Nov/2022 11:47:46] code 505, message Invalid HTTP version (2.0)
+[01/Nov/2022 11:47:46] "PRI * HTTP/2.0" 505 -
+----------------------------------------
+Exception happened during processing of request from ('162.142.125.212', 56720)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[01/Nov/2022 14:22:51] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ã\x8f£Í{\x0f\x18@\\!B\x9a5LLé\x8c"ncÝû[fgÄ3ÀÐ\x9aãc ùpÕcZúë\x84\x9aÔÇ\x8bÔ×\x1b\x0b0µ\x10ý\x03°\x1d{Qí0¦v\x1f\x9cs\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[01/Nov/2022 14:22:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 14:22:53] "GET / HTTP/1.1" 400 64762
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 14:22:53] "GET / HTTP/1.1" 400 65209
+[01/Nov/2022 14:22:54] code 505, message Invalid HTTP version (2.0)
+[01/Nov/2022 14:22:54] "PRI * HTTP/2.0" 505 -
+[01/Nov/2022 15:18:19] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ó\x8aQ\xa0\x04!tl\x01\x1f\x1a\x07ò\x03Ûñ¤Ú\x1b¡J»Ft\x98\x17=³\x85\r\x9d\x14\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[01/Nov/2022 15:18:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 16:41:23] "GET / HTTP/1.0" 400 64738
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 16:55:03] "GET / HTTP/1.0" 400 65294
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 19:54:40] "GET / HTTP/1.1" 400 65195
+[01/Nov/2022 20:13:23] code 400, message Bad request version ('À\x14À')
+[01/Nov/2022 20:13:23] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Nov/2022 20:13:23] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÞçW>\x0f2¨\x92ülïwóhF\x9f\x08Ô¯r\x0ec¾\x9fc\x98Mt:qFH\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[01/Nov/2022 20:13:23] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 20:13:23] "GET / HTTP/1.1" 400 65158
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 20:55:38] "GET / HTTP/1.0" 400 64738
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[01/Nov/2022 20:55:38] "OPTIONS / HTTP/1.0" 400 64766
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /nice ports,/Trinity.txt.bak
+[01/Nov/2022 20:55:39] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 400 65047
+[01/Nov/2022 20:55:41] code 400, message Bad request syntax ('JRMI\x00\x02K')
+[01/Nov/2022 20:55:41] "JRMI K" 400 -
+[2022-11-01 20:55:41,200] - Broken pipe from ('139.162.239.30', 47214)
+
+[01/Nov/2022 20:55:41] code 400, message Bad request syntax ('#ST')
+[01/Nov/2022 20:55:41] "#ST" 400 -
+[01/Nov/2022 20:55:43] code 400, message Bad HTTP/0.9 request type ('\x00')
+[01/Nov/2022 20:55:43] " n    beio" 400 -
+[2022-11-01 20:55:43,129] - Broken pipe from ('139.162.239.30', 47220)
+
+[01/Nov/2022 20:55:44] code 400, message Bad request syntax ('\x00\x00\x07\x00\x08\x00\x03\x00\x04\x00\x05\x00\x06')
+[01/Nov/2022 20:55:44] "       " 400 -
+[2022-11-01 20:55:44,771] - Broken pipe from ('139.162.239.30', 47222)
+
+[01/Nov/2022 20:55:44] code 400, message Bad request version ('INFO')
+[01/Nov/2022 20:55:44] "GET SERVER INFO" 400 -
+[01/Nov/2022 20:55:45] code 400, message Bad request version ('RTSP/1.0')
+[01/Nov/2022 20:55:45] "OPTIONS / RTSP/1.0" 400 -
+[01/Nov/2022 20:55:47] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[01/Nov/2022 20:55:47] "  (rþ          |                    " 400 -
+[2022-11-01 20:55:47,285] - Broken pipe from ('139.162.239.30', 50722)
+
+[01/Nov/2022 20:55:48] code 400, message Bad HTTP/0.9 request type ('\x00')
+[01/Nov/2022 20:55:48] "          versionbind   " 400 -
+[2022-11-01 20:55:48,927] - Broken pipe from ('139.162.239.30', 50736)
+
+[01/Nov/2022 20:55:50] code 400, message Bad HTTP/0.9 request type ('\x00')
+[01/Nov/2022 20:55:50] "            " 400 -
+[2022-11-01 20:55:50,563] - Broken pipe from ('139.162.239.30', 50740)
+
+[01/Nov/2022 20:55:50] code 400, message Bad request syntax ('HELP')
+[01/Nov/2022 20:55:50] "HELP" 400 -
+[01/Nov/2022 20:55:50] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[01/Nov/2022 20:55:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Nov/2022 20:55:51] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[01/Nov/2022 20:55:51] "  *%à     Cookie: mstshash=beio" 400 -
+[01/Nov/2022 20:55:51] code 400, message Bad request version ('\x00/\x00')
+[01/Nov/2022 20:55:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Nov/2022 20:55:51] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[01/Nov/2022 20:55:51] "   qjn0k¡¢" 400 -
+[01/Nov/2022 20:55:53] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[01/Nov/2022 20:55:53] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[2022-11-01 20:55:53,678] - Broken pipe from ('139.162.239.30', 50788)
+
+[01/Nov/2022 20:55:55] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[01/Nov/2022 20:55:55] "l          " 400 -
+[2022-11-01 20:55:55,319] - Broken pipe from ('139.162.239.30', 50798)
+
+[01/Nov/2022 20:55:55] code 400, message Bad request syntax ('\x01default')
+[01/Nov/2022 20:55:55] "default" 400 -
+[01/Nov/2022 20:55:55] code 400, message Bad request syntax ('0\x84\x00\x00\x00-\x02\x01\x07c\x84\x00\x00\x00$\x04\x00')
+[01/Nov/2022 20:55:55] "0   -c   $ " 400 -
+[01/Nov/2022 20:55:57] code 400, message Bad HTTP/0.9 request type ('0')
+[01/Nov/2022 20:55:57] "0`  " 400 -
+[2022-11-01 20:55:57,540] - Broken pipe from ('139.162.239.30', 56012)
+
+[01/Nov/2022 20:55:57] code 400, message Bad request version ('SIP/2.0')
+[01/Nov/2022 20:55:57] "OPTIONS sip:nm SIP/2.0" 400 -
+[01/Nov/2022 20:55:59] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+[01/Nov/2022 20:55:59] "TNMP   TNME   " 400 -
+[2022-11-01 20:55:59,465] - Broken pipe from ('139.162.239.30', 56026)
+
+[01/Nov/2022 20:56:01] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+[01/Nov/2022 20:56:01] "  à     " 400 -
+[2022-11-01 20:56:01,103] - Broken pipe from ('139.162.239.30', 56032)
+
+[01/Nov/2022 20:56:02] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+[01/Nov/2022 20:56:02] "DmdT           ÿÿ" 400 -
+[2022-11-01 20:56:02,746] - Broken pipe from ('139.162.239.30', 56046)
+
+[01/Nov/2022 20:56:04] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+[01/Nov/2022 20:56:04] ":   /     @  =            /         @                 " 400 -
+[2022-11-01 20:56:04,389] - Broken pipe from ('139.162.239.30', 56054)
+
+[01/Nov/2022 20:56:06] code 400, message Bad request syntax ('\x01\x00\x00ýÎú\x0b°\xa0\x00\x00\x00MMS\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x03\x00ðððð\x0b\x00\x04\x00\x1c\x00\x03\x00N\x00S\x00P\x00l\x00a\x00y\x00e\x00r\x00/\x009\x00.\x00\x00.\x00\x00.\x02\x009\x008\x00\x00;\x00 \x00{\x00\x00\x00\x00\x00A\x00A\x00\x00\x00-\x00\x00A\x00\x00\x00-\x00\x00\x00a\x00\x00-\x00A\x00A\x00\x00A\x00-\x00\x00\x00\x00\x00A\x00\x00A\x00A\x00\x00A\x00A\x00\x00}\x00\x00\x00àmß_')
+[01/Nov/2022 20:56:06] "  ýÎú°    MMS                    ðððð    N S P l a y e r / 9 .  .  . 9 8  ;   {     A A   -  A   -   a  - A A  A -     A  A A  A A  }   àmß_" 400 -
+[2022-11-01 20:56:06,032] - Broken pipe from ('139.162.239.30', 57362)
+
+[01/Nov/2022 20:56:07] code 400, message Bad HTTP/0.9 request type ('\x00Z\x00\x00\x01\x00\x00\x00\x016\x01,\x00\x00\x08\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00')
+[01/Nov/2022 20:56:07] " Z     6,   ÿ      :               æ           (CONNECT_DATA=(COMMAND=version))" 400 -
+[2022-11-01 20:56:07,666] - Broken pipe from ('139.162.239.30', 57372)
+
+[01/Nov/2022 20:56:09] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00')
+[01/Nov/2022 20:56:09] " 4            ( ÿ U   MSSQLServer H  " 400 -
+[2022-11-01 20:56:09,306] - Broken pipe from ('139.162.239.30', 57380)
+
+[01/Nov/2022 20:56:10] code 400, message Bad request syntax ('\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x0f\x00')
+[01/Nov/2022 20:56:10] "              " 400 -
+[2022-11-01 20:56:10,947] - Broken pipe from ('139.162.239.30', 57396)
+
+[01/Nov/2022 20:56:12] code 400, message Bad request syntax ('GIOP\x01\x00\x01\x00$\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x06\x00\x00\x00abcdef\x00\x00\x04\x00\x00\x00get\x00\x00\x00\x00\x00')
+[01/Nov/2022 20:56:12] "GIOP  $                abcdef     get     " 400 -
+[2022-11-01 20:56:12,591] - Broken pipe from ('139.162.239.30', 57402)
+
+[01/Nov/2022 20:56:14] code 400, message Bad request syntax ('\x00\x9c\x00\x01\x1a+<M\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01ÿÿ\x00\x01none\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00beio\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[01/Nov/2022 20:56:14] "  +<M            ÿÿ none                                                            beio                                                            " 400 -
+[2022-11-01 20:56:14,231] - Broken pipe from ('139.162.239.30', 57406)
+
+[01/Nov/2022 20:56:15] code 400, message Bad request syntax ('\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x00')
+[01/Nov/2022 20:56:15] "                   " 400 -
+[2022-11-01 20:56:15,868] - Broken pipe from ('139.162.239.30', 53690)
+
+[01/Nov/2022 20:56:17] code 400, message Bad request syntax ('\x03\x81\x00\x00\x00\x00\x00_@\x00\x017\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00InitiatorName=iqn.1991-05.com.microsoft:beio-iscsi-probe\x00SessionType=Discovery\x00AuthMethod=None\x00\x00')
+[01/Nov/2022 20:56:17] "     _@ 7                                InitiatorName=iqn.1991-05.com.microsoft:beio-iscsi-probe SessionType=Discovery AuthMethod=None  " 400 -
+[2022-11-01 20:56:17,508] - Broken pipe from ('139.162.239.30', 53698)
+
+[01/Nov/2022 20:56:19] code 400, message Bad request syntax ('\x01\x00\x00\x00\x00Í\x00\x01\x00\x00ANY-SCP\x00\x00\x00\x00\x00\x00\x00\x00\x00FINDSCU\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00\x00\x151.2.840.10008.3.1.1.1 \x00\x00.\x01\x00\x00\x000\x00\x00\x111.2.840.10008.1.1@\x00\x00\x111.2.840.10008.1.2P\x00\x00:Q\x00\x00\x04\x00\x00@\x00R\x00\x00\x1e1.2.826.0.1.3680043.2.1396.999U\x00\x00\x0cCharruaVista')
+[01/Nov/2022 20:56:19] "    Í   ANY-SCP         FINDSCU                                           1.2.840.10008.3.1.1.1   .   0  1.2.840.10008.1.1@  1.2.840.10008.1.2P  :Q    @ R  1.2.826.0.1.3680043.2.1396.999U  CharruaVista" 400 -
+[2022-11-01 20:56:19,148] - Broken pipe from ('139.162.239.30', 53714)
+
+[01/Nov/2022 20:56:19] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[01/Nov/2022 20:56:19] "  ,'à     Cookie: mstshash=Administrator" 400 -
+[01/Nov/2022 20:56:21] code 400, message Bad request syntax ('\x00\x00\x00\x00\x00')
+[01/Nov/2022 20:56:21] "     " 400 -
+[2022-11-01 20:56:21,083] - Broken pipe from ('139.162.239.30', 53734)
+
+[01/Nov/2022 20:56:21] code 400, message Bad request syntax ('\x01I20100')
+[01/Nov/2022 20:56:21] "I20100" 400 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /6zZR
+[02/Nov/2022 01:02:19] "GET /6zZR HTTP/1.1" 400 65320
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /e3vO
+[02/Nov/2022 01:02:20] "GET /e3vO HTTP/1.1" 400 65289
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /stager
+[02/Nov/2022 01:02:20] "GET stager HTTP/1.1" 400 65333
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /stager64
+[02/Nov/2022 01:02:20] "GET stager64 HTTP/1.1" 400 65321
+Invalid HTTP_HOST header: '144.34.170.41.16clouds.com'. You may need to add '144.34.170.41.16clouds.com' to ALLOWED_HOSTS.
+Bad Request: /
+[02/Nov/2022 04:09:40] "GET / HTTP/1.1" 400 65340
+[02/Nov/2022 05:20:54] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Uz÷\x94\x10p\x0e:d´©^\\zï\x87²Ìs\x16\x84\x12')
+[02/Nov/2022 05:20:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[02/Nov/2022 05:20:54] code 400, message Bad request version ('À\x14À')
+[02/Nov/2022 05:20:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[02/Nov/2022 05:20:55] "GET / HTTP/1.1" 400 65158
+----------------------------------------
+Exception happened during processing of request from ('104.36.187.110', 40634)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[02/Nov/2022 14:37:39] code 400, message Bad request syntax ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Àw÷´¨\x0bªåùµ\x1efãD\x12V¼Çc¬åýF1çì*8\x8e'\x13Ù\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[02/Nov/2022 14:37:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[02/Nov/2022 14:37:39] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03'\x8c\x9bPWbQ=«¥Z¨\x16mPè\x9c\x16¤1²Ú\x8b\x9a¿ùA8Óyd¬\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+[02/Nov/2022 14:37:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[02/Nov/2022 14:37:40] "GET / HTTP/1.1" 400 65159
+[02/Nov/2022 17:56:23] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03yÖ,1\x17\xad¥\x03¢u\x93\x1d\x14Qn\x07e¢\x9eZ[\x01±â\x87ù\x9a:\x1e\x9dÖ\r\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[02/Nov/2022 17:56:23] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[02/Nov/2022 19:46:14] "GET / HTTP/1.1" 400 65278
+[02/Nov/2022 23:58:08] code 400, message Bad request version ('À\x14À')
+[02/Nov/2022 23:58:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[02/Nov/2022 23:58:08] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03«Ô²}\x0bu\x8fÚ\x99µº>J¶×\x90ØV\x9dµmâ\x95\x0b©LR\x99lÙÝ£\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[02/Nov/2022 23:58:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[02/Nov/2022 23:58:09] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[03/Nov/2022 08:58:48] "GET / HTTP/1.1" 400 65253
+[03/Nov/2022 09:33:25] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ºÜ"WÜ°\x8a\x03\x95\tÝZä\x88\x13oPs3Ð©tÕ\x96\x0e\x0b\x13\x13R\x1eHû\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[03/Nov/2022 09:33:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[03/Nov/2022 09:33:25] code 400, message Bad request version ('À\x14À')
+[03/Nov/2022 09:33:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[03/Nov/2022 09:33:25] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[03/Nov/2022 10:00:28] "GET / HTTP/1.1" 400 65266
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[03/Nov/2022 10:07:58] "HEAD / HTTP/1.0" 400 64744
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /system_api.php
+[03/Nov/2022 10:08:00] "GET /system_api.php HTTP/1.1" 400 65562
+[03/Nov/2022 10:08:00] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03±®\x9dYXp@\x9e')
+[03/Nov/2022 10:08:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /c/version.js
+[03/Nov/2022 10:08:02] "GET /c/version.js HTTP/1.1" 400 65540
+[03/Nov/2022 10:08:03] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x9d;\x17\x04].é\x9cWt')
+[03/Nov/2022 10:08:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /streaming/clients_live.php
+[03/Nov/2022 10:08:05] "GET /streaming/clients_live.php HTTP/1.1" 400 65694
+[03/Nov/2022 10:08:05] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x03\x8c\x83å6Ã\x10Y\x80¤÷Å\x1d×*ey\x01ie%þ`$mr*h\x949ß¿ hÐ\x18RÏ7©p~\x9b\x1d{}\x00½¤÷«ÏÉ-·\x1eQ5Ñj~5\x8dVs\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[03/Nov/2022 10:08:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /stalker_portal/c/version.js
+[03/Nov/2022 10:08:07] "GET /stalker_portal/c/version.js HTTP/1.1" 400 65705
+[03/Nov/2022 10:08:07] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03°\x98\x9fôÃ\x0ezixîì9\x130\x02@\x1d2#,\x04N\x80nS\rùÏÜó\x16u ©ÓùÝ-¯ªA\x85\x0f^\x02\xad1É}ÎzõÔ\x81ê\xadîþ\x15¹ ¦\x08\x16-\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[03/Nov/2022 10:08:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /stream/live.php
+[03/Nov/2022 10:08:10] "GET /stream/live.php HTTP/1.1" 400 65512
+[03/Nov/2022 10:08:10] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03û>\x14\x9cJÉ\x0f¤!SË4÷ÂòòÁ\r(oËy\x0eY\x85²tÈ{÷¡g \x9a\x82\x87\\\xa0{\x06!ÓAÐªÀ\x80\x13c\x93\x1a¡\x8d*Èjàeí\x1d\xa0ávâ\x9c\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[03/Nov/2022 10:08:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /flu/403.html
+[03/Nov/2022 10:08:12] "GET /flu/403.html HTTP/1.1" 400 65540
+[03/Nov/2022 10:08:12] code 400, message Bad request version ("\x08\x00o\x00Â\x80\x00#\x1beóií+\x15ÚÞh\x81\x82ÄSs\x95\x8d×1®ç\x8d\x13¸\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[03/Nov/2022 10:08:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[03/Nov/2022 10:08:14] "GET / HTTP/1.1" 400 65408
+[03/Nov/2022 10:08:15] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¤®<\x9a\x10b\x02Z')
+[03/Nov/2022 10:08:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[03/Nov/2022 12:35:03] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[03/Nov/2022 12:35:03] "  ,'à     Cookie: mstshash=Domain" 400 -
+[03/Nov/2022 12:35:03] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[03/Nov/2022 12:35:03] "  ,'à     Cookie: mstshash=Domain" 400 -
+[03/Nov/2022 16:26:05] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x959e¹)\x97%Mõ\x00\x1d6Þ\x0bÐ_E\x17\x03½ÒÞyã¡\x06åI\x8a1q×\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[03/Nov/2022 16:26:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('167.94.146.60', 51576)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[03/Nov/2022 19:27:41] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03·×\x02Ü*\x18T¼.ÀR¼0GTA«0û\x1dî\t*\x8b\x96/¸\xa0O\x84Õ[ \x96\x9c¹\x11\x1aQç.\x16\x9fxq=ÜF\x03Û\x99\x041þ\x01c#U=X\x01\x8aj={\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[03/Nov/2022 19:27:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[03/Nov/2022 19:27:43] "GET / HTTP/1.1" 400 64760
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[03/Nov/2022 19:27:43] "GET / HTTP/1.1" 400 65207
+[03/Nov/2022 19:27:44] code 505, message Invalid HTTP version (2.0)
+[03/Nov/2022 19:27:44] "PRI * HTTP/2.0" 505 -
+[03/Nov/2022 20:11:12] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x924=Öý;Ü)Çæ\x00Ed=9õÞñ¥ÀÌ!ùf\x94\x9f\x98¦\x80\x17¨q\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[03/Nov/2022 20:11:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[03/Nov/2022 20:11:13] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03)á¢ïT-?J"í!cLP\x90\x0bÚúàbi\x04Þ\x08ò+\xa0ÕÙ\x9cv\x8b\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[03/Nov/2022 20:11:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[03/Nov/2022 20:11:13] "GET / HTTP/1.1" 400 65159
+[04/Nov/2022 00:43:35] code 400, message Bad request syntax ('\x16\x03\x01\x00ê\x01\x00\x00æ\x03\x03Ú@\x86\x16åÿ\x85®[ZÁ\x7f´\x99\x9d±¼¥^³Îå\x98®ãvey(Èê/ gS¢ÛÐ\x91Éû2\x8c\x16\x84\x08\x14¿z\t\x1a\x0bå\x0eÎJ\x90ÃTãUdöØ\x8f\x00&Ì©Ì¨À+À/À,À0À\tÀ\x13À')
+[04/Nov/2022 00:43:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /.git/config
+[04/Nov/2022 00:43:36] "GET /.git/config HTTP/1.1" 400 65494
+[04/Nov/2022 08:08:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x02\x84çÑ)ØSÙú%HnÕ½\x91ß\x9a²Â\x8d\x86iW¨\x8dÚÏZEFÓ¦\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[04/Nov/2022 08:08:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Nov/2022 08:08:08] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x863À0,2ô7£ð\x15\x12j\x984Rfà\tt=ÇÏßFN\xa0\x95\x1fë±\x13\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[04/Nov/2022 08:08:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 08:08:09] "GET / HTTP/1.1" 400 65159
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 08:36:14] "GET / HTTP/1.0" 400 64735
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 08:36:15] "OPTIONS / HTTP/1.0" 400 64763
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /nice ports,/Trinity.txt.bak
+[04/Nov/2022 08:36:15] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 400 65044
+[04/Nov/2022 08:36:21] code 400, message Bad request syntax ('JRMI\x00\x02K')
+[04/Nov/2022 08:36:21] "JRMI K" 400 -
+[04/Nov/2022 08:36:22] code 400, message Bad request version ('INFO')
+[04/Nov/2022 08:36:22] "GET SERVER INFO" 400 -
+[04/Nov/2022 08:39:00] code 400, message Bad HTTP/0.9 request type ('\x80\x00\x00(!\x81ðÕ\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86')
+[04/Nov/2022 08:39:00] "  (!ðÕ                                " 400 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 09:18:20] "GET / HTTP/1.1" 400 65207
+[04/Nov/2022 09:18:20] code 505, message Invalid HTTP version (2.0)
+[04/Nov/2022 09:18:20] "PRI * HTTP/2.0" 505 -
+[04/Nov/2022 09:25:21] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03$ßñ¢\x1cÕEQ\x18o û\x1còª\x1e¦Y\x1eVÆD\x01x \x07f\x85O;ÄÛ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[04/Nov/2022 09:25:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Nov/2022 11:00:37] code 400, message Bad HTTP/0.9 request type ('\x1aÞ\x01-\x00\x12\x00\x00\x00ù\x95ô9N\x08')
+[04/Nov/2022 11:00:37] " Þ-    ùô9N:¢¬!X " 400 -
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 11:11:45] "GET / HTTP/1.1" 400 65270
+[04/Nov/2022 11:45:25] "GET / HTTP/1.1" 200 2191
+----------------------------------------
+Exception happened during processing of request from ('162.142.125.9', 40366)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[04/Nov/2022 13:11:50] code 400, message Bad request version ('áánw\x8a\x02û4£')
+[04/Nov/2022 13:11:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 13:11:52] "GET / HTTP/1.1" 400 64760
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 13:11:52] "GET / HTTP/1.1" 400 65207
+[04/Nov/2022 13:11:52] code 505, message Invalid HTTP version (2.0)
+[04/Nov/2022 13:11:52] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: '144.34.170.41.16clouds.com'. You may need to add '144.34.170.41.16clouds.com' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 13:33:54] "GET / HTTP/1.1" 400 65340
+[04/Nov/2022 17:01:30] "GET / HTTP/1.1" 200 2191
+[04/Nov/2022 18:03:41] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\xa0Ä\x18\x9c\x07ÿ²}Ü/Á½án|û!\x16Z§uXy\x1eJT¾\x108\x9f\xad\x0b\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[04/Nov/2022 18:03:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Nov/2022 18:03:41] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÿ»àD\x174\x87\x95\x16Y<')
+[04/Nov/2022 18:03:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 18:03:41] "GET / HTTP/1.1" 400 65160
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[04/Nov/2022 22:30:18] "GET / HTTP/1.1" 400 65364
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[05/Nov/2022 00:50:43] "GET / HTTP/1.1" 400 65153
+[05/Nov/2022 02:37:01] code 400, message Bad request version ('À(À$À\x14À')
+[05/Nov/2022 02:37:01] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[05/Nov/2022 02:39:46] "GET / HTTP/1.1" 400 65195
+[05/Nov/2022 04:04:26] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03gO\x13\x91»¬k\x1a;îó<ã%\x0bààÉM±yÊ\x8fkÕ\x8d\x0fõ\x1d9¹\x85\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[05/Nov/2022 04:04:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[05/Nov/2022 04:04:27] code 400, message Bad request syntax ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¯êîzágâ\x80\x93¢[Õe¸\rç0hà\tØ¦?K\x15A¿\x94!'\x03g\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[05/Nov/2022 04:04:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[05/Nov/2022 04:04:27] "GET / HTTP/1.1" 400 65158
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[05/Nov/2022 06:56:17] "GET / HTTP/1.1" 400 65263
+[05/Nov/2022 06:56:18] code 400, message Bad request version ('ìK\x95£+H7*&\x99î\x16ÂAjî©\x07À¯\x96gh-')
+[05/Nov/2022 06:56:18] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[05/Nov/2022 14:01:03] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03~\x18\x88&ïàrK5muGÒ~\x9bÕ\x18\rRõÓ\x1fh¤\x8f+Ð\x16\t\x9e\x98\x83\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[05/Nov/2022 14:01:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[05/Nov/2022 14:01:04] code 400, message Bad request version ('À\x14À')
+[05/Nov/2022 14:01:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[05/Nov/2022 14:01:04] "GET / HTTP/1.1" 400 65159
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.119', 38422)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[05/Nov/2022 17:18:30] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x037R¿¹&\x96\x8c¡\x07<:\x8eJp\x83Âx\x7fd©êÏ):¸^\x1b²\xad\x8e)£ §Ik\x9a\x91º3µm8¼¨©\x17\x12\x84\x83\x85½;"âÁÿº\x02¾\x06Î\x86Ç×\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[05/Nov/2022 17:18:30] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[05/Nov/2022 17:18:31] "GET / HTTP/1.1" 400 64761
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[05/Nov/2022 17:18:31] "GET / HTTP/1.1" 400 65208
+[05/Nov/2022 17:18:31] code 505, message Invalid HTTP version (2.0)
+[05/Nov/2022 17:18:31] "PRI * HTTP/2.0" 505 -
+Invalid HTTP_HOST header: 'localhost.localdomain:8888'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+Bad Request: /
+[05/Nov/2022 22:09:31] "GET / HTTP/1.0" 400 65293
+[05/Nov/2022 22:35:12] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Âî\xad'®ðæ1ëùp\x8a\x96Ðµ§XÂÚ´\x7fJ\x88¼F%@Ö\x12\x04ã¶\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+[05/Nov/2022 22:35:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[06/Nov/2022 00:09:50] code 400, message Bad request version ('À\x14À')
+[06/Nov/2022 00:09:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[06/Nov/2022 00:09:50] code 400, message Bad request version ('À\x14À')
+[06/Nov/2022 00:09:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[06/Nov/2022 00:09:52] "GET / HTTP/1.1" 400 65158
+----------------------------------------
+Exception happened during processing of request from ('104.152.52.137', 56727)
+Traceback (most recent call last):
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/home/yiyusheng/anaconda2/envs/py3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[06/Nov/2022 09:24:08] code 400, message Bad request version ('À\x14À')
+[06/Nov/2022 09:24:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[06/Nov/2022 09:24:08] code 400, message Bad request version ('À\x14À')
+[06/Nov/2022 09:24:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '144.34.170.41:8888'. You may need to add '144.34.170.41' to ALLOWED_HOSTS.
+Bad Request: /
+[06/Nov/2022 09:24:09] "GET / HTTP/1.1" 400 65160

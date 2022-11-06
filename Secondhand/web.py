@@ -19,17 +19,16 @@ def secondhand(request):
 
     webname = Secondhand.objects.values('webname').distinct()
     webnameList = [list(i.values())[0] for i in webname]
-    invalidWebList = ['dospy','it168','smzdm','tgbus','imp3','duowan','KDS']
+    invalidWebList = ['dospy','it168','smzdm','tgbus','imp3','duowan','KDS','51NB','8080','feng','fengniao','gfan','xitek']
     validWebList = list(set(webnameList) - set(invalidWebList))
     validWebList.sort()
     invalidWebList.sort()
 
     whiteList = [
-            'mac','mbp','ipod','ipad','watch','airpod',
-            'surface','miix','yoga','venue','thinkpad','xps',
-            'kindle','kpw','ps4','psv','xbox','switch','ns',
-            'ikbc','电动车',
-            '1050','1060','1070','1080'
+            'mac','mbp','ipad','watch','airpod',
+            'surface','thinkpad','xps',
+            'kindle','kpw',
+            'ps4','psv','xbox','switch','ns',
             ]
     blackList = ['口红','喷雾','悦木之源','裤',
             '鞋','耐克','子弹头','裙','乳液','短袖','衣','靴',

@@ -5,4 +5,5 @@ urlpatterns = [
     path('', index.index,name='index'),
     path('secondhand/', include('Secondhand.urls')),
     path('prichat/', include('Prichat.urls')),
+    path('table/', include('Table.urls')),
 ]
